@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>월스트리트 모닝 브리핑 - 2026.03.25</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Noto Sans KR', -apple-system, sans-serif;
+    background: #0a0a0f;
+    color: #e8e8ec;
+    -webkit-font-smoothing: antialiased;
+  }
+  .container { max-width: 480px; margin: 0 auto; }
+
+  /* ── HEADER ── */
+  .header {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 60%, #0f3460 100%);
+    padding: 44px 24px 28px;
+    position: relative; overflow: hidden;
+  }
+  .header::after {
+    content: '';
+    position: absolute; top: -60px; right: -40px;
+    width: 220px; height: 220px;
+    background: radial-gradient(circle, rgba(255,183,77,0.1) 0%, transparent 70%);
+    border-radius: 50%;
+  }
+  .header-eyebrow {
+    font-size: 10px; font-weight: 600;
+    letter-spacing: 3px; text-transform: uppercase;
+    color: #ffb74d; margin-bottom: 10px;
+  }
+  .header-title { font-size: 27px; font-weight: 900; line-height: 1.25; }
+  .header-date { font-size: 13px; color: #8899aa; font-weight: 300; margin-top: 4px; }
+
+  /* ── MARKET TICKER ── */
+  .ticker {
+    display: grid; grid-template-columns: repeat(4, 1fr);
+    margin-top: 20px; padding-top: 16px;
+    border-top: 1px solid rgba(255,255,255,0.06);
+  }
+  .ticker-item { text-align: center; }
+  .ticker-name { font-size: 9px; color: #556677; letter-spacing: 1px; text-transform: uppercase; }
+  .ticker-val { font-size: 14px; font-weight: 700; margin-top: 2px; }
+  .ticker-chg { font-size: 10px; margin-top: 1px; }
+  .up { color: #4caf50; } .down { color: #f44336; } .neutral { color: #ffb74d; }
+
+  /* ── ISSUE COUNT ── */
+  .issue-meta {
+    padding: 14px 24px;
+    font-size: 11px; color: #556677;
+    letter-spacing: 1px; text-transform: uppercase;
+    border-bottom: 1px solid rgba(255,255,255,0.03);
+    display: flex; justify-content: space-between; align-items: center;
+  }
+  .issue-count {
+    background: rgba(255,183,77,0.1);
+    color: #ffb74d;
+    font-size: 11px; font-weight: 700;
+    padding: 3px 10px; border-radius: 20px;
+  }
+
+  /* ── ISSUE CARDS ── */
+  .cards { padding: 16px; display: flex; flex-direction: column; gap: 12px; }
+
+  a.card {
+    display: block;
+    border-radius: 16px;
+    padding: 20px;
+    text-decoration: none; color: inherit;
+    border: 1px solid rgba(255,255,255,0.06);
+    background: rgba(255,255,255,0.025);
+    position: relative;
+    transition: all 0.15s ease;
+    overflow: hidden;
+  }
+  a.card:active { transform: scale(0.985); background: rgba(255,255,255,0.06); }
+
+  /* 중요도 색상 라인 */
+  a.card::before {
+    content: '';
+    position: absolute; left: 0; top: 0; bottom: 0;
+    width: 3px; border-radius: 16px 0 0 16px;
+  }
+  a.card.priority-1::before { background: #ef5350; }
+  a.card.priority-2::before { background: #ff7043; }
+  a.card.priority-3::before { background: #ffb74d; }
+  a.card.priority-4::before { background: #42a5f5; }
+  a.card.priority-5::before { background: #4caf50; }
+  a.card.priority-6::before { background: #ab47bc; }
+  a.card.priority-7::before { background: #78909c; }
+
+  /* 카드 상단 메타 */
+  .card-meta {
+    display: flex; align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+  .card-tags { display: flex; gap: 6px; flex-wrap: wrap; }
+  .tag {
+    font-size: 9px; font-weight: 700;
+    letter-spacing: 1px; text-transform: uppercase;
+    padding: 3px 8px; border-radius: 4px;
+  }
+  .tag-politics { background: rgba(239,83,80,0.15); color: #ef9a9a; }
+  .tag-economy  { background: rgba(66,165,245,0.15); color: #90caf9; }
+  .tag-market   { background: rgba(76,175,80,0.15); color: #a5d6a7; }
+  .tag-tech     { background: rgba(171,71,188,0.15); color: #ce93d8; }
+  .tag-korea    { background: rgba(255,183,77,0.15); color: #ffe082; }
+  .tag-global   { background: rgba(38,166,154,0.15); color: #80cbc4; }
+  .tag-breaking { background: rgba(239,83,80,0.25); color: #ef5350; }
+
+  .card-arrow { font-size: 16px; color: #334455; flex-shrink: 0; }
+
+  /* 카드 본문 */
+  .card-rank {
+    font-size: 11px; font-weight: 900;
+    color: rgba(255,255,255,0.15);
+    margin-bottom: 6px;
+    font-variant-numeric: tabular-nums;
+  }
+  .card-title {
+    font-size: 16px; font-weight: 700;
+    line-height: 1.45; margin-bottom: 10px;
+  }
+  .card-body {
+    font-size: 13px; line-height: 1.75;
+    color: #8899aa; font-weight: 300;
+  }
+  .card-body strong { color: #bbc; font-weight: 500; }
+  .card-source {
+    font-size: 10px; color: #445566;
+    margin-top: 10px; padding-top: 10px;
+    border-top: 1px solid rgba(255,255,255,0.04);
+  }
+
+  /* ── FOOTER ── */
+  .footer {
+    padding: 28px 24px 52px;
+    text-align: center; color: #334455;
+    font-size: 10px; line-height: 2;
+  }
+  .footer-bar {
+    width: 36px; height: 2px;
+    background: rgba(255,183,77,0.2);
+    margin: 0 auto 12px; border-radius: 1px;
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <!-- HEADER -->
+  <div class="header">
+    <div class="header-eyebrow">Wall Street Morning Briefing</div>
+    <div class="header-title">월스트리트<br>모닝 브리핑</div>
+    <div class="header-date">2026년 3월 25일 수요일</div>
+    <div class="ticker">
+      <div class="ticker-item">
+        <div class="ticker-name">S&P 500</div>
+        <div class="ticker-val">5,556</div>
+        <div class="ticker-chg down">-0.37%</div>
+      </div>
+      <div class="ticker-item">
+        <div class="ticker-name">Nasdaq</div>
+        <div class="ticker-val">21,762</div>
+        <div class="ticker-chg down">-0.84%</div>
+      </div>
+      <div class="ticker-item">
+        <div class="ticker-name">KOSPI</div>
+        <div class="ticker-val">5,781</div>
+        <div class="ticker-chg up">+0.31%</div>
+      </div>
+      <div class="ticker-item">
+        <div class="ticker-name">Brent</div>
+        <div class="ticker-val">$103.6</div>
+        <div class="ticker-chg down">+13%↑</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ISSUE META -->
+  <div class="issue-meta">
+    <span>오늘의 주요 이슈</span>
+    <span class="issue-count">6 STORIES</span>
+  </div>
+
+  <!-- CARDS -->
+  <div class="cards">
+
+    <!-- 1 -->
+    <a class="card priority-1" href="https://www.cnn.com/world/live-news/iran-war-us-israel-trump-03-24-26" target="_blank">
+      <div class="card-meta">
+        <div class="card-tags">
+          <span class="tag tag-breaking">BREAKING</span>
+          <span class="tag tag-politics">정치</span>
+          <span class="tag tag-global">국제</span>
+        </div>
+        <span class="card-arrow">↗</span>
+      </div>
+      <div class="card-rank">01 / 오늘의 TOP 이슈</div>
+      <div class="card-title">트럼프 "밴스·루비오가 이란과 협상 중" — 휴전 기대감 확산</div>
+      <div class="card-body">
+        이란전 25일차. 트럼프가 밴스 부통령과 루비오 국무장관이 이란과 직접 대화 중이라고 밝히며 휴전 기대감이 시장을 끌어올렸다. 이란 측도 "지속 가능한 제안에 귀 기울일 것"이라고 응답, 중동 긴장 완화 신호가 처음으로 감지됐다. <strong>그러나 실제 협상 진척 여부는 불투명하며 유가는 다시 $103대로 반등.</strong>
+      </div>
+      <div class="card-source">CNN · Reuters · 2026.03.24</div>
+    </a>
+
+    <!-- 2 -->
+    <a class="card priority-2" href="https://www.cnbc.com/2026/03/24/oil-prices-today-wti-brent-middle-east-iran-war.html" target="_blank">
+      <div class="card-meta">
+        <div class="card-tags">
+          <span class="tag tag-economy">경제</span>
+          <span class="tag tag-global">국제</span>
+        </div>
+        <span class="card-arrow">↗</span>
+      </div>
+      <div class="card-rank">02</div>
+      <div class="card-title">유가 $103 재돌파 — 호르무즈 봉쇄 리스크 여전</div>
+      <div class="card-body">
+        브렌트유가 휴전 기대에 하락했다가 다시 $103대로 복귀. 전 세계 석유·LNG 20%가 통과하는 호르무즈 해협에 선박 150척 이상 정체 중. <strong>글로벌 항공 화물 운송 능력 18% 감소, 보험료 급등 지속.</strong> 에너지 인플레이션이 연준의 금리 결정에도 변수.
+      </div>
+      <div class="card-source">CNBC · 2026.03.24</div>
+    </a>
+
+    <!-- 3 -->
+    <a class="card priority-3" href="https://finance.yahoo.com/news/live/stock-market-today-dow-sp-500-nasdaq-futures-jump-iran-progress-230359158.html" target="_blank">
+      <div class="card-meta">
+        <div class="card-tags">
+          <span class="tag tag-market">주식</span>
+          <span class="tag tag-global">국제</span>
+        </div>
+        <span class="card-arrow">↗</span>
+      </div>
+      <div class="card-rank">03</div>
+      <div class="card-title">뉴욕 증시 하락, 오늘 선물 반등 — 내구재 주문 주목</div>
+      <div class="card-body">
+        어제 S&P 500 -0.37%(5,556pt), 나스닥 -0.84%(21,762pt). 이란 협상 기대 랠리를 유가 재상승이 반납. <strong>오늘 선물시장 +0.7% 상승 출발.</strong> 오늘 발표되는 2월 내구재 주문과 Cintas·Paychex·Chewy 실적에 주목.
+      </div>
+      <div class="card-source">Yahoo Finance · 2026.03.25</div>
+    </a>
+
+    <!-- 4 -->
+    <a class="card priority-4" href="https://ko.tradingeconomics.com/south-korea/stock-market" target="_blank">
+      <div class="card-meta">
+        <div class="card-tags">
+          <span class="tag tag-market">주식</span>
+          <span class="tag tag-korea">한국</span>
+        </div>
+        <span class="card-arrow">↗</span>
+      </div>
+      <div class="card-rank">04</div>
+      <div class="card-title">코스피 5,781 반등 — 원화 강세 전환이 외국인 압력 완화</div>
+      <div class="card-body">
+        월요일 6.49% 폭락(5,406pt) 후 개인·기관 매수세에 힘입어 반등. 원/달러 환율이 1,500원 돌파 후 소폭 안정되며 외국인 매도 압력 완화. <strong>현대차·기아, 엔비디아와 자율주행 협력 공식화로 기술주 상승 견인.</strong>
+      </div>
+      <div class="card-source">Trading Economics · 한국경제 · 2026.03.25</div>
+    </a>
+
+    <!-- 5 -->
+    <a class="card priority-5" href="https://www.khan.co.kr/" target="_blank">
+      <div class="card-meta">
+        <div class="card-tags">
+          <span class="tag tag-politics">정치</span>
+          <span class="tag tag-economy">경제</span>
+          <span class="tag tag-korea">한국</span>
+        </div>
+        <span class="card-arrow">↗</span>
+      </div>
+      <div class="card-rank">05</div>
+      <div class="card-title">이재명, 비상경제체제 가동 — "부동산 투기 방치하면 나라 망한다"</div>
+      <div class="card-body">
+        오늘부터 범부처 비상경제본부 + 청와대 비상경제상황실 출범. 중동 전쟁 장기화에 따른 경제 위기 대응 강화. 동시에 대통령이 부동산 투기 근절 의지를 강하게 표명. <strong>오늘부터 2026년 공시지가 열람 시작, 서울 최대 29% 급등으로 역대급 보유세 예고.</strong>
+      </div>
+      <div class="card-source">경향신문 · 2026.03.25</div>
+    </a>
+
+    <!-- 6 -->
+    <a class="card priority-6" href="https://techstartups.com/2026/03/24/top-tech-news-today-march-24-2026/" target="_blank">
+      <div class="card-meta">
+        <div class="card-tags">
+          <span class="tag tag-tech">트렌드</span>
+          <span class="tag tag-global">국제</span>
+        </div>
+        <span class="card-arrow">↗</span>
+      </div>
+      <div class="card-rank">06</div>
+      <div class="card-title">Apple AI 시리 + Gemini 탑재 출시 / 모건스탠리 "AI 돌파구 온다"</div>
+      <div class="card-body">
+        iOS 26.4와 함께 완전히 재설계된 AI 시리 공개 예정. Google Gemini + Apple Private Cloud 조합으로 프라이버시 유지하며 화면 인식·앱 간 연동 가능. <strong>모건스탠리는 2026년 AI 기술의 결정적 도약을 경고하며 "대부분 기업이 준비 안 됐다"고 지적.</strong> OpenAI 연매출 $250억 돌파, 상장 검토 중.
+      </div>
+      <div class="card-source">Tech Startups · Fortune · 2026.03.24</div>
+    </a>
+
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <div class="footer-bar"></div>
+    Wall Street Morning Briefing<br>
+    각 카드를 탭하면 원문 기사로 이동합니다<br>
+    출처: Reuters · AP · CNN · CNBC · Yahoo Finance<br>
+    경향신문 · 한국경제 · Tech Startups · Fortune
+  </div>
+
+</div>
+</body>
+</html>
