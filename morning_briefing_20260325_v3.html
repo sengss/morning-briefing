@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>월스트리트 모닝 브리핑 - 2026.03.25</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap');
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Noto Sans KR', -apple-system, sans-serif; background: #0a0a0f; color: #e8e8ec; -webkit-font-smoothing: antialiased; }
+  .container { max-width: 480px; margin: 0 auto; }
+
+  /* HEADER */
+  .header { background: linear-gradient(135deg, #1a1a2e 0%, #16213e 60%, #0f3460 100%); padding: 44px 24px 28px; position: relative; overflow: hidden; }
+  .header::after { content: ''; position: absolute; top: -60px; right: -40px; width: 220px; height: 220px; background: radial-gradient(circle, rgba(255,183,77,.1) 0%, transparent 70%); border-radius: 50%; }
+  .header-eyebrow { font-size: 10px; font-weight: 600; letter-spacing: 3px; text-transform: uppercase; color: #ffb74d; margin-bottom: 10px; }
+  .header-title { font-size: 27px; font-weight: 900; line-height: 1.25; }
+  .header-date { font-size: 13px; color: #8899aa; font-weight: 300; margin-top: 4px; }
+  .ticker { display: grid; grid-template-columns: repeat(4, 1fr); margin-top: 20px; padding-top: 16px; border-top: 1px solid rgba(255,255,255,.06); }
+  .ticker-item { text-align: center; }
+  .ticker-name { font-size: 9px; color: #556677; letter-spacing: 1px; text-transform: uppercase; }
+  .ticker-val { font-size: 14px; font-weight: 700; margin-top: 2px; }
+  .ticker-chg { font-size: 10px; margin-top: 1px; }
+  .up { color: #4caf50; } .down { color: #f44336; } .neutral { color: #ffb74d; }
+
+  /* CATEGORY SECTION */
+  .cat-section { margin-top: 4px; }
+  .cat-header { display: flex; align-items: center; gap: 12px; padding: 20px 20px 14px; border-bottom: 1px solid rgba(255,255,255,.04); }
+  .cat-icon { width: 36px; height: 36px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 18px; flex-shrink: 0; }
+  .cat-title { font-size: 13px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; }
+  .cat-count { margin-left: auto; font-size: 10px; font-weight: 600; padding: 2px 8px; border-radius: 12px; }
+
+  .politics .cat-icon { background: rgba(239,83,80,.12); }
+  .politics .cat-title { color: #ef5350; }
+  .politics .cat-count { background: rgba(239,83,80,.12); color: #ef5350; }
+
+  .economy .cat-icon { background: rgba(66,165,245,.12); }
+  .economy .cat-title { color: #42a5f5; }
+  .economy .cat-count { background: rgba(66,165,245,.12); color: #42a5f5; }
+
+  .stocks .cat-icon { background: rgba(76,175,80,.12); }
+  .stocks .cat-title { color: #4caf50; }
+  .stocks .cat-count { background: rgba(76,175,80,.12); color: #4caf50; }
+
+  .trends .cat-icon { background: rgba(171,71,188,.12); }
+  .trends .cat-title { color: #ab47bc; }
+  .trends .cat-count { background: rgba(171,71,188,.12); color: #ab47bc; }
+
+  /* CARDS */
+  .cards { padding: 12px 16px 8px; display: flex; flex-direction: column; gap: 10px; }
+  a.card { display: block; border-radius: 14px; padding: 16px 18px; text-decoration: none; color: inherit; border: 1px solid rgba(255,255,255,.05); background: rgba(255,255,255,.025); position: relative; overflow: hidden; }
+  a.card:active { transform: scale(.985); background: rgba(255,255,255,.06); }
+  a.card::before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 3px; border-radius: 14px 0 0 14px; }
+
+  .politics a.card::before { background: #ef5350; }
+  .economy  a.card::before { background: #42a5f5; }
+  .stocks   a.card::before { background: #4caf50; }
+  .trends   a.card::before { background: #ab47bc; }
+
+  .card-top { display: flex; align-items: flex-start; justify-content: space-between; gap: 8px; margin-bottom: 8px; }
+  .card-tags { display: flex; gap: 5px; flex-wrap: wrap; }
+  .tag { font-size: 9px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; padding: 2px 7px; border-radius: 4px; }
+  .tag-breaking { background: rgba(239,83,80,.25); color: #ef5350; }
+  .tag-watch    { background: rgba(255,183,77,.15); color: #ffb74d; }
+  .tag-info     { background: rgba(66,165,245,.15); color: #90caf9; }
+  .tag-kr       { background: rgba(255,183,77,.12); color: #ffe082; }
+  .tag-global   { background: rgba(38,166,154,.15); color: #80cbc4; }
+  .tag-today    { background: rgba(76,175,80,.15); color: #a5d6a7; }
+  .arrow { font-size: 14px; color: #334455; flex-shrink: 0; margin-top: 1px; }
+  .card-title { font-size: 15px; font-weight: 700; line-height: 1.45; margin-bottom: 8px; }
+  .card-body { font-size: 12.5px; line-height: 1.75; color: #8899aa; font-weight: 300; }
+  .card-body strong { color: #bbc; font-weight: 500; }
+  .card-source { font-size: 10px; color: #445566; margin-top: 8px; padding-top: 8px; border-top: 1px solid rgba(255,255,255,.04); }
+
+  /* FOOTER */
+  .footer { padding: 28px 24px 52px; text-align: center; color: #334455; font-size: 10px; line-height: 2; }
+  .footer-bar { width: 36px; height: 2px; background: rgba(255,183,77,.2); margin: 0 auto 12px; border-radius: 1px; }
+
+  /* DIVIDER */
+  .section-divider { height: 8px; background: rgba(255,255,255,.015); margin: 4px 0; }
+</style>
+</head>
+<body>
+<div class="container">
+
+<!-- ═══ HEADER ═══ -->
+<div class="header">
+  <div class="header-eyebrow">Wall Street Morning Briefing</div>
+  <div class="header-title">월스트리트<br>모닝 브리핑</div>
+  <div class="header-date">2026년 3월 25일 수요일</div>
+  <div class="ticker">
+    <div class="ticker-item"><div class="ticker-name">S&P 500</div><div class="ticker-val">5,556</div><div class="ticker-chg down">-0.37%</div></div>
+    <div class="ticker-item"><div class="ticker-name">Nasdaq</div><div class="ticker-val">21,762</div><div class="ticker-chg down">-0.84%</div></div>
+    <div class="ticker-item"><div class="ticker-name">KOSPI</div><div class="ticker-val">5,781</div><div class="ticker-chg up">+0.31%</div></div>
+    <div class="ticker-item"><div class="ticker-name">Brent</div><div class="ticker-val">$103.6</div><div class="ticker-chg down">+13%↑</div></div>
+  </div>
+</div>
+
+<!-- ═══ 정치 ═══ -->
+<div class="cat-section politics">
+  <div class="cat-header">
+    <div class="cat-icon">🏛</div>
+    <div class="cat-title">정치 · Politics</div>
+    <div class="cat-count">6건</div>
+  </div>
+  <div class="cards">
+
+    <a class="card" href="https://www.cnn.com/world/live-news/iran-war-us-israel-trump-03-24-26" target="_blank">
+      <div class="card-top"><div class="card-tags"><span class="tag tag-breaking">BREAKING</span><span class="tag tag-global">국제</span></div><span class="arrow">↗</span></div>
+      <div class="card-title">트럼프 "밴스·루비오가 이란과 직접 협상 중" — 휴전 기대감</div>
+      <div class="card-body">이란전 25일차. 밴스 부통령·루비오 국무장관이 이란과 직접 대화 중이며 "주요 합의 도달"했다고 트럼프가 밝혔다. <strong>이란 전력망·에너지 시설 추가 공습을 5일간 유예.</strong></div>
+      <div class="card-source">CNN · 2026.03.24</div>
+    </a>
+
+    <a class="card" href="https://www.aljazeera.com/news/2026/3/23/trump-postpones-military-strikes-on-iranian-power-plants" target="_blank">
+      <div class="card-top"><div class="card-tags"><span class="tag tag-watch">WATCH</span><span class="tag tag-global">국제</span></div><span class="arrow">↗</span></div>
+      <div class="card-title">이란전 25일 — 공습 유예에도 미군 1,000명 추가 파병</div>
+      <div class="card-body">협상 기대와 달리 82공수사단 약 1,000명이 중동에 추가 배치 중. <strong>말과 행동의 괴리에 시장 혼란 지속.</strong> 이란은 페르시아만 봉쇄 가능성을 재차 경고.</div>
+      <div class="card-source">Al Jazeera · 2026.03.23</div>
+    </a>
+
+    <a class="card" href="https://www.democracynow.org/2026/3/24/headlines" target="_blank">
+      <div class="card-top"><div class="card-tags"><span class="tag tag-info">미국</span></div><span class="arrow">↗</span></div>
+      <div class="card-title">트럼프 신임 국토안보부 장관 Mullin 54-45 인준 확정</div>
+      <div class="card-body">전 상원의원 멀린이 크리스티 놈 해임 후 국토안보부 장관에 취임. <strong>이민 단속·강제 추방 확대 정책 가속화 예상.</strong> 민주당 전원 반대표.</div>
+      <div class="card-source">Democracy Now · 2026.03.24</div>
+    </a>
+
+    <a class="card" href="https://www.npr.org/sections/politics/" target="_blank">
+      <div class="card-top"><div class="card-tags"><span class="tag tag-global">국제</span></div><span class="arrow">↗</span></div>
+      <div class="card-title">이스라엘, 레바논 리타니강까지 '안보지대' 설치 선언</div>
+      <div class="card-body">이스라엘 국방장관이 레바논 남부 주민 영구 퇴거 명령과 함께 리타니강까지 안보지대 설치를 공식화. <strong>극우 재무장관은 레바논 남부 합병 주장.</strong></div>
+      <div class="card-source">NPR · 2026.03.24</div>
+    </a>
+
+    <a class="card" href="https://www.khan.co.kr/" target="_blank">
+      <div class="card-top"><div class="card-tags"><span class="tag tag-kr">한국</span></div><span class="arrow">↗</span></div>
+      <div class="card-title">이재명 대통령, 비상경제체제 가동 — 6·3 지선 영향 여야 공방</div>
+      <div class="card-body">오늘부터 범부처 비상경제본부 출범. 여당은 안보 기조 강조, 야당은 경제 피해 부각. <strong>지방선거 전략 재조정 본격화.</strong></div>
+      <div class="card-source">경향신문 · 2026.03.25</div>
+    </a>
+
+    <a class="card" href="https://www.fmprc.gov.cn/mfa_eng/xw/fyrbt/202603/t20260319_11877725.html" target="_blank">
+      <div class="card-top"><div class="card-tags"><span class="tag tag-global">국제</span></div><span class="arrow">↗</span></div>
+      <div class="card-title">중국, 일본 타카이치 총리의 대만 발언에 강력 반발</div>
+      <div class="card-body">중국 외교부가 일본 총리의 대만 관련 발언을 "내정 간섭"으로 규정하고 강력히 항의. <strong>대만해협 긴장이 중동전 속에서도 고조되는 양상.</strong></div>
+      <div class="card-source">중국 외교부 · 2026.03.19</div>
+    </a>
+
+  </div>
+</div>
+<div class="section-divider"></div>
+
+<!-- ═══ 경제 ═══ -->
+<div class="cat-section economy">
+  <div class="cat-header">
+    <div class="cat-icon">💰</div>
+    <div class="cat-title">경제 · Economy</div>
+    <div class="cat-count">6건</div>
+  </div>
+  <div class="cards">
+
+    <a class="card" href="https://www.cnbc.com/2026/03/24/oil-prices-today-wti-brent-middle-east-iran-war.html" target="_blank">
+      <div class="card-top"><div class="card-tags"><span class="tag tag-breaking">ALERT</span><span class="tag tag-global">국제</span></div><span class="arrow">↗</span></div>
+      <div class="card-title">브렌트유 $103 재돌파 — 최고 $119 찍은 후 조정</div>
+      <div class="card-body">휴전 기대로 하락했다가 다시 $103대 복귀. 호르무즈 해협 선박 150척 이상 정체. <strong>에너지 인플레이션이 연준 금리 결정 최대 변수로 부상.</strong></div>
+      <div class="card-source">CNBC · 2026.03.24</div>
+    </a>
+
+    <a class="card" href="https://www.spglobal.com/market-intelligence/en/news-insights/research/2026/03/global-economic-outlook-march-2026" target="_blank">
+      <div class="card-top"><div class="card-tags"><span class="tag tag-watch">WATCH</span><span class="tag tag-global">국제</span></div><span class="arrow">↗</span></div>
+      <div class="card-title">S&P Global "중동전으로 2026 성장 하향·인플레 상향"</div>
+      <div class="card-body">S&P Global이 3월 전망 수정. 전 세계적으로 성장률 하향, 인플레이션 상향 조정. <strong>골드만삭스는 그나마 2.9% 성장 전망으로 컨센서스 상회.</strong></div>
+      <div class="card-source">S&P Global · 2026.03</div>
+    </a>
+
+    <a class="card" href="https://www.atlanticcouncil.org/dispatches/five-trends-to-watch-in-the-global-economy-in-2026/" target="_blank">
+      <div class="card-top"><div class="card-tags"><span class="tag tag-info">글로벌</span></div><span class="arrow">↗</span></div>
+      <div class="card-title">유럽·영국, 금리 인상 가능성 급부상 — 인플레 재점화</div>
+      <div class="card-body">연준·ECB·영란은행 모두 동결. 하지만 에너지 충격에 시장은 영국·유럽 다중 인상을 가격에 반영하기 시작. <strong>2026년 금리 인하 기대 사실상 소멸.</strong></div>
+      <div class="card-source">Atlantic Council · 2026</div>
+    </a>
+
+    <a class="card" href="https://ko.tradingeconomics.com/south-korea/stock-market" target="_blank">
+      <div class="card-top"><div class="card-tags"><span class="tag tag-kr">한국</span></div><span class="arrow">↗</span></div>
+      <div class="card-title">원/달러 1,500원 돌파 후 소폭 안정 — 10년 만에 최고</div>
+      <div class="card-body">중동 분쟁 충격으로 1,500원 돌파 후 협상 기대에 소폭 하락. <strong>원화 강세 전환이 코스피 외국인 매도 압력 완화에 기여.</strong></div>
+      <div class="card-source">Trading Economics · 2026.03.25</div>
+    </a>
+
+    <a class="card" href="https://www.khan.co.kr/" target="_blank">
+      <div class="card-top"><div class="card-tags"><span class="tag tag-kr">한국</span></div><span class="arrow">↗</span></div>
+      <div class="card-title">2026 공시지가 서울 최대 29% 급등 — 역대급 보유세 예고</div>
+      <div class="card-body">오늘부터 공시지가 열람 시작. 서울 주요 지역 최대 29% 상승. <strong>의견 제출은 4월 6일까지.</strong> 보유세 인상으로 부동산 시장 추가 냉각 우려.</div>
+      <div class="card-source">경향신문 · 2026.03.25</div>
+    </a>
+
+    <a class="card" href="https://www.jamesinvestment.com/market-commentary/march-2026/" target="_blank">
+      <div class="card-top"><div class="card-tags"><span class="tag tag-kr">한국</span></div><span class="arrow">↗</span></div>
+      <div class="card-title">청년 실업률 7.7% — 5년 만에 최고, 고용 양극화 심화</div>
+      <div class="card-body">2월 전체 취업자 23.4만 명 증가했지만 15~29세 청년층은 14.6만 명 감소. <strong>중장년 취업은 늘고 청년 취업은 줄어드는 구조적 문제 심화.</strong></div>
+      <div class="card-source">통계청 · 2026.03</div>
+    </a>
+
+  </div>
+</div>
+<div class="section-divider"></div>
+
+<!-- ═══ 주식 ═══ -->
+<div class="cat-section stocks">
+  <div class="cat-header">
+    <div class="cat-icon">📈</div>
+    <div class="cat-title">주식 · Markets</div>
+    <div class="cat-count">6건</div>
+  </div>
+  <div class="cards">
+
+    <a class="card" href="https://finance.yahoo.com/news/live/stock-market-today-dow-sp-500-nasdaq-futures-jump-iran-progress-230359158.html" target="_blank">
+      <div class="card-top"><div class="card-tags"><span class="tag tag-today">TODAY</span><span class="tag tag-global">뉴욕</span></div><span class="arrow">↗</span></div>
+      <div class="card-title">오늘 선물 +0.7% 반등 — S&P 어제 -0.37% 반납</div>
+      <div class="card-body">이란 협상 기대에 선물 일제 상승 출발. 어제는 S&P -0.37%(5,556pt), 나스닥 -0.84%(21,762pt). <strong>오늘 2월 내구재 주문·Cintas·Chewy 실적 발표 예정.</strong></div>
+      <div class="card-source">Yahoo Finance · 2026.03.25</div>
+    </a>
+
+    <a class="card" href="https://ko.tradingeconomics.com/south-korea/stock-market" target="_blank">
+      <div class="card-top"><div class="card-tags"><span class="tag tag-kr">한국</span></div><span class="arrow">↗</span></div>
+      <div class="card-title">코스피 5,781 반등 — 월요일 6.5% 폭락 후 회복 시도</div>
+      <div class="card-body">월요일 5,406pt 폭락 후 개인·기관 매수로 반등. <strong>현대차·기아 엔비디아 자율주행 협력 발표가 기술주 견인.</strong> SK하이닉스도 AI 반도체 공급 확대.</div>
+      <div class="card-source">Trading Economics · 2026.03.25</div>
+    </a>
+
+    <a class="card" href="https://www.cnbc.com/2026/03/21/a-geopolitical-fog-has-enveloped-the-stock-market-three-things-investors-should-do-now.html" target="_blank">
+      <div class="card-top"><div class="card-tags"><span class="tag tag-watch">WATCH</span></div><span class="arrow">↗</span></div>
+      <div class="card-title">CNBC "지정학 안개 속 투자자가 해야 할 3가지"</div>
+      <div class="card-body">① 방어주(에너지·헬스케어) 비중 확대 ② 중동 직접 노출 자산 축소 ③ 현금 비중 일시 확대. <strong>VIX 27 — 여전히 고변동성 구간.</strong></div>
+      <div class="card-source">CNBC · 2026.03.21</div>
+    </a>
+
+    <a class="card" href="https://www.jpmorgan.com/insights/global-research/outlook/market-outlook" target="_blank">
+      <div class="card-top"><div class="card-tags"><span class="tag tag-info">전망</span></div><span class="arrow">↗</span></div>
+      <div class="card-title">JP모건 "글로벌 주식 연간 두 자릿수 상승 여전히 가능"</div>
+      <div class="card-body">단기 중동 충격에도 연간 전망 유지. <strong>선진국·신흥국 모두 두 자릿수 상승 전망.</strong> 단, 에너지 가격 급등 장기화 시 시나리오 수정 불가피.</div>
+      <div class="card-source">JP Morgan · 2026</div>
+    </a>
+
+    <a class="card" href="https://www.kaohooninternational.com/markets/579917" target="_blank">
+      <div class="card-top"><div class="card-tags"><span class="tag tag-global">아시아</span></div><span class="arrow">↗</span></div>
+      <div class="card-title">태국 SET +3.37% 급등 — 이란 협상 기대에 아시아 동반 반등</div>
+      <div class="card-body">태국 증시 1,457pt로 3.37% 급등. 한국·일본·대만도 동반 상승. <strong>중동 긴장 완화 기대에 위험자산 전반 매수세 유입.</strong></div>
+      <div class="card-source">Kaohoon International · 2026.03.25</div>
+    </a>
+
+    <a class="card" href="https://www.blackrock.com/us/individual/insights/blackrock-investment-institute/weekly-commentary" target="_blank">
+      <div class="card-top"><div class="card-tags"><span class="tag tag-info">전략</span></div><span class="arrow">↗</span></div>
+      <div class="card-title">블랙록 "AI 슈퍼사이클 — 기술주 장기 매수 전략 유효"</div>
+      <div class="card-body">AI 관련 CapEx와 실적 성장이 기술주 상승의 구조적 동력. <strong>은행·헬스케어·물류까지 AI 수혜 확산 중.</strong> 단기 변동성은 매수 기회로 활용 권고.</div>
+      <div class="card-source">BlackRock · 2026.03</div>
+    </a>
+
+  </div>
+</div>
+<div class="section-divider"></div>
+
+<!-- ═══ 트렌드 ═══ -->
+<div class="cat-section trends">
+  <div class="cat-header">
+    <div class="cat-icon">🔮</div>
+    <div class="cat-title">트렌드 · Trends</div>
+    <div class="cat-count">5건</div>
+  </div>
+  <div class="cards">
+
+    <a class="card" href="https://techstartups.com/2026/03/24/top-tech-news-today-march-24-2026/" target="_blank">
+      <div class="card-top"><div class="card-tags"><span class="tag tag-breaking">HOT</span><span class="tag tag-global">AI</span></div><span class="arrow">↗</span></div>
+      <div class="card-title">Apple AI 시리, Google Gemini 탑재 — iOS 26.4 출시</div>
+      <div class="card-body">완전 재설계된 AI 시리가 iOS 26.4와 함께 공개. 화면 인식·앱 간 연동·이메일 자동 처리 가능. <strong>Google Gemini + Apple Private Cloud 조합으로 프라이버시 유지.</strong></div>
+      <div class="card-source">Tech Startups · 2026.03.24</div>
+    </a>
+
+    <a class="card" href="https://fortune.com/2026/03/13/elon-musk-morgan-stanley-ai-leap-2026/" target="_blank">
+      <div class="card-top"><div class="card-tags"><span class="tag tag-watch">WATCH</span></div><span class="arrow">↗</span></div>
+      <div class="card-title">모건스탠리 "2026 AI 돌파구 — 대부분 기업 준비 안 됐다"</div>
+      <div class="card-body">AI 에이전트 실험이 본격 배포로 전환 중. 통신 48%, 소매 47% 도입률. <strong>OpenAI 연매출 $250억 돌파, 상장 검토. Anthropic $190억 근접.</strong></div>
+      <div class="card-source">Fortune · 2026.03.13</div>
+    </a>
+
+    <a class="card" href="https://home.treasury.gov/news/press-releases/sb0421" target="_blank">
+      <div class="card-top"><div class="card-tags"><span class="tag tag-info">정책</span></div><span class="arrow">↗</span></div>
+      <div class="card-title">美 재무부, 금융 AI 혁신 시리즈 출범 — 사기 탐지·심사 가속</div>
+      <div class="card-body">FSOC와 재무부 AI혁신실 공동 출범. 금융 사기 탐지·사이버보안·신용 심사에 AI 도입 가속. <strong>금융 AI 규제 프레임워크도 동시 수립 중.</strong></div>
+      <div class="card-source">U.S. Treasury · 2026.03.24</div>
+    </a>
+
+    <a class="card" href="https://www.bloomberg.com/graphics/2026-investment-outlooks/" target="_blank">
+      <div class="card-top"><div class="card-tags"><span class="tag tag-info">경제</span></div><span class="arrow">↗</span></div>
+      <div class="card-title">블룸버그 "달러 약세 + AI 붐 — 2026 투자 핵심 테마"</div>
+      <div class="card-body">달러 인덱스 하락 속 신흥국 자산 매력 부각. AI 인프라 투자 수혜주(전력·냉각·반도체 소재) 주목. <strong>중동 분쟁이 에너지 섹터 재평가 촉발.</strong></div>
+      <div class="card-source">Bloomberg · 2026</div>
+    </a>
+
+    <a class="card" href="https://techstartups.com/2026/03/24/top-tech-news-today-march-24-2026/" target="_blank">
+      <div class="card-top"><div class="card-tags"><span class="tag tag-kr">한국</span></div><span class="arrow">↗</span></div>
+      <div class="card-title">현대차·기아 + 엔비디아 자율주행 협력 / SK하이닉스 AI 가속</div>
+      <div class="card-body">GTC 컨퍼런스에서 현대차·기아가 엔비디아와 자율주행 협력 공식화. <strong>SK하이닉스는 HBM4 AI 반도체 공급 확대에 본격 나서며 엔비디아 핵심 파트너 지위 강화.</strong></div>
+      <div class="card-source">Tech Startups · 한국경제 · 2026.03.24</div>
+    </a>
+
+  </div>
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+  <div class="footer-bar"></div>
+  Wall Street Morning Briefing · 총 23건<br>
+  각 카드를 탭하면 원문 기사로 이동합니다<br>
+  출처: Reuters · AP · CNN · CNBC · Yahoo Finance<br>
+  경향신문 · 한국경제 · Tech Startups · Bloomberg · Fortune
+</div>
+
+</div>
+</body>
+</html>
