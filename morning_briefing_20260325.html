@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>월스트리트 모닝 브리핑 - 2026.03.25</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Noto Sans KR', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: #0a0a0f;
+    color: #e8e8ec;
+    min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .container {
+    max-width: 480px;
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  /* ── HEADER ── */
+  .header {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+    padding: 48px 24px 28px;
+    position: relative;
+    overflow: hidden;
+  }
+  .header::before {
+    content: '';
+    position: absolute;
+    top: -50%; right: -30%;
+    width: 200px; height: 200px;
+    background: radial-gradient(circle, rgba(255,183,77,0.12) 0%, transparent 70%);
+    border-radius: 50%;
+  }
+  .header-label {
+    font-size: 10px; font-weight: 500;
+    letter-spacing: 3px; text-transform: uppercase;
+    color: #ffb74d; margin-bottom: 10px;
+  }
+  .header-title {
+    font-size: 28px; font-weight: 900;
+    line-height: 1.25; margin-bottom: 4px;
+  }
+  .header-date {
+    font-size: 13px; color: #8899aa; font-weight: 300;
+  }
+
+  /* ── MARKET STRIP ── */
+  .market-strip {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+    margin-top: 20px; padding-top: 16px;
+    border-top: 1px solid rgba(255,255,255,0.06);
+  }
+  .market-item { text-align: center; padding: 4px 0; }
+  .market-label {
+    font-size: 9px; color: #556677;
+    letter-spacing: 1px; text-transform: uppercase;
+  }
+  .market-value { font-size: 14px; font-weight: 700; margin-top: 2px; }
+  .market-change { font-size: 10px; margin-top: 1px; }
+  .up { color: #4caf50; }
+  .down { color: #f44336; }
+  .neutral { color: #ffb74d; }
+
+  /* ── SECTION ── */
+  .section { padding: 24px 20px; }
+  .section + .section { border-top: 1px solid rgba(255,255,255,0.03); }
+  .section-header {
+    display: flex; align-items: center;
+    gap: 10px; margin-bottom: 16px;
+  }
+  .section-icon {
+    width: 32px; height: 32px; border-radius: 8px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 16px; flex-shrink: 0;
+  }
+  .section-title {
+    font-size: 12px; font-weight: 700;
+    letter-spacing: 2px; text-transform: uppercase;
+  }
+
+  .politics .section-icon { background: rgba(239,83,80,0.12); }
+  .politics .section-title { color: #ef5350; }
+  .economy .section-icon { background: rgba(66,165,245,0.12); }
+  .economy .section-title { color: #42a5f5; }
+  .stocks .section-icon { background: rgba(76,175,80,0.12); }
+  .stocks .section-title { color: #4caf50; }
+  .trends .section-icon { background: rgba(171,71,188,0.12); }
+  .trends .section-title { color: #ab47bc; }
+
+  /* ── NEWS CARDS (클릭 가능) ── */
+  a.news-card {
+    display: block;
+    background: rgba(255,255,255,0.025);
+    border: 1px solid rgba(255,255,255,0.05);
+    border-radius: 14px;
+    padding: 16px 18px;
+    margin-bottom: 10px;
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.15s ease;
+    position: relative;
+  }
+  a.news-card:active {
+    background: rgba(255,255,255,0.08);
+    transform: scale(0.985);
+  }
+  a.news-card::after {
+    content: '→';
+    position: absolute;
+    right: 16px; top: 16px;
+    font-size: 14px; color: #445566;
+    transition: color 0.15s;
+  }
+  a.news-card:active::after { color: #8899aa; }
+
+  .news-tag {
+    display: inline-block;
+    font-size: 9px; font-weight: 600;
+    letter-spacing: 1px;
+    padding: 2px 7px; border-radius: 4px;
+    margin-bottom: 8px; text-transform: uppercase;
+  }
+  .tag-alert { background: rgba(239,83,80,0.15); color: #ef5350; }
+  .tag-watch { background: rgba(255,183,77,0.15); color: #ffb74d; }
+  .tag-info { background: rgba(66,165,245,0.15); color: #42a5f5; }
+  .tag-kr { background: rgba(171,71,188,0.15); color: #ce93d8; }
+  .tag-today { background: rgba(76,175,80,0.15); color: #4caf50; }
+
+  .news-headline {
+    font-size: 15px; font-weight: 700;
+    line-height: 1.5; margin-bottom: 7px;
+    padding-right: 24px;
+  }
+  .news-body {
+    font-size: 12.5px; line-height: 1.7;
+    color: #8899aa; font-weight: 300;
+  }
+  .news-source {
+    font-size: 10px; color: #445566;
+    margin-top: 8px;
+  }
+
+  /* ── KEY FIGURE ── */
+  .key-figure {
+    display: flex; align-items: baseline; gap: 8px;
+    padding: 12px 16px;
+    background: rgba(255,255,255,0.02);
+    border-radius: 10px; margin-bottom: 10px;
+  }
+  .key-figure-value { font-size: 22px; font-weight: 900; }
+  .key-figure-label { font-size: 11px; color: #667788; line-height: 1.4; }
+
+  /* ── FOOTER ── */
+  .footer {
+    padding: 28px 24px 48px;
+    text-align: center;
+    color: #334455; font-size: 10px; line-height: 1.8;
+  }
+  .footer-line {
+    width: 32px; height: 2px;
+    background: rgba(255,183,77,0.25);
+    margin: 0 auto 10px; border-radius: 1px;
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <!-- ═══ HEADER ═══ -->
+  <div class="header">
+    <div class="header-label">Wall Street Morning Briefing</div>
+    <div class="header-title">월스트리트<br>모닝 브리핑</div>
+    <div class="header-date">2026년 3월 25일 수요일</div>
+    <div class="market-strip">
+      <div class="market-item">
+        <div class="market-label">S&P 500</div>
+        <div class="market-value">5,556</div>
+        <div class="market-change down">-0.37%</div>
+      </div>
+      <div class="market-item">
+        <div class="market-label">Nasdaq</div>
+        <div class="market-value">21,762</div>
+        <div class="market-change down">-0.84%</div>
+      </div>
+      <div class="market-item">
+        <div class="market-label">KOSPI</div>
+        <div class="market-value">5,781</div>
+        <div class="market-change up">+0.31%</div>
+      </div>
+      <div class="market-item">
+        <div class="market-label">Brent</div>
+        <div class="market-value">$103.6</div>
+        <div class="market-change down">100↑</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ 정치 ═══ -->
+  <div class="section politics">
+    <div class="section-header">
+      <div class="section-icon">🏛</div>
+      <div class="section-title">정치 · Politics</div>
+    </div>
+
+    <a class="news-card" href="https://www.cnn.com/world/live-news/iran-war-us-israel-trump-03-24-26" target="_blank">
+      <span class="news-tag tag-alert">BREAKING</span>
+      <div class="news-headline">트럼프 "밴스·루비오가 이란과 협상 중" — 휴전 기대감</div>
+      <div class="news-body">이란전 25일차. 트럼프가 밴스 부통령과 루비오 국무장관이 이란과 대화 중이라고 밝혀 휴전 기대감 확산. 이란 측도 "지속 가능한 제안에 귀 기울일 것"이라고 응답.</div>
+      <div class="news-source">CNN · 2026.03.24</div>
+    </a>
+
+    <a class="news-card" href="https://www.npr.org/2026/03/20/nx-s1-5754550/israel-strikes-tehran-iran-attacks-gulf" target="_blank">
+      <span class="news-tag tag-watch">WATCH</span>
+      <div class="news-headline">트럼프 "이란전 축소 검토" 발언에도 해병대 추가 파병</div>
+      <div class="news-body">82공수사단 약 1,000명 중동 추가 배치 예정. 필리핀은 이란전 여파로 국가비상사태 선포. 말과 행동의 괴리에 시장 혼란 지속.</div>
+      <div class="news-source">NPR · 2026.03.20</div>
+    </a>
+
+    <a class="news-card" href="https://www.khan.co.kr/" target="_blank">
+      <span class="news-tag tag-kr">한국</span>
+      <div class="news-headline">이재명 대통령, 중동전쟁 대응 비상경제체제 가동</div>
+      <div class="news-body">25일부터 범부처 비상경제본부 + 청와대 비상경제상황실 설치. 대통령 주재 비상경제 점검회의가 컨트롤타워 역할.</div>
+      <div class="news-source">경향신문 · 2026.03.25</div>
+    </a>
+  </div>
+
+  <!-- ═══ 경제 ═══ -->
+  <div class="section economy">
+    <div class="section-header">
+      <div class="section-icon">💰</div>
+      <div class="section-title">경제 · Economy</div>
+    </div>
+
+    <a class="news-card" href="https://www.cnbc.com/2026/03/24/oil-prices-today-wti-brent-middle-east-iran-war.html" target="_blank">
+      <span class="news-tag tag-alert">ALERT</span>
+      <div class="news-headline">유가 배럴당 $103 돌파 — 이란전 장기화 우려</div>
+      <div class="news-body">브렌트유가 다시 $100 위로 복귀. 휴전 기대에 하락했다가 협상 불투명으로 재상승. 호르무즈 해협 통과 선박 보험료 급등 지속.</div>
+      <div class="news-source">CNBC · 2026.03.24</div>
+    </a>
+
+    <div class="key-figure">
+      <div class="key-figure-value neutral">₩1,500</div>
+      <div class="key-figure-label">원/달러 환율 — 10년 만에 최고 수준 돌파 후 소폭 안정</div>
+    </div>
+
+    <a class="news-card" href="https://www.khan.co.kr/" target="_blank">
+      <span class="news-tag tag-kr">한국</span>
+      <div class="news-headline">이재명 "부동산 투기 방치하면 나라 망한다"</div>
+      <div class="news-body">대통령이 부동산 투기 근절 의지를 강하게 표명. 전쟁 불확실성 속에서도 국내 부동산 정책 드라이브 지속.</div>
+      <div class="news-source">경향신문 · 2026.03.24</div>
+    </a>
+
+    <a class="news-card" href="https://fortune.com/article/price-of-oil-03-24-2026/" target="_blank">
+      <span class="news-tag tag-watch">WATCH</span>
+      <div class="news-headline">쿠바 전력망 3번째 붕괴 — 미국 석유 봉쇄 여파</div>
+      <div class="news-body">3월 들어 세 번째 전국 정전. 노후 인프라 + 미국의 석유 봉쇄가 겹치며 쿠바 경제 위기 심화.</div>
+      <div class="news-source">Fortune · 2026.03.24</div>
+    </a>
+  </div>
+
+  <!-- ═══ 주식 ═══ -->
+  <div class="section stocks">
+    <div class="section-header">
+      <div class="section-icon">📈</div>
+      <div class="section-title">주식 · Markets</div>
+    </div>
+
+    <a class="news-card" href="https://finance.yahoo.com/news/live/stock-market-today-dow-sp-500-nasdaq-futures-steady-after-relief-rally-on-trumps-hint-of-iran-deescalation-224729252.html" target="_blank">
+      <span class="news-tag tag-info">MARKET</span>
+      <div class="news-headline">뉴욕 증시 하락 — 유가 재상승에 랠리 반납</div>
+      <div class="news-body">S&P 500 -0.37% (5,556pt), 나스닥 -0.84% (21,762pt). 전일 이란 협상 기대 랠리를 반납. 유가 $100 복귀가 투자심리 압박.</div>
+      <div class="news-source">Yahoo Finance · 2026.03.24</div>
+    </a>
+
+    <a class="news-card" href="https://ko.tradingeconomics.com/south-korea/stock-market" target="_blank">
+      <span class="news-tag tag-kr">한국</span>
+      <div class="news-headline">코스피 5,781 반등 마감 — 월요일 6.5% 폭락 만회 시도</div>
+      <div class="news-body">월요일 6.49% 급락(5,406) 후 개인·기관 매수세에 반등. 원화 강세 전환이 외국인 매도 압력 완화에 기여.</div>
+      <div class="news-source">Trading Economics · 2026.03.25</div>
+    </a>
+
+    <a class="news-card" href="https://finance.yahoo.com/news/live/stock-market-today-dow-sp-500-nasdaq-futures-jump-as-wall-street-hopes-for-iran-progress-230359158.html" target="_blank">
+      <span class="news-tag tag-today">TODAY</span>
+      <div class="news-headline">오늘 주목: 선물 +0.7% 상승 출발 + 내구재 주문</div>
+      <div class="news-body">이란 협상 진전 기대에 선물 일제 반등. 오늘 2월 내구재 주문 발표 + Cintas, Paychex, Chewy 실적 발표 예정.</div>
+      <div class="news-source">Yahoo Finance · 2026.03.25</div>
+    </a>
+  </div>
+
+  <!-- ═══ 트렌드 ═══ -->
+  <div class="section trends">
+    <div class="section-header">
+      <div class="section-icon">🔮</div>
+      <div class="section-title">트렌드 · Trends</div>
+    </div>
+
+    <a class="news-card" href="https://techstartups.com/2026/03/24/top-tech-news-today-march-24-2026/" target="_blank">
+      <span class="news-tag tag-info">AI</span>
+      <div class="news-headline">Apple, AI 시리 3월 출시 — Google Gemini 탑재</div>
+      <div class="news-body">iOS 26.4와 함께 완전히 재설계된 AI 시리 공개 예정. 화면 인식, 앱 간 연동 가능. Google Gemini + Apple Private Cloud로 프라이버시 유지.</div>
+      <div class="news-source">Tech Startups · 2026.03.24</div>
+    </a>
+
+    <a class="news-card" href="https://fortune.com/2026/03/13/elon-musk-morgan-stanley-ai-leap-2026/" target="_blank">
+      <span class="news-tag tag-watch">WATCH</span>
+      <div class="news-headline">모건스탠리 "2026년 AI 돌파구 온다 — 대부분 준비 안 돼"</div>
+      <div class="news-body">모건스탠리가 올해 AI 기술의 결정적 도약을 경고. OpenAI 연매출 $250억 돌파, 상장 검토 중. Anthropic도 $190억 근접.</div>
+      <div class="news-source">Fortune · 2026.03.13</div>
+    </a>
+
+    <a class="news-card" href="https://home.treasury.gov/news/press-releases/sb0421" target="_blank">
+      <span class="news-tag tag-info">POLICY</span>
+      <div class="news-headline">美 재무부, 금융 AI 혁신 시리즈 출범</div>
+      <div class="news-body">FSOC와 재무부 AI 혁신실이 공동 출범. 사기 탐지, 사이버보안, 신용 심사 등 핵심 금융 기능에 AI 도입 가속.</div>
+      <div class="news-source">U.S. Treasury · 2026.03.24</div>
+    </a>
+  </div>
+
+  <!-- ═══ FOOTER ═══ -->
+  <div class="footer">
+    <div class="footer-line"></div>
+    Wall Street Morning Briefing<br>
+    AI 기반 자동 수집 · 분류 · 요약<br>
+    각 카드를 탭하면 원문 기사로 이동합니다<br>
+    출처: Reuters, AP, CNN, NPR, CNBC, Yahoo Finance,<br>
+    경향신문, 한국경제, Fortune, Tech Startups
+  </div>
+
+</div>
+</body>
+</html>
