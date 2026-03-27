@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>월스트리트 모닝 브리핑 – 2026년 3월 27일</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Noto Sans KR', sans-serif;
+    background: #0a0a0f;
+    color: #e8e8f0;
+    min-height: 100vh;
+    padding: 0 0 40px;
+  }
+  .wrap { max-width: 480px; margin: 0 auto; }
+
+  /* ── Header ── */
+  .header {
+    background: linear-gradient(135deg, #0d1117 0%, #161b27 100%);
+    padding: 24px 20px 20px;
+    border-bottom: 1px solid #1e2535;
+  }
+  .header-top { display: flex; align-items: center; gap: 10px; margin-bottom: 4px; }
+  .logo-icon { font-size: 22px; }
+  .brand { font-size: 18px; font-weight: 900; letter-spacing: -0.5px; color: #fff; }
+  .brand span { color: #60a5fa; }
+  .date-line { font-size: 12px; color: #64748b; margin-bottom: 16px; }
+
+  /* ── Market Ticker ── */
+  .ticker {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+  }
+  .tick {
+    background: #0f1623;
+    border: 1px solid #1e2535;
+    border-radius: 8px;
+    padding: 8px 6px;
+    text-align: center;
+  }
+  .tick-name { font-size: 9px; color: #64748b; font-weight: 700; letter-spacing: 0.5px; margin-bottom: 3px; }
+  .tick-val { font-size: 13px; font-weight: 700; color: #e8e8f0; margin-bottom: 2px; }
+  .tick-chg { font-size: 10px; font-weight: 500; }
+  .up { color: #4ade80; }
+  .down { color: #f87171; }
+
+  /* ── Category Section ── */
+  .section { margin-top: 20px; padding: 0 12px; }
+  .cat-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 14px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+  }
+  .cat-icon { font-size: 20px; }
+  .cat-name { font-size: 15px; font-weight: 900; letter-spacing: -0.3px; flex: 1; }
+  .cat-badge {
+    font-size: 11px;
+    font-weight: 700;
+    padding: 3px 8px;
+    border-radius: 20px;
+    opacity: 0.9;
+  }
+
+  /* Category colors */
+  .cat-politics .cat-header { background: rgba(239,83,80,0.12); border: 1px solid rgba(239,83,80,0.25); }
+  .cat-politics .cat-name { color: #ef5350; }
+  .cat-politics .cat-badge { background: rgba(239,83,80,0.2); color: #ef9a9a; }
+  .cat-politics .card { border-left: 3px solid #ef5350; }
+
+  .cat-economy .cat-header { background: rgba(66,165,245,0.12); border: 1px solid rgba(66,165,245,0.25); }
+  .cat-economy .cat-name { color: #42a5f5; }
+  .cat-economy .cat-badge { background: rgba(66,165,245,0.2); color: #90caf9; }
+  .cat-economy .card { border-left: 3px solid #42a5f5; }
+
+  .cat-market .cat-header { background: rgba(76,175,80,0.12); border: 1px solid rgba(76,175,80,0.25); }
+  .cat-market .cat-name { color: #4caf50; }
+  .cat-market .cat-badge { background: rgba(76,175,80,0.2); color: #a5d6a7; }
+  .cat-market .card { border-left: 3px solid #4caf50; }
+
+  .cat-trend .cat-header { background: rgba(171,71,188,0.12); border: 1px solid rgba(171,71,188,0.25); }
+  .cat-trend .cat-name { color: #ab47bc; }
+  .cat-trend .cat-badge { background: rgba(171,71,188,0.2); color: #ce93d8; }
+  .cat-trend .card { border-left: 3px solid #ab47bc; }
+
+  /* ── Card ── */
+  .cards { display: flex; flex-direction: column; gap: 8px; }
+  .card {
+    display: block;
+    background: #111827;
+    border-radius: 12px;
+    padding: 14px 14px 12px;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.15s, background 0.15s;
+    position: relative;
+    overflow: hidden;
+  }
+  .card:active { transform: scale(0.98); background: #1a2234; }
+  .card-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 7px;
+  }
+  .tag {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    padding: 2px 7px;
+    border-radius: 4px;
+    background: rgba(255,255,255,0.07);
+    color: #94a3b8;
+    text-transform: uppercase;
+  }
+  .arrow { font-size: 14px; color: #475569; }
+  .card-title {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.4;
+    color: #f1f5f9;
+    margin-bottom: 7px;
+    letter-spacing: -0.2px;
+  }
+  .card-body {
+    font-size: 12px;
+    line-height: 1.65;
+    color: #94a3b8;
+    margin-bottom: 8px;
+  }
+  .card-body strong { color: #cbd5e1; }
+  .card-source {
+    font-size: 10px;
+    color: #475569;
+    font-weight: 500;
+  }
+
+  /* ── Divider ── */
+  .divider {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #1e2535, transparent);
+    margin: 16px 12px 0;
+  }
+
+  /* ── Footer ── */
+  .footer {
+    text-align: center;
+    padding: 24px 20px 0;
+    font-size: 11px;
+    color: #334155;
+    line-height: 1.6;
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- Header -->
+  <div class="header">
+    <div class="header-top">
+      <span class="logo-icon">📰</span>
+      <div class="brand">월스트리트 <span>모닝 브리핑</span></div>
+    </div>
+    <div class="date-line">2026년 3월 27일 금요일 · Wall Street Veteran Analysis</div>
+    <div class="ticker">
+      <div class="tick">
+        <div class="tick-name">S&P 500</div>
+        <div class="tick-val">6,477</div>
+        <div class="tick-chg down">▼ 1.74%</div>
+      </div>
+      <div class="tick">
+        <div class="tick-name">나스닥</div>
+        <div class="tick-val">21,408</div>
+        <div class="tick-chg down">▼ 2.38%</div>
+      </div>
+      <div class="tick">
+        <div class="tick-name">코스피</div>
+        <div class="tick-val">5,275</div>
+        <div class="tick-chg down">▼ 3.40%</div>
+      </div>
+      <div class="tick">
+        <div class="tick-name">브렌트유</div>
+        <div class="tick-val">$92</div>
+        <div class="tick-chg down">▲ 연초比 +50%</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ════ 정치 ════ -->
+  <div class="section cat-politics">
+    <div class="cat-header">
+      <span class="cat-icon">🏛</span>
+      <span class="cat-name">정치</span>
+      <span class="cat-badge">6 STORIES</span>
+    </div>
+    <div class="cards">
+
+      <a class="card" href="https://www.foxnews.com/world/nato-scrambles-jets-russia-fires-nearly-400-drones-toward-ukraine-signaling-new-spring-offensive" target="_blank">
+        <div class="card-top"><span class="tag">속보</span><span class="arrow">↗</span></div>
+        <div class="card-title">러시아, 드론 400대 우크라이나 포격…NATO 전투기 긴급 출격</div>
+        <div class="card-body">러시아가 하룻밤 사이 <strong>드론 약 400대와 수십 기의 미사일</strong>을 우크라이나 전역에 발사했다. 폴란드·루마니아 NATO군이 전투기를 긴급 출격시켰으며, 일부 타격은 동맹국 영공에 근접한 것으로 확인됐다. 전문가들은 봄 공세 본격화 신호로 분석하고 있다.</div>
+        <div class="card-source">Fox News · 2026.03.27</div>
+      </a>
+
+      <a class="card" href="https://www.foxnews.com/politics/trump-touts-significant-iran-present-linked-strait-hormuz-deal-talks-heat-up" target="_blank">
+        <div class="card-top"><span class="tag">외교</span><span class="arrow">↗</span></div>
+        <div class="card-title">트럼프 "이란이 호르무즈 관련 선물"…핵협상 급물살</div>
+        <div class="card-body">트럼프 대통령이 이란으로부터 <strong>호르무즈 해협 관련 '중요한 선물'</strong>을 받았다고 밝혔다. 이란이 핵합의 협상 테이블로 복귀할 용의를 내비쳤고, 트럼프는 즉각 군사 공격 유예를 선언했다. 협상 타결 시 원유 공급 정상화 기대감이 커지고 있다.</div>
+        <div class="card-source">Fox News · 2026.03.27</div>
+      </a>
+
+      <a class="card" href="https://www.theguardian.com/world/live/2026/mar/25/denmark-election-results-mette-frederiksen-europe-latest-news-updates" target="_blank">
+        <div class="card-top"><span class="tag">선거</span><span class="arrow">↗</span></div>
+        <div class="card-title">덴마크 총선, 프레데릭센 1위…연정 구성 협상 돌입</div>
+        <div class="card-body">덴마크 의회 선거에서 메테 프레데릭센 총리의 사민당이 1위를 차지했다. 그러나 과반(90석)에 못 미치는 <strong>84석</strong>을 확보해 다당 연립정부 구성 협상이 불가피해졌다. 유럽 좌파 진영이 결과에 주목하고 있다.</div>
+        <div class="card-source">The Guardian · 2026.03.25</div>
+      </a>
+
+      <a class="card" href="https://www.nytimes.com/2026/03/24/us/politics/florida-special-election-emily-gregory.html" target="_blank">
+        <div class="card-top"><span class="tag">미국정치</span><span class="arrow">↗</span></div>
+        <div class="card-title">마러라고 코앞 플로리다 보선서 민주당 깜짝 승리</div>
+        <div class="card-body">팜비치 지역구 보궐선거에서 민주당 에밀리 그레고리가 공화당 텃밭을 뒤집었다. <strong>트럼프 마러라고 별장이 위치한 지역구</strong>에서의 민주당 승리로 중간선거를 앞두고 정치 지형 변화 조짐이 감지된다. 민주당은 "심판론이 시작됐다"고 평가했다.</div>
+        <div class="card-source">New York Times · 2026.03.24</div>
+      </a>
+
+      <a class="card" href="https://www.foxnews.com/politics/reporters-notebook-gop-eyes-dhs-deal-funding-ice-probes-not-removals-shutdown-drags" target="_blank">
+        <div class="card-top"><span class="tag">셧다운</span><span class="arrow">↗</span></div>
+        <div class="card-title">미 정부 셧다운 장기화…공화당, ICE 수사예산만 합의 모색</div>
+        <div class="card-body">미국 부분 정부 셧다운이 장기화되는 가운데 공화당이 <strong>ICE 수사예산은 포함하되 강제추방 예산은 제외</strong>하는 절충안을 모색 중이다. DHS 운영 예산 처리가 핵심 쟁점으로, 민주당과의 협상은 교착 상태에 빠져 있다.</div>
+        <div class="card-source">Fox News · 2026.03.27</div>
+      </a>
+
+      <a class="card" href="https://www.nytimes.com/2026/03/25/technology/social-media-trial-verdict.html" target="_blank">
+        <div class="card-top"><span class="tag">판결</span><span class="arrow">↗</span></div>
+        <div class="card-title">소셜미디어 중독 소송…법원 Meta·YouTube 과실 인정</div>
+        <div class="card-body">미국 법원이 소셜미디어 중독 집단소송에서 <strong>Meta와 YouTube의 과실을 인정, 300만 달러 손해배상</strong>을 명령했다. 이번 판결은 빅테크 플랫폼의 미성년자 보호 의무에 관한 선례로, 향후 수십 건의 유사 소송에 영향을 미칠 전망이다.</div>
+        <div class="card-source">New York Times · 2026.03.25</div>
+      </a>
+
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- ════ 경제 ════ -->
+  <div class="section cat-economy">
+    <div class="cat-header">
+      <span class="cat-icon">💰</span>
+      <span class="cat-name">경제</span>
+      <span class="cat-badge">6 STORIES</span>
+    </div>
+    <div class="cards">
+
+      <a class="card" href="https://www.weforum.org/stories/2026/03/us-trade-deficit-international-trade-stories-march-2026/" target="_blank">
+        <div class="card-top"><span class="tag">에너지</span><span class="arrow">↗</span></div>
+        <div class="card-title">브렌트유 $92 돌파…연초 대비 50% 폭등</div>
+        <div class="card-body">이란-미국 갈등으로 호르무즈 해협 통과 물량이 급감하면서 브렌트유가 <strong>배럴당 92달러를 돌파</strong>, 연초 대비 50% 폭등했다. WEF는 에너지 가격 급등이 전 세계 물류·식품 공급망에 연쇄 충격을 줄 것이라 경고했다.</div>
+        <div class="card-source">World Economic Forum · 2026.03.27</div>
+      </a>
+
+      <a class="card" href="https://www.weforum.org/stories/2026/03/us-trade-deficit-international-trade-stories-march-2026/" target="_blank">
+        <div class="card-top"><span class="tag">무역적자</span><span class="arrow">↗</span></div>
+        <div class="card-title">미국 무역적자 $703억 사상 최대…관세 역효과 심각</div>
+        <div class="card-body">12월 미국 상품·서비스 무역적자가 전월 대비 <strong>32.6% 급증한 703억 달러</strong>로 집계됐다. 고율 관세에도 수입은 오히려 늘고 수출은 줄었으며, 관세 부과 전 선제 수입 급증이 주요 원인으로 지목됐다.</div>
+        <div class="card-source">WEF / Census Bureau · 2026.03.27</div>
+      </a>
+
+      <a class="card" href="https://www.wto.org/english/news_e/news26_e/stat_19mar26_329_e.htm" target="_blank">
+        <div class="card-top"><span class="tag">무역전망</span><span class="arrow">↗</span></div>
+        <div class="card-title">WTO "2026년 세계 무역 성장 1.9%로 급감 전망"</div>
+        <div class="card-body">WTO가 2026년 글로벌 상품 교역 성장률을 <strong>1.9%로 대폭 하향</strong>했다. 2025년 4.6%에서 절반 이하로 떨어지는 것으로, 중동 분쟁 장기화와 관세 정책이 핵심 원인이다. 세계 경기침체 진입 가능성에 대한 우려가 커지고 있다.</div>
+        <div class="card-source">WTO · 2026.03.19</div>
+      </a>
+
+      <a class="card" href="https://en.wikipedia.org/wiki/Economic_impact_of_the_2026_Iran_war" target="_blank">
+        <div class="card-top"><span class="tag">이란전쟁</span><span class="arrow">↗</span></div>
+        <div class="card-title">이란 전쟁 경제 충격…스태그플레이션 공포 확산</div>
+        <div class="card-body">중동 전쟁이 에너지·물류 위기로 번지면서 <strong>고물가+경기침체 동반 스태그플레이션</strong> 우려가 글로벌 금융시장을 짓누르고 있다. 호르무즈 해협 물동량 급감으로 LNG, 원유, 식량 공급망이 복합 충격을 받고 있다.</div>
+        <div class="card-source">CNN Business · 2026.03.05</div>
+      </a>
+
+      <a class="card" href="https://ko.tradingeconomics.com/south-korea/stock-market" target="_blank">
+        <div class="card-top"><span class="tag">환율</span><span class="arrow">↗</span></div>
+        <div class="card-title">원달러 환율 1508원대…고환율 장기화 우려</div>
+        <div class="card-body">원·달러 환율이 <strong>1508.6원</strong>으로 전 거래일 대비 추가 상승했다. 중동 불안과 글로벌 달러 강세가 맞물리며 원화 약세가 이어지고, 수입물가 상승으로 국내 인플레이션 압력이 가중될 전망이다.</div>
+        <div class="card-source">한국거래소 · 2026.03.27</div>
+      </a>
+
+      <a class="card" href="https://www.iea.org/reports/oil-market-report-march-2026" target="_blank">
+        <div class="card-top"><span class="tag">IEA</span><span class="arrow">↗</span></div>
+        <div class="card-title">IEA "중동 충돌로 원유 공급 차질…에너지 안보 비상"</div>
+        <div class="card-body">국제에너지기구(IEA)가 3월 보고서에서 중동 전쟁으로 인한 <strong>원유 생산 차질과 해상 운송 혼란</strong>을 긴급 경고했다. 일부 중동 국가의 생산 설비가 피해를 입었으며, 글로벌 전략비축유 방출 여부가 논의 중이다.</div>
+        <div class="card-source">IEA · 2026.03.2026</div>
+      </a>
+
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- ════ 주식 ════ -->
+  <div class="section cat-market">
+    <div class="cat-header">
+      <span class="cat-icon">📈</span>
+      <span class="cat-name">주식</span>
+      <span class="cat-badge">6 STORIES</span>
+    </div>
+    <div class="cards">
+
+      <a class="card" href="https://sg.finance.yahoo.com/news/stock-market-today-dow-sp-500-nasdaq-sink-as-tech-slides-wall-street-weighs-prospects-for-iran-truce-192802148.html" target="_blank">
+        <div class="card-top"><span class="tag">시장</span><span class="arrow">↗</span></div>
+        <div class="card-title">S&P500 -1.74%, 나스닥 조정권…유가 급등에 월가 패닉</div>
+        <div class="card-body">전일 뉴욕 증시가 급락해 S&P500은 <strong>6,477포인트(-1.74%)</strong>, 나스닥은 21,408포인트(-2.38%)로 마감했다. 나스닥은 고점 대비 10% 이상 하락하며 기술적 조정권에 진입했으며, 유가 급등과 스태그플레이션 공포가 주요 원인이다.</div>
+        <div class="card-source">Yahoo Finance · 2026.03.26</div>
+      </a>
+
+      <a class="card" href="https://www.newsis.com/view/NISX20260327_0003566473" target="_blank">
+        <div class="card-top"><span class="tag">코스피</span><span class="arrow">↗</span></div>
+        <div class="card-title">코스피 장초반 -3.4% 급락…5274선까지 밀려</div>
+        <div class="card-body">코스피가 27일 장 초반 <strong>전일 대비 3.4% 하락한 5,274포인트</strong>까지 급락했다. 중동 불안, 뉴욕 증시 폭락, 구글 '터보퀀트' 충격이 겹친 삼중고가 원인으로 분석된다. 코스닥도 1.5% 하락 출발했다.</div>
+        <div class="card-source">뉴시스 · 2026.03.27</div>
+      </a>
+
+      <a class="card" href="https://ca.finance.yahoo.com/news/tech-stocks-today-meta-google-face-legal-reckoning-openai-narrows-its-focus-144220284.html" target="_blank">
+        <div class="card-top"><span class="tag">빅테크</span><span class="arrow">↗</span></div>
+        <div class="card-title">Meta -7.9% 폭락…소셜미디어 유죄 판결 직격탄</div>
+        <div class="card-body">소셜미디어 중독 배상 판결 직후 <strong>Meta 주가가 하루 7.9% 폭락</strong>했다. Alphabet(Google)도 3% 하락하며 빅테크 전반이 동반 매도 압력을 받았다. 향후 유사 소송이 줄지을 것으로 예상돼 섹터 전반의 법적 리스크가 부각됐다.</div>
+        <div class="card-source">Yahoo Finance · 2026.03.26</div>
+      </a>
+
+      <a class="card" href="https://sg.finance.yahoo.com/news/stock-market-today-dow-sp-500-nasdaq-sink-as-tech-slides-wall-street-weighs-prospects-for-iran-truce-192802148.html" target="_blank">
+        <div class="card-top"><span class="tag">반도체</span><span class="arrow">↗</span></div>
+        <div class="card-title">반도체 섹터 폭락…AMD -7.5%, Micron -6.9%, 엔비디아 -4.2%</div>
+        <div class="card-body">구글의 메모리 절감 AI 도구 공개 소식에 반도체주가 일제히 급락했다. <strong>AMD -7.5%, Micron -6.9%, 엔비디아 -4.2%</strong>를 기록했으며, 필라델피아 반도체 지수(SOX)가 5% 이상 빠졌다. 국내 삼성전자·SK하이닉스도 동반 하락 압력을 받고 있다.</div>
+        <div class="card-source">Yahoo Finance · 2026.03.26</div>
+      </a>
+
+      <a class="card" href="https://finance.yahoo.com/news/live/stock-market-today-dow-sp-500-nasdaq-futures-rise-as-trump-delays-military-action-against-iranian-infrastructure-224556863.html" target="_blank">
+        <div class="card-top"><span class="tag">선물</span><span class="arrow">↗</span></div>
+        <div class="card-title">트럼프 이란 공습 유예…미 선물 반등 출발</div>
+        <div class="card-body">트럼프 대통령이 이란 에너지 인프라 타격을 일시 유예한다고 발표한 뒤 <strong>미국 선물 지수가 일제히 반등</strong>해 나스닥 선물이 1% 이상 올랐다. 이란과의 외교 협상 기대감이 시장 심리를 반전시켰으나 불확실성은 여전하다.</div>
+        <div class="card-source">Yahoo Finance · 2026.03.27</div>
+      </a>
+
+      <a class="card" href="https://finance.yahoo.com/news/live/tech-stocks-today-microsoft-shakes-up-ai-leadership-nvidias-jensen-huang-kicks-off-gtc-event-144220414.html" target="_blank">
+        <div class="card-top"><span class="tag">구글</span><span class="arrow">↗</span></div>
+        <div class="card-title">구글 '터보퀀트' AI 도구 공개…메모리칩 섹터 패닉</div>
+        <div class="card-body">구글이 AI 추론의 <strong>메모리 사용량을 획기적으로 줄이는 '터보퀀트' 기술</strong>을 공개하자 HBM 메모리 수요 감소 우려로 반도체·메모리 섹터가 일제히 급락했다. 삼성전자·SK하이닉스 등 국내 메모리 기업도 직접 타격권에 들었다.</div>
+        <div class="card-source">Yahoo Finance · 2026.03.27</div>
+      </a>
+
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- ════ 트렌드 ════ -->
+  <div class="section cat-trend">
+    <div class="cat-header">
+      <span class="cat-icon">🔮</span>
+      <span class="cat-name">트렌드</span>
+      <span class="cat-badge">5 STORIES</span>
+    </div>
+    <div class="cards">
+
+      <a class="card" href="https://www.nbcnews.com/tech/tech-news/openai-shuttering-sora-video-generating-service-rcna264989" target="_blank">
+        <div class="card-top"><span class="tag">AI</span><span class="arrow">↗</span></div>
+        <div class="card-title">OpenAI, AI 영상 앱 '소라' 전격 폐쇄</div>
+        <div class="card-body">OpenAI가 AI 영상 생성 서비스 '소라(Sora)'를 돌연 종료했다. <strong>기업가치 8,400억 달러 달성 및 IPO 준비</strong>를 앞두고 핵심 사업 집중을 위해 비핵심 서비스를 정리하는 전략으로 풀이된다. 한때 화제였던 소라의 폐쇄는 AI 생성 영상 시장에 큰 파장을 일으키고 있다.</div>
+        <div class="card-source">NBC News · 2026.03.26</div>
+      </a>
+
+      <a class="card" href="https://ca.finance.yahoo.com/news/tech-stocks-today-meta-google-face-legal-reckoning-openai-narrows-its-focus-144220284.html" target="_blank">
+        <div class="card-top"><span class="tag">IPO</span><span class="arrow">↗</span></div>
+        <div class="card-title">Anthropic, 4분기 IPO 검토…OpenAI와 상장 경쟁</div>
+        <div class="card-body">Claude AI를 개발한 Anthropic이 <strong>올해 4분기 IPO를 검토 중</strong>이라는 보도가 나왔다. OpenAI도 올해 상장을 추진 중이어서 AI 빅2의 주식시장 데뷔 경쟁이 주목된다. 양사 모두 연간 수백억 달러의 투자를 유치하며 기업가치를 끌어올리고 있다.</div>
+        <div class="card-source">Yahoo Finance · 2026.03.26</div>
+      </a>
+
+      <a class="card" href="https://finance.yahoo.com/news/live/tech-stocks-today-microsoft-shakes-up-ai-leadership-nvidias-jensen-huang-kicks-off-gtc-event-144220414.html" target="_blank">
+        <div class="card-top"><span class="tag">Apple</span><span class="arrow">↗</span></div>
+        <div class="card-title">Apple, Siri에 타사 AI 연동 개방…AI 생태계 확장</div>
+        <div class="card-body">애플이 Siri에 <strong>ChatGPT·Gemini 등 외부 AI 서비스 연동을 허용</strong>하는 방향으로 전략을 선회했다. 자체 AI 개발 속도에 한계를 인정하고 개방형 생태계로 돌아서는 것으로, AI 엔지니어 영입 경쟁에서 밀리는 점도 배경으로 지목된다.</div>
+        <div class="card-source">Yahoo Finance · 2026.03.27</div>
+      </a>
+
+      <a class="card" href="https://ca.finance.yahoo.com/news/tech-stocks-today-meta-google-face-legal-reckoning-openai-narrows-its-focus-144220284.html" target="_blank">
+        <div class="card-top"><span class="tag">규제</span><span class="arrow">↗</span></div>
+        <div class="card-title">OpenAI, AI 성인 챗봇 '어덜트 모드' 무기한 보류</div>
+        <div class="card-body">OpenAI가 계획 중이던 성인용 AI 챗봇 서비스를 <strong>직원·투자자 반발로 무기한 연기</strong>했다. 미성년자 보호 우려와 AI 의존도 조장 리스크가 핵심 반대 이유였다. 이번 결정은 AI 서비스 윤리 기준 논쟁에 새 불씨를 당겼다.</div>
+        <div class="card-source">Yahoo Finance · 2026.03.26</div>
+      </a>
+
+      <a class="card" href="https://www.nytimes.com/2026/03/25/technology/social-media-trial-verdict.html" target="_blank">
+        <div class="card-top"><span class="tag">법정</span><span class="arrow">↗</span></div>
+        <div class="card-title">소셜미디어 중독 배상 판결…빅테크 플랫폼 책임 시대 개막</div>
+        <div class="card-body">Meta·YouTube의 소셜미디어 중독 유죄 판결로 <strong>플랫폼 기업의 콘텐츠 중독 설계에 대한 법적 책임</strong>이 처음으로 인정됐다. 미성년자 대상 알고리즘 설계를 둘러싼 수십 건의 후속 소송이 예고되며 전 세계 규제 강화 논의가 가속될 전망이다.</div>
+        <div class="card-source">New York Times · 2026.03.25</div>
+      </a>
+
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    각 카드를 탭하면 원문 기사로 이동합니다<br>
+    Wall Street Morning Briefing · 2026.03.27
+  </div>
+
+</div>
+</body>
+</html>
