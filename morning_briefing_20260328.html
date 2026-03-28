@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>월스트리트 모닝 브리핑 - 2026년 3월 28일</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Noto Sans KR', sans-serif;
+    background: #0a0a0f;
+    color: #e8e8f0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    padding: 0 0 40px 0;
+  }
+
+  .container {
+    width: 100%;
+    max-width: 480px;
+    background: #0d0d15;
+  }
+
+  /* HEADER */
+  .header {
+    background: linear-gradient(135deg, #0d0d15 0%, #1a1a2e 100%);
+    padding: 24px 20px 16px;
+    border-bottom: 1px solid #1e1e30;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+
+  .header-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 4px;
+  }
+
+  .brand-dot {
+    width: 8px;
+    height: 8px;
+    background: #ffd700;
+    border-radius: 50%;
+    animation: pulse 2s infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.4; }
+  }
+
+  .header h1 {
+    font-size: 18px;
+    font-weight: 900;
+    color: #ffd700;
+    letter-spacing: -0.5px;
+  }
+
+  .header-date {
+    font-size: 12px;
+    color: #7070a0;
+    margin-bottom: 16px;
+    padding-left: 18px;
+  }
+
+  /* MARKET TICKERS */
+  .tickers {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+  }
+
+  .ticker {
+    background: #12121e;
+    border: 1px solid #1e1e35;
+    border-radius: 10px;
+    padding: 8px 6px;
+    text-align: center;
+  }
+
+  .ticker-name {
+    font-size: 9px;
+    color: #6060a0;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+    margin-bottom: 3px;
+  }
+
+  .ticker-value {
+    font-size: 12px;
+    font-weight: 700;
+    color: #e8e8f0;
+    margin-bottom: 2px;
+  }
+
+  .ticker-change {
+    font-size: 10px;
+    font-weight: 600;
+    border-radius: 4px;
+    padding: 1px 4px;
+    display: inline-block;
+  }
+
+  .up { color: #4caf50; background: rgba(76, 175, 80, 0.1); }
+  .down { color: #ef5350; background: rgba(239, 83, 80, 0.1); }
+
+  /* CATEGORY SECTIONS */
+  .section { margin: 20px 0 0; }
+
+  .cat-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 20px 12px;
+  }
+
+  .cat-emoji { font-size: 20px; }
+
+  .cat-title {
+    font-size: 15px;
+    font-weight: 700;
+    color: #e8e8f0;
+  }
+
+  .cat-badge {
+    margin-left: auto;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 2px 9px;
+    border-radius: 20px;
+    color: #0a0a0f;
+  }
+
+  .cat-line {
+    height: 2px;
+    margin: 0 20px 16px;
+    border-radius: 2px;
+    opacity: 0.8;
+  }
+
+  /* CARDS */
+  .cards-wrap { padding: 0 12px; display: flex; flex-direction: column; gap: 10px; }
+
+  a.card {
+    display: block;
+    background: #12121e;
+    border: 1px solid #1e1e30;
+    border-radius: 14px;
+    padding: 14px 14px 12px;
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.2s ease;
+    border-left: 3px solid transparent;
+  }
+
+  a.card:hover, a.card:active {
+    background: #181828;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+  }
+
+  .card-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 8px;
+  }
+
+  .tag {
+    font-size: 10px;
+    font-weight: 700;
+    padding: 2px 8px;
+    border-radius: 20px;
+    letter-spacing: 0.3px;
+  }
+
+  .arrow {
+    font-size: 14px;
+    opacity: 0.5;
+    transition: opacity 0.2s;
+  }
+
+  a.card:hover .arrow { opacity: 1; }
+
+  .card-title {
+    font-size: 14px;
+    font-weight: 700;
+    color: #e8e8f0;
+    line-height: 1.4;
+    margin-bottom: 7px;
+    letter-spacing: -0.3px;
+  }
+
+  .card-body {
+    font-size: 12px;
+    color: #9090b8;
+    line-height: 1.6;
+    margin-bottom: 8px;
+  }
+
+  .card-body strong {
+    color: #c8c8e8;
+    font-weight: 600;
+  }
+
+  .card-source {
+    font-size: 10px;
+    color: #50507a;
+    font-weight: 500;
+  }
+
+  /* CATEGORY COLORS */
+  /* 정치 = red #ef5350 */
+  .section-politics .cat-badge { background: #ef5350; }
+  .section-politics .cat-line { background: #ef5350; }
+  .section-politics .tag { background: rgba(239,83,80,0.15); color: #ef5350; }
+  .section-politics a.card { border-left-color: #ef5350; }
+
+  /* 경제 = blue #42a5f5 */
+  .section-economy .cat-badge { background: #42a5f5; }
+  .section-economy .cat-line { background: #42a5f5; }
+  .section-economy .tag { background: rgba(66,165,245,0.15); color: #42a5f5; }
+  .section-economy a.card { border-left-color: #42a5f5; }
+
+  /* 주식 = green #4caf50 */
+  .section-markets .cat-badge { background: #4caf50; }
+  .section-markets .cat-line { background: #4caf50; }
+  .section-markets .tag { background: rgba(76,175,80,0.15); color: #4caf50; }
+  .section-markets a.card { border-left-color: #4caf50; }
+
+  /* 트렌드 = purple #ab47bc */
+  .section-trends .cat-badge { background: #ab47bc; }
+  .section-trends .cat-line { background: #ab47bc; }
+  .section-trends .tag { background: rgba(171,71,188,0.15); color: #ab47bc; }
+  .section-trends a.card { border-left-color: #ab47bc; }
+
+  /* DIVIDER */
+  .divider {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #1e1e35, transparent);
+    margin: 24px 20px 0;
+  }
+
+  /* FOOTER */
+  .footer {
+    text-align: center;
+    padding: 24px 20px;
+    font-size: 11px;
+    color: #40405a;
+    border-top: 1px solid #1e1e30;
+    margin-top: 28px;
+  }
+
+  .footer-hint { margin-bottom: 6px; }
+  .footer-logo { color: #ffd700; font-weight: 700; }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <!-- HEADER -->
+  <div class="header">
+    <div class="header-brand">
+      <div class="brand-dot"></div>
+      <h1>월스트리트 모닝 브리핑</h1>
+    </div>
+    <div class="header-date">2026년 3월 28일 토요일 · Wall Street Morning Briefing</div>
+
+    <div class="tickers">
+      <div class="ticker">
+        <div class="ticker-name">S&P 500</div>
+        <div class="ticker-value">6,368</div>
+        <div class="ticker-change down">▼ 1.67%</div>
+      </div>
+      <div class="ticker">
+        <div class="ticker-name">나스닥</div>
+        <div class="ticker-value">20,948</div>
+        <div class="ticker-change down">▼ 2.15%</div>
+      </div>
+      <div class="ticker">
+        <div class="ticker-name">코스피</div>
+        <div class="ticker-value">5,642</div>
+        <div class="ticker-change up">▲ 1.59%</div>
+      </div>
+      <div class="ticker">
+        <div class="ticker-name">브렌트유</div>
+        <div class="ticker-value">$111.7</div>
+        <div class="ticker-change up">▲ 4.22%</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== 정치 ===== -->
+  <div class="section section-politics">
+    <div class="cat-header">
+      <span class="cat-emoji">🏛</span>
+      <span class="cat-title">정치</span>
+      <span class="cat-badge">7</span>
+    </div>
+    <div class="cat-line"></div>
+
+    <div class="cards-wrap">
+
+      <a class="card" href="https://www.bbc.com/news/articles/cvgl4yk7vgpo" target="_blank">
+        <div class="card-top">
+          <span class="tag">🚨 사이버</span>
+          <span class="arrow">↗</span>
+        </div>
+        <div class="card-title">이란 해커, FBI 국장 이메일 해킹</div>
+        <div class="card-body">이란 지원 해커 그룹이 캐시 파텔 FBI 국장의 개인 이메일 계정을 침입했다. <strong>미-이란 군사 충돌이 사이버 공간으로 확전</strong>되며 긴장감이 고조되고 있다.</div>
+        <div class="card-source">BBC · 2026.03.28</div>
+      </a>
+
+      <a class="card" href="https://www.theguardian.com/world/2026/mar/27/how-trump-bombed-us-into-worse-position-iran-strategic-failure" target="_blank">
+        <div class="card-top">
+          <span class="tag">분석</span>
+          <span class="arrow">↗</span>
+        </div>
+        <div class="card-title">트럼프의 이란 폭격, 오히려 역효과</div>
+        <div class="card-body">미국의 이란 군사 공격이 전략적 실패로 평가받고 있다. <strong>호르무즈 해협 재개를 위해 협상 테이블에 먼저 나앉은 것은 미국</strong>이라는 분석이 나왔다.</div>
+        <div class="card-source">The Guardian · 2026.03.27</div>
+      </a>
+
+      <a class="card" href="https://www.theguardian.com/world/2026/mar/26/putin-asks-oligarchs-to-donate-to-russias-dwindling-defence-budget" target="_blank">
+        <div class="card-top">
+          <span class="tag">러시아</span>
+          <span class="arrow">↗</span>
+        </div>
+        <div class="card-title">푸틴, 올리가르히에 국방비 헌금 요청</div>
+        <div class="card-body">블라디미르 푸틴 러시아 대통령이 국방 예산 감소를 이유로 올리가르히들에게 기부를 요청했다. <strong>러시아의 군사 재정이 심각한 압박을 받고 있다는 신호</strong>로 해석된다.</div>
+        <div class="card-source">The Guardian · 2026.03.26</div>
+      </a>
+
+      <a class="card" href="https://www.theguardian.com/us-news/2026/mar/27/us-senate-passes-funding-package-for-homeland-security-excludes-ice" target="_blank">
+        <div class="card-top">
+          <span class="tag">미국 정치</span>
+          <span class="arrow">↗</span>
+        </div>
+        <div class="card-title">공화당 하원, DHS 예산안 또 부결</div>
+        <div class="card-body">미 하원 공화당이 상원을 통과한 국토안보부 예산안을 부결시켰다. <strong>ICE(이민국) 관련 조항을 둘러싼 양원 갈등</strong>이 지속되고 있다.</div>
+        <div class="card-source">The Guardian · 2026.03.27</div>
+      </a>
+
+      <a class="card" href="https://www.nytimes.com/2026/03/27/us/no-kings-protests-cities.html" target="_blank">
+        <div class="card-top">
+          <span class="tag">시위</span>
+          <span class="arrow">↗</span>
+        </div>
+        <div class="card-title">'왕은 없다' 반트럼프 시위 전국 확산</div>
+        <div class="card-body">미국 주요 도시에서 'No Kings' 반정부 시위가 동시다발적으로 열리고 있다. <strong>트럼프 행정부 출범 이후 최대 규모</strong>의 거리 시위로 평가된다.</div>
+        <div class="card-source">The New York Times · 2026.03.27</div>
+      </a>
+
+      <a class="card" href="https://www.nytimes.com/2026/03/26/us/politics/trump-signature-us-dollars.html" target="_blank">
+        <div class="card-top">
+          <span class="tag">속보</span>
+          <span class="arrow">↗</span>
+        </div>
+        <div class="card-title">트럼프 서명, 미국 달러 지폐에 새긴다</div>
+        <div class="card-body">트럼프 대통령이 재임 중 미국 달러 화폐에 자신의 서명을 넣게 된다. <strong>현직 대통령의 서명이 통화에 등장하는 것은 미국 역사상 전례 없는 일</strong>이다.</div>
+        <div class="card-source">The New York Times · 2026.03.26</div>
+      </a>
+
+      <a class="card" href="https://www.cnbc.com/2026/03/25/south-korea-iran-oil-shock-middle-east-conflict.html" target="_blank">
+        <div class="card-top">
+          <span class="tag">한국</span>
+          <span class="arrow">↗</span>
+        </div>
+        <div class="card-title">韓 총리 "중동 위기 최악의 시나리오"</div>
+        <div class="card-body">김민석 국무총리가 중동 에너지 위기에 대해 긴급 대책을 발표했다. <strong>한국은 원유의 70%, LNG의 20%를 중동에서 수입</strong>하고 있어 충격이 상당하다.</div>
+        <div class="card-source">CNBC · 2026.03.25</div>
+      </a>
+
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- ===== 경제 ===== -->
+  <div class="section section-economy">
+    <div class="cat-header">
+      <span class="cat-emoji">💰</span>
+      <span class="cat-title">경제</span>
+      <span class="cat-badge">6</span>
+    </div>
+    <div class="cat-line"></div>
+
+    <div class="cards-wrap">
+
+      <a class="card" href="https://www.cnbc.com/2026/03/27/markets-see-the-feds-next-move-as-a-potential-hike-as-oil-prices-inflation-fears-rise.html" target="_blank">
+        <div class="card-top">
+          <span class="tag">인플레</span>
+          <span class="arrow">↗</span>
+        </div>
+        <div class="card-title">유가 급등에 인플레 공포 확산</div>
+        <div class="card-body">브렌트유가 배럴당 110달러를 넘자 OECD가 미국 인플레이션 전망치를 <strong>4.2%로 대폭 상향</strong>했다. 연준의 연내 금리 인상 가능성이 52%로 치솟았다.</div>
+        <div class="card-source">CNBC · 2026.03.27</div>
+      </a>
+
+      <a class="card" href="https://www.cnbc.com/2026/03/27/oil-price-wti-brent-crude-trump-strait-hormuz-tensions-iran-ships.html" target="_blank">
+        <div class="card-top">
+          <span class="tag">에너지</span>
+          <span class="arrow">↗</span>
+        </div>
+        <div class="card-title">유가, 2022년 이후 최고치 돌파</div>
+        <div class="card-body">호르무즈 해협 봉쇄로 하루 <strong>1,780만 배럴의 원유 흐름이 차단</strong>됐다. 이란 전쟁 발발 이후 유가는 47% 이상 폭등해 2022년 이후 최고치를 기록했다.</div>
+        <div class="card-source">CNBC · 2026.03.27</div>
+      </a>
+
+      <a class="card" href="https://www.npr.org/2026/03/27/nx-s1-5757946/oil-iran-war-markets-uncertainty" target="_blank">
+        <div class="card-top">
+          <span class="tag">분석</span>
+          <span class="arrow">↗</span>
+        </div>
+        <div class="card-title">이란 전쟁, 글로벌 에너지 시장 혼란</div>
+        <div class="card-body">미-이란 군사 충돌이 세계 에너지 시장에 극심한 불확실성을 야기하고 있다. <strong>공급 충격의 장기화 가능성</strong>에 각국 에너지 당국이 대응책 마련에 나섰다.</div>
+        <div class="card-source">NPR · 2026.03.27</div>
+      </a>
+
+      <a class="card" href="https://www.cnbc.com/2026/03/26/market-trends-oil-futures-backwardation.html" target="_blank">
+        <div class="card-top">
+          <span class="tag">원자재</span>
+          <span class="arrow">↗</span>
+        </div>
+        <div class="card-title">석유 선물 '백워데이션' 심화</div>
+        <div class="card-body">원유 선물 시장이 드문 '백워데이션' 상태에 진입해 단기 공급 부족이 심각함을 보여준다. <strong>근월물 가격이 원월물을 크게 웃도는</strong> 이 현상은 에너지 비용 급등을 예고한다.</div>
+        <div class="card-source">CNBC · 2026.03.26</div>
+      </a>
+
+      <a class="card" href="https://www.iea.org/reports/oil-market-report-march-2026" target="_blank">
+        <div class="card-top">
+          <span class="tag">IEA</span>
+          <span class="arrow">↗</span>
+        </div>
+        <div class="card-title">IEA, 3월 석유시장 긴급 보고서 발표</div>
+        <div class="card-body">국제에너지기구(IEA)가 3월 석유시장 긴급 보고서를 통해 공급-수요 불균형 현황을 발표했다. <strong>호르무즈 봉쇄가 지속될 경우 글로벌 GDP 2% 감소</strong>가 예상된다는 경고도 담겼다.</div>
+        <div class="card-source">IEA · 2026.03.28</div>
+      </a>
+
+      <a class="card" href="https://news.nate.com/" target="_blank">
+        <div class="card-top">
+          <span class="tag">한국 경제</span>
+          <span class="arrow">↗</span>
+        </div>
+        <div class="card-title">담뱃값 1만 원 인상 논의 본격화</div>
+        <div class="card-body">한국 정부가 담배 가격을 4,500원에서 1만 원 이상으로 인상하는 방안을 검토 중이다. <strong>주류에 대한 새로운 과세도 함께 논의</strong>되고 있어 생활 물가에 영향이 예상된다.</div>
+        <div class="card-source">국내 언론 · 2026.03.28</div>
+      </a>
+
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- ===== 주식 ===== -->
+  <div class="section section-markets">
+    <div class="cat-header">
+      <span class="cat-emoji">📈</span>
+      <span class="cat-title">주식</span>
+      <span class="cat-badge">6</span>
+    </div>
+    <div class="cat-line"></div>
+
+    <div class="cards-wrap">
+
+      <a class="card" href="https://www.thestreet.com/investing/stocks/stock-market-today-mar-27-2026-updates" target="_blank">
+        <div class="card-top">
+          <span class="tag">🔴 급락</span>
+          <span class="arrow">↗</span>
+        </div>
+        <div class="card-title">다우, 800p 폭락하며 조정 구간 진입</div>
+        <div class="card-body">다우존스 산업평균지수가 793.47포인트 하락해 45,166에 마감했다. <strong>이란 사태 여파로 아마존 -3.85%, 세일즈포스 -3.41%</strong> 등 기술주가 큰 폭으로 떨어졌다.</div>
+        <div class="card-source">TheStreet · 2026.03.27</div>
+      </a>
+
+      <a class="card" href="https://www.nytimes.com/2026/03/27/business/iran-war-stock-market-investors.html" target="_blank">
+        <div class="card-top">
+          <span class="tag">시장</span>
+          <span class="arrow">↗</span>
+        </div>
+        <div class="card-title">S&P 500, 1월 고점 대비 -9% 하락</div>
+        <div class="card-body">S&P 500 지수가 1월 최고치 대비 9% 가까이 하락하며 투자자들의 이탈이 가속화됐다. <strong>이란 전쟁의 장기화 우려</strong>가 시장 변동성을 극도로 높이고 있다.</div>
+        <div class="card-source">The New York Times · 2026.03.27</div>
+      </a>
+
+      <a class="card" href="https://247wallst.com/investing/2026/03/27/stock-market-live-march-27-2026-sp-500-spy-slips-despite-trump-deadline-extension/" target="_blank">
+        <div class="card-top">
+          <span class="tag">지정학</span>
+          <span class="arrow">↗</span>
+        </div>
+        <div class="card-title">트럼프 기한 연장에도 증시 하락 지속</div>
+        <div class="card-body">트럼프 대통령이 이란 군사 행동 마감시한을 10일 연장했음에도 S&P 500은 하락을 멈추지 않았다. <strong>시장은 기한 연장보다 근본적 해결을 원하는</strong> 신호를 보내고 있다.</div>
+        <div class="card-source">24/7 Wall St. · 2026.03.27</div>
+      </a>
+
+      <a class="card" href="https://www.thestreet.com/investing/stocks/stock-market-today-mar-27-2026-updates" target="_blank">
+        <div class="card-top">
+          <span class="tag">에너지주</span>
+          <span class="arrow">↗</span>
+        </div>
+        <div class="card-title">엑손모빌 +3.5%, 에너지주 역행 강세</div>
+        <div class="card-body">전반적인 증시 하락 속에서 에너지 섹터는 유가 급등 수혜를 누렸다. <strong>WTI 원유가 배럴당 99달러를 돌파하며 엑손모빌, 셰브론 등이 강세</strong>를 보였다.</div>
+        <div class="card-source">TheStreet · 2026.03.27</div>
+      </a>
+
+      <a class="card" href="https://www.cnbc.com/2026/03/27/markets-see-the-feds-next-move-as-a-potential-hike-as-oil-prices-inflation-fears-rise.html" target="_blank">
+        <div class="card-top">
+          <span class="tag">연준</span>
+          <span class="arrow">↗</span>
+        </div>
+        <div class="card-title">연준 금리 인상 가능성 52% 육박</div>
+        <div class="card-body">인플레이션 재점화 우려로 시장은 올해 연준의 금리 인상 가능성을 52%로 보고 있다. <strong>이는 불과 한 달 전 5%에 불과했던 수치</strong>가 폭등한 것으로, 채권 시장이 급격히 재편되고 있다.</div>
+        <div class="card-source">CNBC · 2026.03.27</div>
+      </a>
+
+      <a class="card" href="https://www.cnbc.com/2026/03/25/asia-markets-today-nikkei-225-kospi-hang-seng-index.html" target="_blank">
+        <div class="card-top">
+          <span class="tag">코스피</span>
+          <span class="arrow">↗</span>
+        </div>
+        <div class="card-title">코스피 홀로 +1.59%… 아시아 증시 차별화</div>
+        <div class="card-body">미국 증시 하락에도 코스피는 5,642포인트를 기록하며 상승했다. <strong>반도체·방위산업주가 글로벌 긴장 고조 수혜를 받아</strong> 아시아 주요국 증시 중 돋보이는 성과를 냈다.</div>
+        <div class="card-source">CNBC · 2026.03.25</div>
+      </a>
+
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- ===== 트렌드 ===== -->
+  <div class="section section-trends">
+    <div class="cat-header">
+      <span class="cat-emoji">🔮</span>
+      <span class="cat-title">트렌드</span>
+      <span class="cat-badge">6</span>
+    </div>
+    <div class="cat-line"></div>
+
+    <div class="cards-wrap">
+
+      <a class="card" href="https://www.crescendo.ai/news/latest-ai-news-and-updates" target="_blank">
+        <div class="card-top">
+          <span class="tag">AI</span>
+          <span class="arrow">↗</span>
+        </div>
+        <div class="card-title">소프트뱅크, OpenAI에 4조원 브릿지론</div>
+        <div class="card-body">소프트뱅크가 OpenAI 투자를 위해 JP모건·골드만삭스 등을 통해 400억 달러 규모의 브릿지 론을 확보했다. <strong>AI 투자 열풍이 전쟁 리스크에도 꺾이지 않고</strong> 있음을 보여준다.</div>
+        <div class="card-source">Crescendo AI · 2026.03.28</div>
+      </a>
+
+      <a class="card" href="https://www.buildez.ai/blog/what-ai-trends-this-month-march-2026" target="_blank">
+        <div class="card-top">
+          <span class="tag">빅테크</span>
+          <span class="arrow">↗</span>
+        </div>
+        <div class="card-title">애플, Siri 경쟁 AI 개방 추진</div>
+        <div class="card-body">애플이 iOS 27에서 Siri를 Gemini, Claude 등 경쟁 AI 어시스턴트에 개방하는 방안을 추진 중이다. <strong>아이폰을 단일 AI가 아닌 멀티 AI 플랫폼</strong>으로 전환하겠다는 전략적 전환점이다.</div>
+        <div class="card-source">BuildEZ · 2026.03.28</div>
+      </a>
+
+      <a class="card" href="https://www.digitalapplied.com/blog/march-2026-ai-roundup-month-that-changed-everything" target="_blank">
+        <div class="card-top">
+          <span class="tag">AI 모델</span>
+          <span class="arrow">↗</span>
+        </div>
+        <div class="card-title">3월에만 GPT-5.4·제미나이 3.1 출시</div>
+        <div class="card-body">3월 한 달 동안 GPT-5.4(3월 17일), Gemini 3.1(3월 20일), Mistral Small 4(3월 3일) 등이 잇달아 출시됐다. <strong>AI 업계의 '모델 전쟁'이 유례없는 속도로 가열</strong>되고 있다.</div>
+        <div class="card-source">Digital Applied · 2026.03.28</div>
+      </a>
+
+      <a class="card" href="https://www.ibm.com/think/news/ai-tech-trends-predictions-2026" target="_blank">
+        <div class="card-top">
+          <span class="tag">시장 규모</span>
+          <span class="arrow">↗</span>
+        </div>
+        <div class="card-title">2026 글로벌 AI 지출 2,700조 원 전망</div>
+        <div class="card-body">2026년 전 세계 AI 지출 규모가 2조 5,200억 달러에 달해 전년 대비 44% 증가할 전망이다. <strong>AI가 본격적인 산업 인프라로 자리잡는</strong> 전환점이 도래했다는 분석이 나온다.</div>
+        <div class="card-source">IBM · 2026.03.28</div>
+      </a>
+
+      <a class="card" href="https://news.nate.com/" target="_blank">
+        <div class="card-top">
+          <span class="tag">한국 사회</span>
+          <span class="arrow">↗</span>
+        </div>
+        <div class="card-title">AI가 만든 안중근 비하 영상 논란</div>
+        <div class="card-body">틱톡에 AI로 제작한 독립운동가 안중근 의사 비하 영상이 올라와 파문이 일었다. <strong>보훈부가 틱톡 코리아에 삭제 요청</strong>하며 AI 생성 콘텐츠의 역사 왜곡 문제가 다시 수면 위로 올랐다.</div>
+        <div class="card-source">국내 언론 · 2026.03.28</div>
+      </a>
+
+      <a class="card" href="https://techcrunch.com/2026/01/02/in-2026-ai-will-move-from-hype-to-pragmatism/" target="_blank">
+        <div class="card-top">
+          <span class="tag">인사이트</span>
+          <span class="arrow">↗</span>
+        </div>
+        <div class="card-title">AI, 과대 광고 시대 지나 실용 단계로</div>
+        <div class="card-body">2026년은 AI가 단순 화제에서 실질적 기업 ROI를 창출하는 시대로 전환되는 해로 기록될 전망이다. <strong>측정 가능한 성과를 내지 못하는 AI 프로젝트는 도태</strong>될 것이라는 분석이 주목받고 있다.</div>
+        <div class="card-source">TechCrunch · 2026.03.28</div>
+      </a>
+
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <div class="footer-hint">각 카드를 탭하면 원문 기사로 이동합니다</div>
+    <div class="footer-logo">📰 월스트리트 모닝 브리핑 · 2026.03.28</div>
+  </div>
+
+</div>
+</body>
+</html>
