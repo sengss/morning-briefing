@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>월스트리트 모닝 브리핑 — 2026년 3월 29일</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: #0a0a0f;
+    color: #e0e0e0;
+    font-family: 'Noto Sans KR', -apple-system, sans-serif;
+    min-height: 100vh;
+    padding: 0;
+  }
+
+  .wrapper {
+    max-width: 480px;
+    margin: 0 auto;
+    padding-bottom: 40px;
+  }
+
+  /* ── HEADER ── */
+  .header {
+    background: linear-gradient(135deg, #0d0d1a 0%, #111128 100%);
+    border-bottom: 1px solid #1e1e3a;
+    padding: 24px 20px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+
+  .header-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 4px;
+  }
+
+  .brand {
+    font-size: 18px;
+    font-weight: 900;
+    background: linear-gradient(90deg, #f0c040, #ff8c42);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    letter-spacing: -0.5px;
+  }
+
+  .live-badge {
+    background: #ef5350;
+    color: #fff;
+    font-size: 10px;
+    font-weight: 700;
+    padding: 2px 8px;
+    border-radius: 20px;
+    letter-spacing: 1px;
+    animation: pulse 2s infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.6; }
+  }
+
+  .header-date {
+    font-size: 12px;
+    color: #888;
+    margin-bottom: 16px;
+  }
+
+  /* ── TICKER ── */
+  .ticker-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+  }
+
+  .ticker-item {
+    background: #141420;
+    border: 1px solid #1e1e3a;
+    border-radius: 10px;
+    padding: 8px 6px;
+    text-align: center;
+  }
+
+  .ticker-label {
+    font-size: 9px;
+    color: #666;
+    font-weight: 500;
+    margin-bottom: 3px;
+    letter-spacing: 0.3px;
+  }
+
+  .ticker-value {
+    font-size: 13px;
+    font-weight: 700;
+    color: #e0e0e0;
+    letter-spacing: -0.3px;
+  }
+
+  .ticker-change {
+    font-size: 10px;
+    font-weight: 600;
+    margin-top: 2px;
+  }
+
+  .down { color: #ef5350; }
+  .up   { color: #4caf50; }
+
+  /* ── SECTIONS ── */
+  .section {
+    padding: 20px 16px 4px;
+  }
+
+  .section-divider {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #1e1e3a, transparent);
+    margin: 8px 16px;
+  }
+
+  .cat-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 14px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid;
+  }
+
+  .cat-header.politics { border-color: #ef5350; }
+  .cat-header.economy  { border-color: #42a5f5; }
+  .cat-header.markets  { border-color: #4caf50; }
+  .cat-header.trends   { border-color: #ab47bc; }
+
+  .cat-emoji { font-size: 22px; }
+
+  .cat-name {
+    font-size: 16px;
+    font-weight: 700;
+    color: #f0f0f0;
+    flex: 1;
+  }
+
+  .cat-badge {
+    font-size: 11px;
+    font-weight: 700;
+    color: #fff;
+    padding: 3px 9px;
+    border-radius: 12px;
+  }
+
+  .cat-badge.politics { background: #ef5350; }
+  .cat-badge.economy  { background: #42a5f5; }
+  .cat-badge.markets  { background: #4caf50; }
+  .cat-badge.trends   { background: #ab47bc; }
+
+  /* ── CARDS ── */
+  .card {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    background: #111118;
+    border: 1px solid #1a1a2e;
+    border-left: 3px solid;
+    border-radius: 12px;
+    padding: 14px 14px 12px;
+    margin-bottom: 10px;
+    transition: transform 0.15s ease, background 0.15s ease;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .card:active { transform: scale(0.98); background: #16161f; }
+
+  .card.politics { border-left-color: #ef5350; }
+  .card.economy  { border-left-color: #42a5f5; }
+  .card.markets  { border-left-color: #4caf50; }
+  .card.trends   { border-left-color: #ab47bc; }
+
+  .card-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 7px;
+  }
+
+  .tag-pill {
+    font-size: 10px;
+    font-weight: 700;
+    padding: 2px 9px;
+    border-radius: 20px;
+    letter-spacing: 0.5px;
+  }
+
+  .tag-pill.politics { background: rgba(239,83,80,0.18); color: #ef9090; }
+  .tag-pill.economy  { background: rgba(66,165,245,0.18); color: #90c8f5; }
+  .tag-pill.markets  { background: rgba(76,175,80,0.18);  color: #90d094; }
+  .tag-pill.trends   { background: rgba(171,71,188,0.18); color: #cc90d5; }
+
+  .arrow-icon {
+    font-size: 14px;
+    color: #444;
+  }
+
+  .card-title {
+    font-size: 14px;
+    font-weight: 700;
+    color: #f0f0f0;
+    line-height: 1.4;
+    margin-bottom: 7px;
+  }
+
+  .card-body {
+    font-size: 12px;
+    color: #aaa;
+    line-height: 1.65;
+    margin-bottom: 8px;
+  }
+
+  .card-body strong {
+    color: #e0e0e0;
+    font-weight: 600;
+  }
+
+  .card-source {
+    font-size: 10px;
+    color: #555;
+    font-weight: 500;
+  }
+
+  /* ── FOOTER ── */
+  .footer {
+    text-align: center;
+    padding: 24px 20px 16px;
+    font-size: 11px;
+    color: #444;
+    border-top: 1px solid #1a1a2e;
+    margin: 16px 16px 0;
+  }
+</style>
+</head>
+<body>
+<div class="wrapper">
+
+  <!-- HEADER -->
+  <div class="header">
+    <div class="header-top">
+      <div class="brand">📰 월스트리트 모닝 브리핑</div>
+      <div class="live-badge">LIVE</div>
+    </div>
+    <div class="header-date">2026년 3월 29일 일요일 · Wall Street Morning Briefing</div>
+
+    <div class="ticker-grid">
+      <div class="ticker-item">
+        <div class="ticker-label">S&amp;P 500</div>
+        <div class="ticker-value">6,368</div>
+        <div class="ticker-change down">▼ 1.67%</div>
+      </div>
+      <div class="ticker-item">
+        <div class="ticker-label">나스닥</div>
+        <div class="ticker-value">20,948</div>
+        <div class="ticker-change down">▼ 2.15%</div>
+      </div>
+      <div class="ticker-item">
+        <div class="ticker-label">코스피</div>
+        <div class="ticker-value">5,438</div>
+        <div class="ticker-change down">▼ 0.40%</div>
+      </div>
+      <div class="ticker-item">
+        <div class="ticker-label">브렌트유</div>
+        <div class="ticker-value">$105.9</div>
+        <div class="ticker-change up">▲ 40%↑</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ① 정치 -->
+  <div class="section">
+    <div class="cat-header politics">
+      <div class="cat-emoji">🏛</div>
+      <div class="cat-name">정치</div>
+      <div class="cat-badge politics">6건</div>
+    </div>
+
+    <a class="card politics" href="https://www.cnn.com/2026/03/27/world/live-news/iran-war-us-israel-trump" target="_blank">
+      <div class="card-top">
+        <span class="tag-pill politics">속보</span>
+        <span class="arrow-icon">↗</span>
+      </div>
+      <div class="card-title">이란, 사우디 美공군기지 공격 — 미군 10명 부상</div>
+      <div class="card-body">이란이 사우디아라비아 프린스술탄 공군기지를 미사일로 공격해 <strong>미군 10명이 부상</strong>을 입었다. 사망자는 없었지만, 미국-이스라엘-이란 삼각 분쟁이 걷잡을 수 없이 확산되고 있다.</div>
+      <div class="card-source">CNN · 2026.03.27</div>
+    </a>
+
+    <a class="card politics" href="https://edition.cnn.com/2026/03/26/world/live-news/iran-war-us-israel-trump" target="_blank">
+      <div class="card-top">
+        <span class="tag-pill politics">외교</span>
+        <span class="arrow-icon">↗</span>
+      </div>
+      <div class="card-title">트럼프, 이란 협상 진전 주장 — 4월 6일까지 에너지 타격 유예</div>
+      <div class="card-body">트럼프 대통령은 <strong>이란과의 협상이 순조롭게 진행 중</strong>이라며 에너지 시설 타격을 4월 6일까지 유예한다고 밝혔다. 호르무즈 해협 개방 여부가 최대 협상 쟁점이다.</div>
+      <div class="card-source">CNN · 2026.03.26</div>
+    </a>
+
+    <a class="card politics" href="https://en.wikipedia.org/wiki/2026_Strait_of_Hormuz_crisis" target="_blank">
+      <div class="card-top">
+        <span class="tag-pill politics">군사</span>
+        <span class="arrow-icon">↗</span>
+      </div>
+      <div class="card-title">미군, 3월 19일 호르무즈 개방 작전 개시</div>
+      <div class="card-body">미국은 3월 19일 호르무즈 해협을 강제 개방하기 위한 군사 작전을 시작했다. 이란이 해협을 봉쇄하면서 <strong>세계 일일 원유 공급의 약 20%</strong>가 차단된 상황이다.</div>
+      <div class="card-source">Wikipedia / Kpler · 2026.03</div>
+    </a>
+
+    <a class="card politics" href="https://www.cnn.com/2026/03/27/world/live-news/iran-war-us-israel-trump" target="_blank">
+      <div class="card-top">
+        <span class="tag-pill politics">군사</span>
+        <span class="arrow-icon">↗</span>
+      </div>
+      <div class="card-title">美 조지 H.W. 부시 항모 중동 급파</div>
+      <div class="card-body">미국 국방부는 항공모함 USS 조지 H.W. 부시를 중부사령부(CENTCOM) 관할 해역에 배치했다. <strong>수천 명의 추가 병력</strong>도 중동으로 투입 중이다.</div>
+      <div class="card-source">CNN · 2026.03.27</div>
+    </a>
+
+    <a class="card politics" href="https://www.cliktoday.com/2026/03/20260327-today-news.html" target="_blank">
+      <div class="card-top">
+        <span class="tag-pill politics">속보</span>
+        <span class="arrow-icon">↗</span>
+      </div>
+      <div class="card-title">후티 반군, 이스라엘에 미사일 발사 — 이란전 공식 참전</div>
+      <div class="card-body">예멘의 친이란 후티 반군이 3월 28일 이스라엘을 향해 미사일을 발사하며 이란 전쟁에 공식 참전했다. <strong>미·이스라엘의 이란 공습 이후 약 한 달</strong> 만에 전선이 더욱 확대됐다.</div>
+      <div class="card-source">오늘의클릭 / 연합 · 2026.03.28</div>
+    </a>
+
+    <a class="card politics" href="https://www.npr.org/2026/03/27/nx-s1-5757946/oil-iran-war-markets-uncertainty" target="_blank">
+      <div class="card-top">
+        <span class="tag-pill politics">분석</span>
+        <span class="arrow-icon">↗</span>
+      </div>
+      <div class="card-title">레바논 민간인 피해 급증 — 이스라엘 공습에 62만 명 피난</div>
+      <div class="card-body">이스라엘의 레바논 공습으로 <strong>3월 2일 이후 민간인 1,116명이 사망</strong>하고 3,229명이 부상했다. 레바논·팔레스타인·시리아계 여성과 아동 62만 명 이상이 피난길에 올랐다.</div>
+      <div class="card-source">NPR · 2026.03.27</div>
+    </a>
+  </div>
+
+  <div class="section-divider"></div>
+
+  <!-- ② 경제 -->
+  <div class="section">
+    <div class="cat-header economy">
+      <div class="cat-emoji">💰</div>
+      <div class="cat-name">경제</div>
+      <div class="cat-badge economy">6건</div>
+    </div>
+
+    <a class="card economy" href="https://fortune.com/article/price-of-oil-03-27-2026/" target="_blank">
+      <div class="card-top">
+        <span class="tag-pill economy">에너지</span>
+        <span class="arrow-icon">↗</span>
+      </div>
+      <div class="card-title">브렌트유 $105 돌파 — 3월 한 달간 40% 폭등</div>
+      <div class="card-body">브렌트 원유 가격이 3월 26일 기준 배럴당 <strong>$105.85를 기록</strong>하며 한 달 만에 40% 이상 폭등했다. 호르무즈 해협 봉쇄로 역사상 최대 규모의 에너지 공급 차질이 빚어지고 있다.</div>
+      <div class="card-source">Fortune · 2026.03.27</div>
+    </a>
+
+    <a class="card economy" href="https://www.cnbc.com/2026/03/27/markets-see-the-feds-next-move-as-a-potential-hike-as-oil-prices-inflation-fears-rise.html" target="_blank">
+      <div class="card-top">
+        <span class="tag-pill economy">금리</span>
+        <span class="arrow-icon">↗</span>
+      </div>
+      <div class="card-title">연준, 기준금리 동결… 인상 가능성 52%로 급등</div>
+      <div class="card-body">연방준비제도는 3월 회의에서 기준금리를 <strong>3.5~3.75% 범위로 동결</strong>했으나, 선물 시장에서 연내 금리 인상 가능성이 52%까지 치솟았다. 유가 급등이 인플레이션 억제 경로를 복잡하게 만들고 있다.</div>
+      <div class="card-source">CNBC · 2026.03.27</div>
+    </a>
+
+    <a class="card economy" href="https://www.cnbc.com/2026/03/18/fed-interest-rate-decision-march-2026.html" target="_blank">
+      <div class="card-top">
+        <span class="tag-pill economy">인플레</span>
+        <span class="arrow-icon">↗</span>
+      </div>
+      <div class="card-title">OECD, 미국 인플레 전망 4.2%로 대폭 상향</div>
+      <div class="card-body">OECD는 미국의 2026년 인플레이션 전망을 <strong>종전보다 훨씬 높은 4.2%로 상향</strong> 조정했다. 연준 목표치(2%)의 두 배가 넘는 수준으로, 경기 침체와 물가 동시 상승 우려가 커지고 있다.</div>
+      <div class="card-source">CNBC / Kiplinger · 2026.03.18</div>
+    </a>
+
+    <a class="card economy" href="https://www.cnbc.com/2026/03/11/strait-of-hormuz-closure-shipping-economy-oil.html" target="_blank">
+      <div class="card-top">
+        <span class="tag-pill economy">분석</span>
+        <span class="arrow-icon">↗</span>
+      </div>
+      <div class="card-title">호르무즈 봉쇄 — 1970년대 이후 최대 에너지 위기</div>
+      <div class="card-body">호르무즈 봉쇄로 일일 약 2,000만 배럴의 원유 통행이 사실상 중단됐다. <strong>탱커 150척 이상이 해협 입구에 발이 묶인</strong> 상태로, 글로벌 무역 체계가 급격히 재편되고 있다.</div>
+      <div class="card-source">CNBC · 2026.03.11</div>
+    </a>
+
+    <a class="card economy" href="https://www.trendforce.com/news/2026/03/23/news-under-qatars-shadow-helium-crunch-hits-south-korea-harder-putting-samsung-sk-hynix-tsmc-in-spotlight/" target="_blank">
+      <div class="card-top">
+        <span class="tag-pill economy">공급망</span>
+        <span class="arrow-icon">↗</span>
+      </div>
+      <div class="card-title">카타르발 헬륨 부족 — 삼성·SK하이닉스 직격탄</div>
+      <div class="card-body">중동 분쟁 여파로 카타르의 헬륨 공급이 감소하면서 <strong>삼성전자·SK하이닉스·TSMC 등 반도체 업계</strong>가 타격을 받고 있다. 헬륨은 반도체 세정 공정에 필수적인 희귀가스다.</div>
+      <div class="card-source">TrendForce · 2026.03.23</div>
+    </a>
+
+    <a class="card economy" href="https://www.kpler.com/blog/us-iran-conflict-strait-of-hormuz-crisis-reshapes-global-oil-markets" target="_blank">
+      <div class="card-top">
+        <span class="tag-pill economy">무역</span>
+        <span class="arrow-icon">↗</span>
+      </div>
+      <div class="card-title">러시아산 원유, 서방 제재 속 대중국 수출 급증</div>
+      <div class="card-body">러시아산 원유가 인도 수출에서 빠져나와 중국으로 집중되고 있다. <strong>중국의 러시아산 원유 수입이 월 50만 배럴 증가</strong>하며 글로벌 에너지 흐름이 근본적으로 재편되고 있다.</div>
+      <div class="card-source">Kpler · 2026.03.01</div>
+    </a>
+  </div>
+
+  <div class="section-divider"></div>
+
+  <!-- ③ 주식 -->
+  <div class="section">
+    <div class="cat-header markets">
+      <div class="cat-emoji">📈</div>
+      <div class="cat-name">주식</div>
+      <div class="cat-badge markets">6건</div>
+    </div>
+
+    <a class="card markets" href="https://www.cnbc.com/2026/03/25/stock-market-today-live-updates.html" target="_blank">
+      <div class="card-top">
+        <span class="tag-pill markets">시장</span>
+        <span class="arrow-icon">↗</span>
+      </div>
+      <div class="card-title">S&amp;P 500, 1.67% 급락 — 지정학 공포에 시장 흔들</div>
+      <div class="card-body">S&amp;P 500이 108포인트 급락해 6,368.85에 마감했다. <strong>다우는 793포인트, 나스닥은 459포인트 하락</strong>하며 중동 분쟁과 유가 급등, 인플레이션 재점화 우려가 겹쳤다.</div>
+      <div class="card-source">CNBC · 2026.03.27</div>
+    </a>
+
+    <a class="card markets" href="https://stockmarketwatch.com/live/stock-market-today/" target="_blank">
+      <div class="card-top">
+        <span class="tag-pill markets">공포지수</span>
+        <span class="arrow-icon">↗</span>
+      </div>
+      <div class="card-title">VIX 공포지수 13% 폭등 — 불안감 최고조</div>
+      <div class="card-body">시장 공포지수 VIX가 <strong>13.16% 급등해 31.05까지 치솟았다</strong>. 최근 수개월 중 가장 높은 수준으로, 단기 변동성 확대 우려가 투자자들을 압박하고 있다.</div>
+      <div class="card-source">StockMarketWatch · 2026.03.27</div>
+    </a>
+
+    <a class="card markets" href="https://finance.yahoo.com/quote/%5EKS11/" target="_blank">
+      <div class="card-top">
+        <span class="tag-pill markets">한국증시</span>
+        <span class="arrow-icon">↗</span>
+      </div>
+      <div class="card-title">코스피 5,438에 마감 — 0.4% 하락</div>
+      <div class="card-body">코스피 종합지수는 전일 대비 <strong>0.40% 하락한 5,438.87로 마감</strong>했다. 중동 리스크와 반도체 주 매도 압력이 겹치며 하방 압력이 지속되는 흐름이다.</div>
+      <div class="card-source">Yahoo Finance · 2026.03.27</div>
+    </a>
+
+    <a class="card markets" href="https://meyka.com/blog/samsung-and-sk-hynix-stocks-dip-as-google-unveils-ai-memory-compression-tech-turboquant-2603/" target="_blank">
+      <div class="card-top">
+        <span class="tag-pill markets">반도체</span>
+        <span class="arrow-icon">↗</span>
+      </div>
+      <div class="card-title">구글 TurboQuant에 삼성·SK하이닉스 주가 급락</div>
+      <div class="card-body">구글이 AI 메모리를 <strong>최대 6배 압축</strong>하는 'TurboQuant' 기술을 공개하자, 삼성전자와 SK하이닉스 주가가 즉각 하락했다. HBM 수요 전망에 대한 재평가가 이루어지고 있다.</div>
+      <div class="card-source">Meyka · 2026.03.25</div>
+    </a>
+
+    <a class="card markets" href="https://en.sedaily.com/finance/2026/03/26/korea-incs-profit-surge-masks-weak-growth-outside-samsung" target="_blank">
+      <div class="card-top">
+        <span class="tag-pill markets">실적</span>
+        <span class="arrow-icon">↗</span>
+      </div>
+      <div class="card-title">삼성·SK하이닉스, 2025년 영업이익 9081억 달러 합산</div>
+      <div class="card-body">삼성전자와 SK하이닉스의 2025년 합산 영업이익이 <strong>90.81조 원으로 전년 대비 61.6% 증가</strong>했다. AI 인프라 투자 붐이 메모리 반도체 수익을 견인했다.</div>
+      <div class="card-source">서울경제 · 2026.03.26</div>
+    </a>
+
+    <a class="card markets" href="https://techstartups.com/2026/03/27/top-tech-news-today-march-27-2026/" target="_blank">
+      <div class="card-top">
+        <span class="tag-pill markets">AI투자</span>
+        <span class="arrow-icon">↗</span>
+      </div>
+      <div class="card-title">소프트뱅크, OpenAI 투자 위해 400억 달러 브리지론</div>
+      <div class="card-body">소프트뱅크가 OpenAI 추가 투자와 운영 자금을 위해 <strong>400억 달러 규모 브리지론</strong>을 확보했다. AI 패권 경쟁이 천문학적 자본 전쟁으로 치닫고 있음을 보여준다.</div>
+      <div class="card-source">TechStartups · 2026.03.27</div>
+    </a>
+  </div>
+
+  <div class="section-divider"></div>
+
+  <!-- ④ 트렌드 -->
+  <div class="section">
+    <div class="cat-header trends">
+      <div class="cat-emoji">🔮</div>
+      <div class="cat-name">트렌드</div>
+      <div class="cat-badge trends">6건</div>
+    </div>
+
+    <a class="card trends" href="https://techstartups.com/2026/03/26/top-tech-news-today-march-26-2026/" target="_blank">
+      <div class="card-top">
+        <span class="tag-pill trends">AI</span>
+        <span class="arrow-icon">↗</span>
+      </div>
+      <div class="card-title">애플, iOS 27서 시리에 타사 AI 허용 예정</div>
+      <div class="card-body">애플이 iOS 27에서 시리(Siri)를 경쟁사 AI 서비스에 개방할 계획이라고 알려졌다. <strong>Gemini, Claude 등이 아이폰에 직접 통합</strong>될 수 있어 AI 생태계 판도가 크게 바뀔 전망이다.</div>
+      <div class="card-source">TechStartups · 2026.03.26</div>
+    </a>
+
+    <a class="card trends" href="https://www.ibm.com/think/news/ai-tech-trends-predictions-2026" target="_blank">
+      <div class="card-top">
+        <span class="tag-pill trends">양자컴퓨터</span>
+        <span class="arrow-icon">↗</span>
+      </div>
+      <div class="card-title">IBM "2026년, 양자컴퓨터가 고전 컴퓨터 최초 능가"</div>
+      <div class="card-body">IBM은 2026년이 양자 컴퓨터가 고전 컴퓨터의 성능을 처음으로 앞서는 역사적 해가 될 것이라고 공식 발표했다. <strong>퀀텀 어드밴티지(Quantum Advantage)</strong> 시대의 개막이 가시화되고 있다.</div>
+      <div class="card-source">IBM Think · 2026</div>
+    </a>
+
+    <a class="card trends" href="https://meyka.com/blog/samsung-and-sk-hynix-stocks-dip-as-google-unveils-ai-memory-compression-tech-turboquant-2603/" target="_blank">
+      <div class="card-top">
+        <span class="tag-pill trends">AI기술</span>
+        <span class="arrow-icon">↗</span>
+      </div>
+      <div class="card-title">구글 TurboQuant — AI 추론 속도 8배, 메모리 6배 압축</div>
+      <div class="card-body">구글이 공개한 TurboQuant는 대형 언어모델의 KV 캐시를 <strong>최대 6배 압축하고 추론 속도를 8배</strong> 높인다. 메모리 반도체 수요 구조 자체를 뒤흔들 기술로 평가받고 있다.</div>
+      <div class="card-source">Meyka · 2026.03.25</div>
+    </a>
+
+    <a class="card trends" href="https://techcrunch.com/2026/01/02/in-2026-ai-will-move-from-hype-to-pragmatism/" target="_blank">
+      <div class="card-top">
+        <span class="tag-pill trends">고용</span>
+        <span class="arrow-icon">↗</span>
+      </div>
+      <div class="card-title">CFO들 "AI로 올해 인력 감축" — 사무직 직종 특히 위험</div>
+      <div class="card-body">최고재무책임자(CFO) 대상 설문에서 <strong>AI가 2026년 중 회사 인력을 줄일 것</strong>이라는 전망이 우세했다. 사무·행정직 자동화가 본격화되며 노동시장의 구조적 변화가 가속되고 있다.</div>
+      <div class="card-source">TechCrunch · 2026.01.02</div>
+    </a>
+
+    <a class="card trends" href="https://www.imnews.imbc.com/replay/2026/nwtoday/article/6808263_37012.html" target="_blank">
+      <div class="card-top">
+        <span class="tag-pill trends">문화</span>
+        <span class="arrow-icon">↗</span>
+      </div>
+      <div class="card-title">영화 '프로젝트 헤일메리' 北美 개봉 첫주 8058만 달러</div>
+      <div class="card-body">앤디 위어 원작 SF 영화 '프로젝트 헤일메리'가 북미 박스오피스 1위로 출발하며 <strong>2026년 북미 최고 오프닝 기록</strong>을 달성했다. 국내서도 첫날 7만 6000명을 동원하며 흥행몰이 중이다.</div>
+      <div class="card-source">MBC뉴스 · 2026.03.29</div>
+    </a>
+
+    <a class="card trends" href="https://www.astutegroup.com/news/general/sk-hynix-holds-62-of-hbm-micron-overtakes-samsung-2026-battle-pivots-to-hbm4/" target="_blank">
+      <div class="card-top">
+        <span class="tag-pill trends">반도체</span>
+        <span class="arrow-icon">↗</span>
+      </div>
+      <div class="card-title">SK하이닉스 HBM 점유율 62%… 마이크론, 삼성 제쳐</div>
+      <div class="card-body">SK하이닉스가 <strong>HBM(고대역폭 메모리) 시장의 62%</strong>를 점유하며 독주 중이다. 마이크론이 삼성을 제치고 2위로 올라서면서 HBM4 전쟁이 본격화되고 있다.</div>
+      <div class="card-source">Astute Group · 2026</div>
+    </a>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    각 카드를 탭하면 원문 기사로 이동합니다<br>
+    <span style="color:#333;">월스트리트 모닝 브리핑 · 자동 생성 · 2026.03.29</span>
+  </div>
+
+</div>
+</body>
+</html>
