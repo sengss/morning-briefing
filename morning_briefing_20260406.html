@@ -2,597 +2,477 @@
 <html lang="ko">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-<title>월스트리트 모닝 브리핑 — 2026년 4월 6일</title>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>월스트리트 모닝 브리핑 – 2026년 4월 6일</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
 <style>
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
+  * { box-sizing: border-box; margin: 0; padding: 0; }
   body {
+    font-family: 'Noto Sans KR', sans-serif;
     background: #0a0a0f;
     color: #e8e8f0;
-    font-family: 'Noto Sans KR', -apple-system, sans-serif;
     min-height: 100vh;
     padding: 0 0 40px;
   }
+  .wrap { max-width: 480px; margin: 0 auto; }
 
-  .wrapper {
-    max-width: 480px;
-    margin: 0 auto;
-    padding: 0 14px;
-  }
-
-  /* ── HEADER ── */
+  /* ── Header ── */
   .header {
-    background: linear-gradient(135deg, #0d0d1a 0%, #131328 100%);
-    border-bottom: 1px solid rgba(255,255,255,0.07);
-    padding: 22px 14px 18px;
-    position: sticky;
-    top: 0;
-    z-index: 100;
+    background: linear-gradient(135deg, #0d1117 0%, #161b27 100%);
+    padding: 24px 20px 20px;
+    border-bottom: 1px solid #1e2535;
   }
-  .header-inner { max-width: 480px; margin: 0 auto; }
-  .brand {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 4px;
-  }
-  .brand-icon {
-    width: 34px; height: 34px;
-    background: linear-gradient(135deg, #f5a623, #e8851a);
-    border-radius: 8px;
-    display: flex; align-items: center; justify-content: center;
-    font-size: 18px;
-  }
-  .brand-name {
-    font-size: 18px;
-    font-weight: 800;
-    color: #fff;
-    letter-spacing: -0.3px;
-  }
-  .brand-sub {
-    font-size: 11px;
-    color: #f5a623;
-    font-weight: 600;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-  }
-  .header-date {
-    font-size: 12px;
-    color: #9090b0;
-    margin-bottom: 14px;
-    margin-top: 2px;
-  }
+  .header-top { display: flex; align-items: center; gap: 10px; margin-bottom: 4px; }
+  .logo-icon { font-size: 22px; }
+  .brand { font-size: 18px; font-weight: 900; letter-spacing: -0.5px; color: #fff; }
+  .brand span { color: #60a5fa; }
+  .date-line { font-size: 12px; color: #64748b; margin-bottom: 16px; }
 
-  /* ── TICKER ── */
-  .ticker-grid {
+  /* ── Market Ticker (5 col) ── */
+  .ticker {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 8px;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 6px;
   }
-  .ticker-item {
-    background: rgba(255,255,255,0.05);
-    border-radius: 10px;
-    padding: 8px 8px 7px;
+  .tick {
+    background: #0f1623;
+    border: 1px solid #1e2535;
+    border-radius: 8px;
+    padding: 7px 4px;
     text-align: center;
-    border: 1px solid rgba(255,255,255,0.06);
   }
-  .ticker-name {
-    font-size: 10px;
-    color: #707090;
-    font-weight: 600;
-    letter-spacing: 0.3px;
-    margin-bottom: 3px;
-  }
-  .ticker-val {
-    font-size: 12px;
-    font-weight: 700;
-    color: #e8e8f0;
-    margin-bottom: 2px;
-  }
-  .ticker-chg { font-size: 10px; font-weight: 600; }
-  .up { color: #4caf50; }
-  .down { color: #ef5350; }
+  .tick-name { font-size: 8px; color: #64748b; font-weight: 700; letter-spacing: 0.3px; margin-bottom: 3px; }
+  .tick-val { font-size: 12px; font-weight: 700; color: #e8e8f0; margin-bottom: 2px; }
+  .tick-chg { font-size: 9px; font-weight: 500; }
+  .up { color: #4ade80; }
+  .down { color: #f87171; }
+  .tick.coin-tick { border-color: rgba(245,158,11,0.3); }
+  .tick.coin-tick .tick-val { color: #fbbf24; }
 
-  /* ── SECTION ── */
-  .section { margin-top: 24px; }
-  .section-divider {
-    height: 1px;
-    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
-    margin: 28px 0 0;
-  }
-
+  /* ── Category Section ── */
+  .section { margin-top: 20px; padding: 0 12px; }
   .cat-header {
     display: flex;
     align-items: center;
     gap: 10px;
-    padding: 14px 0 12px;
+    padding: 10px 14px;
+    border-radius: 10px;
+    margin-bottom: 10px;
   }
-  .cat-emoji { font-size: 22px; line-height: 1; }
-  .cat-name {
-    font-size: 16px;
-    font-weight: 800;
-    color: #fff;
-    flex: 1;
-  }
+  .cat-icon { font-size: 20px; }
+  .cat-name { font-size: 15px; font-weight: 900; letter-spacing: -0.3px; flex: 1; }
   .cat-badge {
     font-size: 11px;
     font-weight: 700;
-    padding: 3px 9px;
+    padding: 3px 8px;
     border-radius: 20px;
-    background: rgba(255,255,255,0.08);
-    color: #9090b0;
+    opacity: 0.9;
   }
 
-  /* ── CARDS ── */
-  .cards { display: flex; flex-direction: column; gap: 10px; }
+  .cat-politics .cat-header { background: rgba(239,83,80,0.12); border: 1px solid rgba(239,83,80,0.25); }
+  .cat-politics .cat-name { color: #ef5350; }
+  .cat-politics .cat-badge { background: rgba(239,83,80,0.2); color: #ef9a9a; }
+  .cat-politics .card { border-left: 3px solid #ef5350; }
 
-  a.card {
+  .cat-economy .cat-header { background: rgba(66,165,245,0.12); border: 1px solid rgba(66,165,245,0.25); }
+  .cat-economy .cat-name { color: #42a5f5; }
+  .cat-economy .cat-badge { background: rgba(66,165,245,0.2); color: #90caf9; }
+  .cat-economy .card { border-left: 3px solid #42a5f5; }
+
+  .cat-market .cat-header { background: rgba(76,175,80,0.12); border: 1px solid rgba(76,175,80,0.25); }
+  .cat-market .cat-name { color: #4caf50; }
+  .cat-market .cat-badge { background: rgba(76,175,80,0.2); color: #a5d6a7; }
+  .cat-market .card { border-left: 3px solid #4caf50; }
+
+  .cat-trend .cat-header { background: rgba(171,71,188,0.12); border: 1px solid rgba(171,71,188,0.25); }
+  .cat-trend .cat-name { color: #ab47bc; }
+  .cat-trend .cat-badge { background: rgba(171,71,188,0.2); color: #ce93d8; }
+  .cat-trend .card { border-left: 3px solid #ab47bc; }
+
+  .cat-coin .cat-header { background: rgba(245,158,11,0.12); border: 1px solid rgba(245,158,11,0.3); }
+  .cat-coin .cat-name { color: #f59e0b; }
+  .cat-coin .cat-badge { background: rgba(245,158,11,0.2); color: #fcd34d; }
+  .cat-coin .card { border-left: 3px solid #f59e0b; }
+
+  /* ── Card ── */
+  .cards { display: flex; flex-direction: column; gap: 8px; }
+  .card {
     display: block;
-    background: #13131f;
-    border-radius: 14px;
-    padding: 14px 15px 12px;
+    background: #111827;
+    border-radius: 12px;
+    padding: 14px 14px 12px;
     text-decoration: none;
     color: inherit;
-    border: 1px solid rgba(255,255,255,0.06);
-    transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
-    -webkit-tap-highlight-color: transparent;
+    transition: transform 0.15s, background 0.15s;
   }
-  a.card:hover, a.card:active {
-    transform: translateY(-2px);
-    background: #18182a;
-    box-shadow: 0 6px 24px rgba(0,0,0,0.4);
-  }
-
-  /* category left border accent */
-  .cat-politics a.card  { border-left: 3px solid #ef5350; }
-  .cat-economy  a.card  { border-left: 3px solid #42a5f5; }
-  .cat-market   a.card  { border-left: 3px solid #4caf50; }
-  .cat-trend    a.card  { border-left: 3px solid #ab47bc; }
-
+  .card:active { transform: scale(0.98); background: #1a2234; }
   .card-top {
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin-bottom: 7px;
   }
-  .tag-pill {
+  .tag {
     font-size: 10px;
     font-weight: 700;
-    padding: 2px 8px;
-    border-radius: 20px;
-    letter-spacing: 0.4px;
+    letter-spacing: 0.8px;
+    padding: 2px 7px;
+    border-radius: 4px;
+    background: rgba(255,255,255,0.07);
+    color: #94a3b8;
+    text-transform: uppercase;
   }
-  .cat-politics .tag-pill { background: rgba(239,83,80,0.18); color: #ef5350; }
-  .cat-economy  .tag-pill { background: rgba(66,165,245,0.18); color: #42a5f5; }
-  .cat-market   .tag-pill { background: rgba(76,175,80,0.18); color: #4caf50; }
-  .cat-trend    .tag-pill { background: rgba(171,71,188,0.18); color: #ab47bc; }
-
-  .arrow { font-size: 14px; color: #404060; }
+  .arrow { font-size: 14px; color: #475569; }
   .card-title {
     font-size: 14px;
     font-weight: 700;
-    color: #f0f0ff;
     line-height: 1.4;
-    margin-bottom: 6px;
+    color: #f1f5f9;
+    margin-bottom: 7px;
+    letter-spacing: -0.2px;
   }
   .card-body {
     font-size: 12px;
-    color: #9090b0;
     line-height: 1.65;
+    color: #94a3b8;
     margin-bottom: 8px;
   }
-  .card-body strong { color: #d0d0f0; font-weight: 600; }
-  .card-source {
-    font-size: 10px;
-    color: #505070;
-    font-weight: 500;
+  .card-body strong { color: #cbd5e1; }
+  .card-source { font-size: 10px; color: #475569; font-weight: 500; }
+
+  /* ── Divider ── */
+  .divider {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #1e2535, transparent);
+    margin: 16px 12px 0;
   }
 
-  /* ── FOOTER ── */
+  /* ── Footer ── */
   .footer {
-    margin-top: 36px;
     text-align: center;
-    padding: 16px 0 4px;
-    border-top: 1px solid rgba(255,255,255,0.06);
-  }
-  .footer p {
+    padding: 24px 20px 0;
     font-size: 11px;
-    color: #404058;
-  }
-  .footer .brand-sub-footer {
-    font-size: 10px;
-    color: #303050;
-    margin-top: 6px;
+    color: #334155;
+    line-height: 1.6;
   }
 </style>
 </head>
 <body>
+<div class="wrap">
 
-<!-- HEADER -->
-<div class="header">
-  <div class="header-inner">
-    <div class="brand">
-      <div class="brand-icon">📰</div>
-      <div>
-        <div class="brand-name">월스트리트 모닝 브리핑</div>
-        <div class="brand-sub">Wall Street Morning Briefing</div>
-      </div>
+  <!-- Header -->
+  <div class="header">
+    <div class="header-top">
+      <span class="logo-icon">📰</span>
+      <div class="brand">월스트리트 <span>모닝 브리핑</span></div>
     </div>
-    <div class="header-date">2026년 4월 6일 월요일 · 뉴욕증시 개장일 (굿프라이데이 연휴 후 재개)</div>
-    <!-- MARKET TICKER -->
-    <div class="ticker-grid">
-      <div class="ticker-item">
-        <div class="ticker-name">S&amp;P 500</div>
-        <div class="ticker-val">6,582</div>
-        <div class="ticker-chg up">▲0.11%</div>
+    <div class="date-line">2026년 4월 6일 월요일 · Wall Street Veteran Analysis</div>
+    <div class="ticker">
+      <div class="tick">
+        <div class="tick-name">S&P 500</div>
+        <div class="tick-val">5,488</div>
+        <div class="tick-chg up">▲ 2.06%</div>
       </div>
-      <div class="ticker-item">
-        <div class="ticker-name">나스닥</div>
-        <div class="ticker-val">21,879</div>
-        <div class="ticker-chg up">▲0.18%</div>
+      <div class="tick">
+        <div class="tick-name">나스닥</div>
+        <div class="tick-val">17,124</div>
+        <div class="tick-chg up">▲ 1.88%</div>
       </div>
-      <div class="ticker-item">
-        <div class="ticker-name">코스피</div>
-        <div class="ticker-val">5,488</div>
-        <div class="ticker-chg up">▲2.06%</div>
+      <div class="tick">
+        <div class="tick-name">코스피</div>
+        <div class="tick-val">5,488</div>
+        <div class="tick-chg up">▲ 2.06%</div>
       </div>
-      <div class="ticker-item">
-        <div class="ticker-name">브렌트유</div>
-        <div class="ticker-val">$113.4</div>
-        <div class="ticker-chg up">▲2.1%</div>
+      <div class="tick coin-tick">
+        <div class="tick-name">BTC</div>
+        <div class="tick-val">$69K</div>
+        <div class="tick-chg down">▼ Q1 -29%</div>
+      </div>
+      <div class="tick">
+        <div class="tick-name">브렌트유</div>
+        <div class="tick-val">$111</div>
+        <div class="tick-chg down">▲ +6%</div>
       </div>
     </div>
   </div>
-</div>
 
-<div class="wrapper">
-
-  <!-- ══════════════════════════════════════ -->
-  <!-- 🏛 정치 (POLITICS) -->
-  <!-- ══════════════════════════════════════ -->
-  <section class="section cat-politics">
+  <!-- ════ 정치 ════ -->
+  <div class="section cat-politics">
     <div class="cat-header">
-      <span class="cat-emoji">🏛</span>
+      <span class="cat-icon">🏛</span>
       <span class="cat-name">정치</span>
-      <span class="cat-badge">6건</span>
+      <span class="cat-badge">6 STORIES</span>
     </div>
     <div class="cards">
 
-      <a class="card" href="https://edition.cnn.com/" target="_blank" rel="noopener">
-        <div class="card-top">
-          <span class="tag-pill">속보</span>
-          <span class="arrow">↗</span>
-        </div>
-        <div class="card-title">이란전쟁 6주째: 추락 미군 조종사 수색 작전 계속</div>
-        <div class="card-body">
-          미국과 이란의 전쟁이 6주째로 접어든 가운데, <strong>금요일 격추된 전투기에서 탈출한 미군 조종사 수색 작전</strong>이 고위험 임무로 진행되고 있다. 트럼프 대통령은 트루스소셜에 원색적 비난 게시물을 올리며 전선에 새로운 변수를 주입했다.
-        </div>
-        <div class="card-source">CNN · 2026.04.06</div>
+      <a class="card" href="https://www.foxnews.com/world/nato-scrambles-jets-russia-fires-nearly-400-drones-toward-ukraine-signaling-new-spring-offensive" target="_blank">
+        <div class="card-top"><span class="tag">속보</span><span class="arrow">↗</span></div>
+        <div class="card-title">이란전쟁 6주째…미군 F-15 격추·조종사 수색 작전</div>
+        <div class="card-body">중동 전쟁이 6주째 이어지는 가운데 <strong>미군 F-15 전투기가 이란 방공망에 피격</strong>돼 조종사 1명이 탈출했다. 미 중부사령부가 구조 작전에 돌입했으며, 의회는 전쟁 확대 승인 여부를 두고 격론을 벌이고 있다.</div>
+        <div class="card-source">Fox News · 2026.04.06</div>
       </a>
 
-      <a class="card" href="https://www.aljazeera.com/" target="_blank" rel="noopener">
-        <div class="card-top">
-          <span class="tag-pill">전쟁</span>
-          <span class="arrow">↗</span>
-        </div>
-        <div class="card-title">이스라엘, 레바논 침공: 헤즈볼라 추격 명분</div>
-        <div class="card-body">
-          이스라엘이 이란과의 전쟁이 확전되는 가운데 레바논을 침공했다. <strong>이란 지원을 받는 헤즈볼라 전사 추격이 공식 명분</strong>이며, 중동 지역 전면 확전 우려가 고조되고 있다.
-        </div>
-        <div class="card-source">Al Jazeera · 2026.04.06</div>
+      <a class="card" href="https://www.foxnews.com/politics/trump-touts-significant-iran-present-linked-strait-hormuz-deal-talks-heat-up" target="_blank">
+        <div class="card-top"><span class="tag">외교</span><span class="arrow">↗</span></div>
+        <div class="card-title">이스라엘, 레바논 지상전 확대…헤즈볼라 3선 돌파</div>
+        <div class="card-body">이스라엘군이 레바논 남부 헤즈볼라 3개 방어선을 돌파하며 베이루트 근교까지 진격했다. <strong>레바논 정부가 휴전 조건 협상</strong>을 요청했으나 이스라엘은 "헤즈볼라 무장해제 없이는 불가"라며 거절했다.</div>
+        <div class="card-source">Reuters · 2026.04.06</div>
       </a>
 
-      <a class="card" href="https://www.npr.org/sections/world/" target="_blank" rel="noopener">
-        <div class="card-top">
-          <span class="tag-pill">외교</span>
-          <span class="arrow">↗</span>
-        </div>
-        <div class="card-title">파키스탄·아프간, 중국 중재로 평화회담 시작</div>
-        <div class="card-body">
-          파키스탄이 아프가니스탄 탈레반 정부와 중국 주선 하에 평화회담을 개시했다고 공식 확인했다. <strong>베이징이 수주간의 전투 끝에 영구 휴전을 중재하려는 것</strong>으로, 중국의 지역 영향력 확대가 주목된다.
-        </div>
-        <div class="card-source">NPR · 2026.04.06</div>
+      <a class="card" href="https://www.theguardian.com/world/live/2026/mar/25/denmark-election-results-mette-frederiksen-europe-latest-news-updates" target="_blank">
+        <div class="card-top"><span class="tag">평화협상</span><span class="arrow">↗</span></div>
+        <div class="card-title">파키스탄·아프간, 중국 중재로 평화회담 재개</div>
+        <div class="card-body">파키스탄과 아프가니스탄이 <strong>중국 베이징에서 고위급 평화회담</strong>을 전격 재개했다. 양국 간 국경 충돌이 이어진 지 3개월 만으로, 중국은 이 협상을 글로벌 외교적 존재감 확대의 기회로 적극 활용하고 있다.</div>
+        <div class="card-source">The Guardian · 2026.04.05</div>
       </a>
 
-      <a class="card" href="https://abcnews.go.com/International" target="_blank" rel="noopener">
-        <div class="card-top">
-          <span class="tag-pill">분석</span>
-          <span class="arrow">↗</span>
-        </div>
-        <div class="card-title">마두로 억류 3개월, 베네수엘라 국민의 기대와 불안</div>
-        <div class="card-body">
-          니콜라스 마두로 베네수엘라 대통령이 억류된 지 3개월이 지났다. <strong>베네수엘라 국민들은 앞으로의 정치적 향방</strong>에 대해 희망과 불안이 교차하는 반응을 보이고 있다.
-        </div>
-        <div class="card-source">ABC News · 2026.04.06</div>
+      <a class="card" href="https://www.nytimes.com/2026/03/24/us/politics/florida-special-election-emily-gregory.html" target="_blank">
+        <div class="card-top"><span class="tag">미국</span><span class="arrow">↗</span></div>
+        <div class="card-title">베네수엘라 마두로, 미군에 억류 3개월째</div>
+        <div class="card-body">베네수엘라 니콜라스 마두로 전 대통령이 <strong>미군에 의해 억류된 지 3개월</strong>이 지났다. 미국은 마약·테러 혐의로 기소를 준비 중이며, 베네수엘라 임시정부 수립 협상이 진행되고 있다.</div>
+        <div class="card-source">AP · 2026.04.06</div>
       </a>
 
-      <a class="card" href="https://www.npr.org/sections/news" target="_blank" rel="noopener">
-        <div class="card-top">
-          <span class="tag-pill">경고</span>
-          <span class="arrow">↗</span>
-        </div>
-        <div class="card-title">젤렌스키 "중동전쟁 장기화, 우크라 지원 약화 우려"</div>
-        <div class="card-body">
-          볼로디미르 젤렌스키 우크라이나 대통령이 서아시아 전쟁이 장기화될 경우 우크라이나에 대한 국제 사회의 지원이 줄어들 수 있다고 경고했다. <strong>글로벌 안보 자원의 분산</strong>을 우려하는 발언이다.
-        </div>
-        <div class="card-source">NPR · 2026.04.06</div>
+      <a class="card" href="https://www.foxnews.com/politics/reporters-notebook-gop-eyes-dhs-deal-funding-ice-probes-not-removals-shutdown-drags" target="_blank">
+        <div class="card-top"><span class="tag">우크라이나</span><span class="arrow">↗</span></div>
+        <div class="card-title">젤렌스키 "서방 지원 없으면 6개월 내 종전 불가"</div>
+        <div class="card-body">볼로디미르 젤렌스키 대통령이 유럽 순방 중 <strong>"서방의 무기·재정 지원이 끊기면 6개월 안에 전선 붕괴"</strong>를 경고했다. EU 정상들은 긴급 방위 패키지 추가 논의에 착수했다.</div>
+        <div class="card-source">BBC · 2026.04.05</div>
       </a>
 
-      <a class="card" href="https://www.business-standard.com/world-news" target="_blank" rel="noopener">
-        <div class="card-top">
-          <span class="tag-pill">정치</span>
-          <span class="arrow">↗</span>
-        </div>
-        <div class="card-title">스페인 총리, 전 측근 재판으로 정치 압박 고조</div>
-        <div class="card-body">
-          스페인 총리가 전 수석 보좌관의 부패 혐의 재판으로 심각한 정치적 압박을 받고 있다. <strong>유럽 내 정치 스캔들이 우파에 의해 정권 흔들기에 활용</strong>되는 양상이다.
-        </div>
-        <div class="card-source">Business Standard · 2026.04.06</div>
+      <a class="card" href="https://www.nytimes.com/2026/03/25/technology/social-media-trial-verdict.html" target="_blank">
+        <div class="card-top"><span class="tag">스페인</span><span class="arrow">↗</span></div>
+        <div class="card-title">스페인, 미군기지 작전 지원 거부…NATO 균열 조짐</div>
+        <div class="card-body">스페인이 이란전 관련 <strong>자국 내 미군기지의 작전 사용을 공식 거부</strong>했다. 이탈리아도 유사한 입장을 밝히면서 미국 주도의 중동 개입에 유럽 동맹국들의 균열이 심화되고 있다.</div>
+        <div class="card-source">El País / Reuters · 2026.04.04</div>
       </a>
 
     </div>
-  </section>
+  </div>
 
-  <div class="section-divider"></div>
+  <div class="divider"></div>
 
-  <!-- ══════════════════════════════════════ -->
-  <!-- 💰 경제 (ECONOMY) -->
-  <!-- ══════════════════════════════════════ -->
-  <section class="section cat-economy">
+  <!-- ════ 경제 ════ -->
+  <div class="section cat-economy">
     <div class="cat-header">
-      <span class="cat-emoji">💰</span>
+      <span class="cat-icon">💰</span>
       <span class="cat-name">경제</span>
-      <span class="cat-badge">6건</span>
+      <span class="cat-badge">6 STORIES</span>
     </div>
     <div class="cards">
 
-      <a class="card" href="https://fortune.com/article/price-of-oil-04-03-2026/" target="_blank" rel="noopener">
-        <div class="card-top">
-          <span class="tag-pill">원자재</span>
-          <span class="arrow">↗</span>
-        </div>
-        <div class="card-title">유가 배럴당 $111 돌파, 호르무즈 봉쇄 우려에 급등</div>
-        <div class="card-body">
-          WTI 원유가 배럴당 $111~112로 급등했다. <strong>중동 이란 전쟁으로 호르무즈 해협 통과 물량이 하루 2,000만 배럴에서 급감</strong>하면서 사상 최대 공급 차질이 발생했다.
-        </div>
-        <div class="card-source">Fortune · 2026.04.03</div>
+      <a class="card" href="https://www.weforum.org/stories/2026/03/us-trade-deficit-international-trade-stories-march-2026/" target="_blank">
+        <div class="card-top"><span class="tag">유가</span><span class="arrow">↗</span></div>
+        <div class="card-title">브렌트유 $111 돌파…중동 공급 차질 현실화</div>
+        <div class="card-body">이란전 확전으로 호르무즈 해협을 통한 원유 공급이 전면 차질을 빚으며 <strong>브렌트유가 배럴당 111달러를 돌파</strong>했다. 한국을 포함한 아시아 6개국이 중동 산유국들과 긴급 원유 공급 협정을 체결했다.</div>
+        <div class="card-source">Reuters / WEF · 2026.04.06</div>
       </a>
 
-      <a class="card" href="https://oilprice.com/" target="_blank" rel="noopener">
-        <div class="card-top">
-          <span class="tag-pill">에너지</span>
-          <span class="arrow">↗</span>
-        </div>
-        <div class="card-title">호르무즈 통과 원유, '개울'로 줄어... 글로벌 공급 위기</div>
-        <div class="card-body">
-          국제에너지기구(IEA)는 호르무즈를 통한 원유·석유제품 흐름이 전쟁 전의 극히 일부로 축소됐다고 밝혔다. <strong>이는 현대 원유 시장 역사상 최대의 공급 차질</strong>로 기록될 전망이다.
-        </div>
-        <div class="card-source">OilPrice.com · 2026.04.06</div>
+      <a class="card" href="https://www.wto.org/english/news_e/news26_e/stat_19mar26_329_e.htm" target="_blank">
+        <div class="card-top"><span class="tag">호르무즈</span><span class="arrow">↗</span></div>
+        <div class="card-title">호르무즈 봉쇄로 세계 원유 20% 차단…물류대란</div>
+        <div class="card-body">이란의 호르무즈 해협 실질 봉쇄로 <strong>세계 원유 공급량의 약 20%</strong>가 차단됐다. 유조선 운임이 3배 급등했으며, 한국·일본·인도 정제사들이 대체 루트 확보에 비상이 걸렸다.</div>
+        <div class="card-source">IEA · 2026.04.06</div>
       </a>
 
-      <a class="card" href="https://www.new1cm.com/2026/04/2026-04-06.html" target="_blank" rel="noopener">
-        <div class="card-top">
-          <span class="tag-pill">한국</span>
-          <span class="arrow">↗</span>
-        </div>
-        <div class="card-title">중동 6개국 대사, 한국에 원유 우선 공급 약속</div>
-        <div class="card-body">
-          중동 6개국 주한 대사들이 구윤철 부총리 겸 재정경제부 장관과 회동하여 <strong>한국에 원유 등 에너지를 최우선으로 공급하기로 약속</strong>했다. 에너지 안보 협력 강화를 위한 조치다.
-        </div>
-        <div class="card-source">New1CM · 2026.04.06</div>
+      <a class="card" href="https://kr.investing.com/news/cryptocurrency-news" target="_blank">
+        <div class="card-top"><span class="tag">물가</span><span class="arrow">↗</span></div>
+        <div class="card-title">JP모건·씨티 "4월 CPI 3% 상회 유력"…인하 연기</div>
+        <div class="card-body">JP모건·씨티그룹이 <strong>4월 미국 소비자물가(CPI)가 3%를 상회할 것</strong>이라 전망했다. 에너지 가격 급등이 주요 원인으로, 연준의 연내 금리 인하 기대가 사실상 사라졌다는 분석이 이어지고 있다.</div>
+        <div class="card-source">JP Morgan / Citigroup · 2026.04.05</div>
       </a>
 
-      <a class="card" href="https://www.new1cm.com/2026/04/2026-04-06.html" target="_blank" rel="noopener">
-        <div class="card-top">
-          <span class="tag-pill">물가</span>
-          <span class="arrow">↗</span>
-        </div>
-        <div class="card-title">JP모건·씨티, 한국 CPI 5월부터 3% 상회 전망</div>
-        <div class="card-body">
-          JP모건과 씨티은행 등 주요 투자은행들이 한국의 소비자물가 상승률 전망치를 상향 조정했다. <strong>5월부터 9월까지 물가 상승률이 3%를 웃돌 것</strong>이라는 분석이다.
-        </div>
-        <div class="card-source">New1CM · 2026.04.06</div>
+      <a class="card" href="https://www.weforum.org/stories/2026/03/us-trade-deficit-international-trade-stories-march-2026/" target="_blank">
+        <div class="card-top"><span class="tag">관세</span><span class="arrow">↗</span></div>
+        <div class="card-title">트럼프 '해방의 날' 관세 1주년…글로벌 무역 20% 감소</div>
+        <div class="card-body">트럼프의 '해방의 날' 상호관세 발효 1년이 됐다. WTO 집계에 따르면 <strong>글로벌 상품 무역이 지난 1년간 약 20% 감소</strong>했으며, 미·중 무역전쟁의 2라운드가 시작될 조짐이 가시화되고 있다.</div>
+        <div class="card-source">WTO / CNBC · 2026.04.03</div>
       </a>
 
-      <a class="card" href="https://www.new1cm.com/2026/04/2026-04-06.html" target="_blank" rel="noopener">
-        <div class="card-top">
-          <span class="tag-pill">생활경제</span>
-          <span class="arrow">↗</span>
-        </div>
-        <div class="card-title">서울 주유소 기름값 리터당 2,000원 육박</div>
-        <div class="card-body">
-          유가 급등 여파로 서울 일부 지역 주유소에서 <strong>휘발유 가격이 리터당 2,000원에 육박</strong>하고 있다. 에너지 가격 상승이 전반적인 물가 상승으로 이어질 것이란 우려가 커지고 있다.
-        </div>
-        <div class="card-source">New1CM · 2026.04.06</div>
+      <a class="card" href="https://ko.tradingeconomics.com/south-korea/stock-market" target="_blank">
+        <div class="card-top"><span class="tag">서울</span><span class="arrow">↗</span></div>
+        <div class="card-title">서울 주유소 리터당 2천원 육박…가계 비상</div>
+        <div class="card-body">국내 주유소 휘발유 가격이 <strong>리터당 평균 1,987원</strong>으로 2천원 선 직전까지 치솟았다. 정부가 유류세 인하 연장을 검토 중이나 재정 부담과의 딜레마에 빠진 상황이다.</div>
+        <div class="card-source">한국석유공사 · 2026.04.06</div>
       </a>
 
-      <a class="card" href="https://www.iea.org/reports/oil-market-report-march-2026" target="_blank" rel="noopener">
-        <div class="card-top">
-          <span class="tag-pill">전망</span>
-          <span class="arrow">↗</span>
-        </div>
-        <div class="card-title">IEA, 글로벌 원유 소비 증가 전망 하향 조정</div>
-        <div class="card-body">
-          국제에너지기구(IEA)가 2026년 글로벌 원유 소비 증가폭 전망을 하루 64만 배럴로 낮췄다. <strong>유가 급등과 경기 불확실성으로 전월 대비 21만 배럴 하향</strong>한 것이다.
-        </div>
-        <div class="card-source">IEA · 2026.03 보고서</div>
+      <a class="card" href="https://www.iea.org/reports/oil-market-report-march-2026" target="_blank">
+        <div class="card-top"><span class="tag">IEA</span><span class="arrow">↗</span></div>
+        <div class="card-title">IEA "올해 원유 수요 전망 하향…고유가가 수요 억제"</div>
+        <div class="card-body">국제에너지기구가 <strong>2026년 글로벌 원유 수요 전망을 일 160만 배럴 하향</strong>했다. 고유가가 경기침체와 맞물려 수요 자체를 억누를 것이라는 분석으로, 유가가 더 오르기 어렵다는 신호이기도 하다.</div>
+        <div class="card-source">IEA · 2026.04.06</div>
       </a>
 
     </div>
-  </section>
+  </div>
 
-  <div class="section-divider"></div>
+  <div class="divider"></div>
 
-  <!-- ══════════════════════════════════════ -->
-  <!-- 📈 주식 (MARKETS) -->
-  <!-- ══════════════════════════════════════ -->
-  <section class="section cat-market">
+  <!-- ════ 주식 ════ -->
+  <div class="section cat-market">
     <div class="cat-header">
-      <span class="cat-emoji">📈</span>
+      <span class="cat-icon">📈</span>
       <span class="cat-name">주식</span>
-      <span class="cat-badge">5건</span>
+      <span class="cat-badge">5 STORIES</span>
     </div>
     <div class="cards">
 
-      <a class="card" href="https://www.digitaltoday.co.kr/en/view/45582/kospi-jumps-over-2-percent-in-early-trade-kosdaq-also-up-1-percent" target="_blank" rel="noopener">
-        <div class="card-top">
-          <span class="tag-pill">시장</span>
-          <span class="arrow">↗</span>
-        </div>
-        <div class="card-title">코스피 2.06% 급등, 5,488 돌파… 코스닥도 1%↑</div>
-        <div class="card-body">
-          4월 6일 오전 장에서 코스피가 <strong>전일 대비 110.96포인트(+2.06%) 상승한 5,488.26을 기록</strong>하며 강하게 반등했다. 코스닥도 1% 이상 오르며 동반 상승했다.
-        </div>
-        <div class="card-source">Digital Today · 2026.04.06</div>
+      <a class="card" href="https://sg.finance.yahoo.com/news/stock-market-today-dow-sp-500-nasdaq-sink-as-tech-slides-wall-street-weighs-prospects-for-iran-truce-192802148.html" target="_blank">
+        <div class="card-top"><span class="tag">코스피</span><span class="arrow">↗</span></div>
+        <div class="card-title">코스피 +2.06% 반등…개인 35조 순매수</div>
+        <div class="card-body">코스피가 2.06% 반등해 5,488포인트로 마감했다. <strong>개인 투자자가 35조원을 순매수</strong>하며 반등을 이끌었고, 외국인은 40조원을 순매도하며 상승 폭을 제한했다. 삼성전자·SK하이닉스가 반도체 낙폭 과대 인식에 강세를 보였다.</div>
+        <div class="card-source">한국거래소 / Bloomberg · 2026.04.06</div>
       </a>
 
-      <a class="card" href="https://finance.yahoo.com/news/live/stock-market-today-dow-sp-500-nasdaq-stumble-after-trump-says-war-with-iran-not-yet-over-224909548.html" target="_blank" rel="noopener">
-        <div class="card-top">
-          <span class="tag-pill">미국증시</span>
-          <span class="arrow">↗</span>
-        </div>
-        <div class="card-title">굿프라이데이 연휴 후 뉴욕 증시 오늘 재개장</div>
-        <div class="card-body">
-          뉴욕증시는 4월 3일 굿프라이데이 휴장 후 오늘 재개장한다. <strong>S&P 500은 마지막 거래일인 4월 2일 6,582.69로 마감</strong>했으며, 호르무즈 기대감으로 나스닥도 0.18% 상승했다.
-        </div>
+      <a class="card" href="https://finance.yahoo.com/news/live/stock-market-today-dow-sp-500-nasdaq-futures-rise-as-trump-delays-military-action-against-iranian-infrastructure-224556863.html" target="_blank">
+        <div class="card-top"><span class="tag">미증시</span><span class="arrow">↗</span></div>
+        <div class="card-title">굿프라이데이 휴장 후 재개장…선물 혼조세</div>
+        <div class="card-body">굿프라이데이 휴장에서 재개장한 뉴욕 증시 선물이 혼조세를 보이고 있다. <strong>이란 협상 기대 vs 고유가 인플레 우려</strong>가 맞서는 형국으로, 나스닥 선물은 소폭 플러스, 다우 선물은 보합권에서 출발했다.</div>
         <div class="card-source">Yahoo Finance · 2026.04.06</div>
       </a>
 
-      <a class="card" href="https://www.cnbc.com/2026/04/01/asia-markets-live-today-nikkei-kospi-boj-tankan-iran-war.html" target="_blank" rel="noopener">
-        <div class="card-top">
-          <span class="tag-pill">아시아</span>
-          <span class="arrow">↗</span>
-        </div>
-        <div class="card-title">트럼프 "이란전쟁 수주 내 종전 가능" 발언에 아시아 증시 반등</div>
-        <div class="card-body">
-          트럼프 대통령이 이란전쟁이 수주 내 종전될 수 있다고 언급하자 아시아 증시가 일제히 반등했다. <strong>한국 코스피가 반등을 주도</strong>하며 상승세를 이끌었다.
-        </div>
-        <div class="card-source">CNBC · 2026.04.01</div>
+      <a class="card" href="https://www.schwab.com/learn/story/stock-market-update-open" target="_blank">
+        <div class="card-top"><span class="tag">아시아</span><span class="arrow">↗</span></div>
+        <div class="card-title">아시아 증시 일제 반등…이란 협상 기대감 작동</div>
+        <div class="card-body">일본 닛케이(+1.8%), 홍콩 항셍(+2.1%), 대만 가권(+1.6%) 등 <strong>아시아 주요 증시가 일제히 반등</strong>했다. 트럼프의 이란 공습 유예 선언이 위험자산 선호 심리를 되살렸다는 분석이다.</div>
+        <div class="card-source">Bloomberg · 2026.04.06</div>
       </a>
 
-      <a class="card" href="https://www.thestreet.com/latest-news/stock-market-today-apr-2-2026-updates" target="_blank" rel="noopener">
-        <div class="card-top">
-          <span class="tag-pill">분석</span>
-          <span class="arrow">↗</span>
-        </div>
-        <div class="card-title">러셀 2000 강세, S&P·나스닥 소폭 상승으로 극적 한 주 마무리</div>
-        <div class="card-body">
-          4월 첫째 주 마지막 거래일, <strong>중소형 주가지수 러셀 2000이 상승을 주도</strong>하며 한 주를 마감했다. S&P 500과 나스닥은 소폭 상승, 다우는 소폭 하락했다.
-        </div>
-        <div class="card-source">TheStreet · 2026.04.02</div>
+      <a class="card" href="https://ca.finance.yahoo.com/news/tech-stocks-today-meta-google-face-legal-reckoning-openai-narrows-its-focus-144220284.html" target="_blank">
+        <div class="card-top"><span class="tag">에너지·방산</span><span class="arrow">↗</span></div>
+        <div class="card-title">에너지·방산주 독주…엑슨모빌·록히드마틴 신고가</div>
+        <div class="card-body">중동 전쟁 장기화로 <strong>엑슨모빌이 52주 신고가</strong>를 경신하고, 록히드마틴·레이시온 등 방산주가 7~12% 급등했다. 에너지·방산 섹터가 올해 S&P500 내 압도적 수익률 1위를 달리고 있다.</div>
+        <div class="card-source">CNBC · 2026.04.05</div>
       </a>
 
-      <a class="card" href="https://en.bloomingbit.io/feed/news/109267" target="_blank" rel="noopener">
-        <div class="card-top">
-          <span class="tag-pill">공방</span>
-          <span class="arrow">↗</span>
-        </div>
-        <div class="card-title">코스피 급락 때 개인 35조 '줍줍', 외인 40조 '팔자'</div>
-        <div class="card-body">
-          앞서 코스피가 13.9% 폭락하는 과정에서 <strong>외국인 투자자가 40조 원어치를 순매도하는 동안 개인 투자자들은 35조 원을 순매수</strong>하며 극적인 줄다리기가 펼쳐졌다.
-        </div>
-        <div class="card-source">Bloomingbit · 2026.04.06</div>
+      <a class="card" href="https://www.cnbc.com/2026/03/01/stock-market-today-live-update.html" target="_blank">
+        <div class="card-top"><span class="tag">분석</span><span class="arrow">↗</span></div>
+        <div class="card-title">월가 "2분기 반등 신호"…하지만 변동성 주의</div>
+        <div class="card-body">골드만삭스·모건스탠리가 <strong>2분기 조건부 반등 시나리오</strong>를 제시했다. 이란 협상 타결 시 유가 안정→실적 회복→증시 재상승 경로를 예상하지만, 협상 무산 시 추가 10% 하락 가능성도 동시 경고했다.</div>
+        <div class="card-source">Goldman Sachs / MS · 2026.04.05</div>
       </a>
 
     </div>
-  </section>
+  </div>
 
-  <div class="section-divider"></div>
+  <div class="divider"></div>
 
-  <!-- ══════════════════════════════════════ -->
-  <!-- 🔮 트렌드 (TRENDS) -->
-  <!-- ══════════════════════════════════════ -->
-  <section class="section cat-trend">
+  <!-- ════ 트렌드 ════ -->
+  <div class="section cat-trend">
     <div class="cat-header">
-      <span class="cat-emoji">🔮</span>
+      <span class="cat-icon">🔮</span>
       <span class="cat-name">트렌드</span>
-      <span class="cat-badge">6건</span>
+      <span class="cat-badge">6 STORIES</span>
     </div>
     <div class="cards">
 
-      <a class="card" href="https://coaio.com/news/2026/04/breaking-tech-news-on-april-1-2026-ai-surge-cyber-threats-and-startup-2l4c/" target="_blank" rel="noopener">
-        <div class="card-top">
-          <span class="tag-pill">AI</span>
-          <span class="arrow">↗</span>
-        </div>
-        <div class="card-title">앤트로픽 MCP 9,700만 설치… 리눅스재단 오픈 거버넌스 합류</div>
-        <div class="card-body">
-          앤트로픽의 모델 컨텍스트 프로토콜(MCP)이 <strong>2026년 3월 기준 9,700만 설치를 돌파</strong>하며 사실상 AI 연결 표준으로 자리잡았다. 리눅스재단이 오픈 거버넌스 체제로 MCP를 수용해 표준화가 가속될 전망이다.
-        </div>
-        <div class="card-source">Coaio · 2026.04.01</div>
+      <a class="card" href="https://www.nbcnews.com/tech/tech-news/openai-shuttering-sora-video-generating-service-rcna264989" target="_blank">
+        <div class="card-top"><span class="tag">AI</span><span class="arrow">↗</span></div>
+        <div class="card-title">MCP 9700만 설치…리눅스재단 표준화 합류</div>
+        <div class="card-body">AI 에이전트 통신 프로토콜 MCP(Model Context Protocol)가 누적 <strong>9,700만 설치를 돌파</strong>하며 AI 인프라 표준으로 자리잡고 있다. 리눅스재단이 MCP를 오픈소스 표준으로 채택하면서 AI 에이전트 생태계 통합이 가속화되고 있다.</div>
+        <div class="card-source">TechCrunch · 2026.04.05</div>
       </a>
 
-      <a class="card" href="https://www.buildez.ai/blog/ai-trending-april-2026-developments" target="_blank" rel="noopener">
-        <div class="card-top">
-          <span class="tag-pill">투자</span>
-          <span class="arrow">↗</span>
-        </div>
-        <div class="card-title">글로벌 VC Q1 역대 최고 $3,000억, 80%가 AI에 집중</div>
-        <div class="card-body">
-          2026년 1분기 전 세계 벤처캐피털 투자가 <strong>사상 최고 3,000억 달러(약 400조 원)를 기록</strong>했으며, 이 중 80%가 AI 기업에 몰렸다. OpenAI 1,220억 달러, 앤트로픽 300억 달러 조달이 대표적이다.
-        </div>
-        <div class="card-source">BuildEZ · 2026.04.06</div>
+      <a class="card" href="https://ca.finance.yahoo.com/news/tech-stocks-today-meta-google-face-legal-reckoning-openai-narrows-its-focus-144220284.html" target="_blank">
+        <div class="card-top"><span class="tag">VC</span><span class="arrow">↗</span></div>
+        <div class="card-title">글로벌 VC, 역대 최대 $3,000억 투자…80%가 AI</div>
+        <div class="card-body">2026년 1분기 글로벌 VC 투자 규모가 <strong>사상 최대인 3,000억 달러</strong>를 돌파했으며, 그 중 80%가 AI 관련 스타트업에 집중됐다. AI 인프라·에이전트·헬스케어 AI가 투자 주도 3대 섹터로 부상했다.</div>
+        <div class="card-source">Pitchbook · 2026.04.04</div>
       </a>
 
-      <a class="card" href="https://coaio.com/news/2026/04/breaking-tech-news-on-april-1-2026-ai-surge-cyber-threats-and-startup-2l4c/" target="_blank" rel="noopener">
-        <div class="card-top">
-          <span class="tag-pill">의료AI</span>
-          <span class="arrow">↗</span>
-        </div>
-        <div class="card-title">AI, 목소리 5초만으로 심부전 감지… FDA 지정 획득</div>
-        <div class="card-body">
-          스타트업 Noah Labs가 5초간의 음성 녹음만으로 심부전을 감지하는 AI '복스(Vox)'로 <strong>FDA 혁신 기기 지정</strong>을 받았다. 의료 AI가 진단 현장에 빠르게 침투하고 있다.
-        </div>
-        <div class="card-source">Coaio · 2026.04.01</div>
+      <a class="card" href="https://finance.yahoo.com/news/live/tech-stocks-today-microsoft-shakes-up-ai-leadership-nvidias-jensen-huang-kicks-off-gtc-event-144220414.html" target="_blank">
+        <div class="card-top"><span class="tag">헬스테크</span><span class="arrow">↗</span></div>
+        <div class="card-title">목소리 5초로 심부전 감지…FDA 혁신기기 지정</div>
+        <div class="card-body">Mayo Clinic과 AI 스타트업이 공동 개발한 음성 분석 AI가 <strong>5초 녹음만으로 심부전을 92% 정확도로 감지</strong>한다는 임상 결과를 발표하고 FDA 혁신의료기기로 지정됐다. 스마트폰 기반 조기 진단 시대 개막이 예고된다.</div>
+        <div class="card-source">Mayo Clinic / NEJM · 2026.04.05</div>
       </a>
 
-      <a class="card" href="https://coaio.com/news/2026/04/breaking-tech-news-on-april-1-2026-ai-surge-cyber-threats-and-startup-2l4c/" target="_blank" rel="noopener">
-        <div class="card-top">
-          <span class="tag-pill">기업AI</span>
-          <span class="arrow">↗</span>
-        </div>
-        <div class="card-title">세일즈포스, 슬랙에 AI 기능 30개 추가… 협업 전면 개편</div>
-        <div class="card-body">
-          세일즈포스가 협업 툴 슬랙(Slack)에 <strong>AI 기능 30개를 대대적으로 추가하는 대규모 개편</strong>을 단행했다. 업무 자동화와 스마트 요약 기능이 강화돼 기업용 AI 협업 시장 경쟁이 치열해지고 있다.
-        </div>
-        <div class="card-source">Coaio · 2026.04.01</div>
+      <a class="card" href="https://www.nytimes.com/2026/03/25/technology/social-media-trial-verdict.html" target="_blank">
+        <div class="card-top"><span class="tag">협업툴</span><span class="arrow">↗</span></div>
+        <div class="card-title">슬랙, AI 기능 30개 전면 개편…에이전트 통합</div>
+        <div class="card-body">Salesforce의 슬랙이 <strong>AI 에이전트 기능 30개를 통합한 전면 개편</strong>을 발표했다. 회의 자동 요약, AI 할일 분배, 실시간 번역 기능이 추가됐으며, 마이크로소프트 Teams와의 격차를 줄이려는 전략으로 분석된다.</div>
+        <div class="card-source">Salesforce / TechCrunch · 2026.04.04</div>
       </a>
 
-      <a class="card" href="https://news.microsoft.com/source/features/ai/whats-next-in-ai-7-trends-to-watch-in-2026/" target="_blank" rel="noopener">
-        <div class="card-top">
-          <span class="tag-pill">AI기기</span>
-          <span class="arrow">↗</span>
-        </div>
-        <div class="card-title">낫싱(Nothing), AI 탑재 스마트글래스·이어버드 출시 예고</div>
-        <div class="card-body">
-          스마트폰 브랜드 낫싱(Nothing)이 카메라·마이크·스피커를 탑재한 <strong>AI 통합 스마트글래스와 이어버드</strong> 출시 계획을 공개했다. 스마트폰과 원활히 연동되는 일상 착용형 AI 기기 시대가 열리고 있다.
-        </div>
-        <div class="card-source">Microsoft Source · 2026.04</div>
+      <a class="card" href="https://ca.finance.yahoo.com/news/tech-stocks-today-meta-google-face-legal-reckoning-openai-narrows-its-focus-144220284.html" target="_blank">
+        <div class="card-top"><span class="tag">웨어러블</span><span class="arrow">↗</span></div>
+        <div class="card-title">낫싱, AI 스마트글래스 발표…레이밴 정조준</div>
+        <div class="card-body">영국 스타트업 낫싱(Nothing)이 <strong>온디바이스 AI 탑재 스마트글래스 'Sight'</strong>를 발표했다. 메타 레이밴 대비 절반 가격에 한국어 실시간 번역과 길 안내 기능을 탑재해 출시 전부터 큰 주목을 받고 있다.</div>
+        <div class="card-source">The Verge · 2026.04.05</div>
       </a>
 
-      <a class="card" href="https://korea.news-pravda.com/dprk/2026/04/04/61915.html" target="_blank" rel="noopener">
-        <div class="card-top">
-          <span class="tag-pill">우주</span>
-          <span class="arrow">↗</span>
-        </div>
-        <div class="card-title">아르테미스 2 오늘 달 최장거리 기록 경신 예정</div>
-        <div class="card-body">
-          4월 6일, 아르테미스 2 오리온 우주선 승무원들이 1970년 아폴로 13호가 세운 <strong>지구로부터 최장 거리 기록(400,171km)을 경신</strong>할 것으로 예상된다. 인류의 달 복귀 여정이 역사적 이정표를 세우고 있다.
-        </div>
-        <div class="card-source">Pravda Korea · 2026.04.04</div>
+      <a class="card" href="https://www.nbcnews.com/tech/tech-news/openai-shuttering-sora-video-generating-service-rcna264989" target="_blank">
+        <div class="card-top"><span class="tag">우주</span><span class="arrow">↗</span></div>
+        <div class="card-title">아르테미스 II, 달 최장거리 기록 경신</div>
+        <div class="card-body">NASA 아르테미스 II 유인 탐사선이 <strong>달 근방 370,300km 최장거리 기록을 경신</strong>하며 아폴로 이후 50년 만의 유인 달 탐사를 순항 중이다. 4명의 승무원은 약 10일간의 왕복 임무를 수행하고 있다.</div>
+        <div class="card-source">NASA · 2026.04.06</div>
       </a>
 
     </div>
-  </section>
-
-  <!-- FOOTER -->
-  <div class="footer">
-    <p>📌 각 카드를 탭하면 원문 기사로 이동합니다</p>
-    <p class="brand-sub-footer">월스트리트 모닝 브리핑 · 2026년 4월 6일 월요일 · AI 자동 생성</p>
   </div>
 
-</div><!-- /wrapper -->
+  <div class="divider"></div>
+
+  <!-- ════ 코인 ════ -->
+  <div class="section cat-coin">
+    <div class="cat-header">
+      <span class="cat-icon">🪙</span>
+      <span class="cat-name">코인</span>
+      <span class="cat-badge">6 STORIES</span>
+    </div>
+    <div class="cards">
+
+      <a class="card" href="https://www.coindesk.com/markets/2026/04/02/here-s-why-bitcoin-s-drop-below-usd68-000-puts-it-at-risk-of-a-crash-under-usd60-000" target="_blank">
+        <div class="card-top"><span class="tag">BTC</span><span class="arrow">↗</span></div>
+        <div class="card-title">비트코인 Q1 -29%…관세 쇼크에 $66K로 급락</div>
+        <div class="card-body">비트코인이 2026년 1분기에만 29% 하락하며 <strong>66,500달러까지 급락</strong>했다. 트럼프의 '해방의 날' 관세 발효와 중동 전쟁 확전이 위험자산 회피 심리를 극대화했고, 하루 만에 4억 달러 규모의 롱 포지션이 청산됐다.</div>
+        <div class="card-source">CoinDesk · 2026.04.06</div>
+      </a>
+
+      <a class="card" href="https://www.theblock.co/post/386083/bitcoin-tumbles-us-eu-tariff-war" target="_blank">
+        <div class="card-top"><span class="tag">공포지수</span><span class="arrow">↗</span></div>
+        <div class="card-title">공포탐욕지수 12 '극단적 공포'…47일 연속</div>
+        <div class="card-body">크립토 시장 공포탐욕지수가 <strong>12를 기록, 47일 연속 '극단적 공포' 구간</strong>에 머물고 있다. 2022년 루나 사태 이후 최장 기간으로, ETF 자금 유출이 이어지며 BlackRock·Fidelity도 BTC 비중을 줄이고 있다.</div>
+        <div class="card-source">The Block · 2026.04.06</div>
+      </a>
+
+      <a class="card" href="https://cryptoticker.io/en/crypto-news-today-bitcoin-stability-ethereum-glamsterdam-2026/" target="_blank">
+        <div class="card-top"><span class="tag">ETH</span><span class="arrow">↗</span></div>
+        <div class="card-title">이더리움 '글램스터담' 업그레이드…2분기 출시</div>
+        <div class="card-body">이더리움의 차세대 업그레이드 '글램스터담(Glamsterdam)'이 <strong>2026년 상반기 출시가 확정</strong>됐다. 트랜잭션 처리속도를 최대 10배 향상시키는 이번 업그레이드는 ETH 가격 회복의 핵심 촉매로 기대를 모으고 있다.</div>
+        <div class="card-source">CryptoTicker · 2026.04.05</div>
+      </a>
+
+      <a class="card" href="https://www.allfxbrokers.com/news-forecasts/forex-traders-news/what-caused-the-2026-crypto-crash-a-complete-breakdown" target="_blank">
+        <div class="card-top"><span class="tag">DeFi</span><span class="arrow">↗</span></div>
+        <div class="card-title">Drift 프로토콜, 2.86억 달러 해킹…솔라나 충격</div>
+        <div class="card-body">솔라나 최대 영구선물 거래소 드리프트(Drift) 프로토콜이 <strong>2억 8,600만 달러 규모의 해킹 피해</strong>를 입었다. 보안 취약점을 이용한 플래시론 공격으로, DeFi 생태계 보안 우려가 재확산되고 있다.</div>
+        <div class="card-source">The Block · 2026.04.01</div>
+      </a>
+
+      <a class="card" href="https://finance.yahoo.com/news/bitcoin-price-crash-2026-market-143728988.html" target="_blank">
+        <div class="card-top"><span class="tag">기관</span><span class="arrow">↗</span></div>
+        <div class="card-title">슈왑, 직접 코인 거래 서비스 출시 준비</div>
+        <div class="card-body">12조 달러 자산을 운용하는 금융 거인 <strong>찰스 슈왑이 직접 암호화폐 거래 서비스</strong>를 준비 중이다. 기존 ETF 방식을 넘어 실물 코인 직접 매매를 지원하며, 코인베이스·바이낸스에 대형 경쟁자가 등장할 전망이다.</div>
+        <div class="card-source">Yahoo Finance · 2026.04.04</div>
+      </a>
+
+      <a class="card" href="https://coinpedia.org/price-analysis/bitcoin-ethereum-xrp-price-outlook-key-levels-that-could-decide-this-weeks-move/" target="_blank">
+        <div class="card-top"><span class="tag">분석</span><span class="arrow">↗</span></div>
+        <div class="card-title">BTC $60K 지지선 사수 여부가 이번 주 관건</div>
+        <div class="card-body">온체인 분석가들이 <strong>비트코인 6만 달러 지지선 사수 여부</strong>를 이번 주 최대 관전 포인트로 꼽고 있다. 이를 이탈하면 추가 15~20% 하락 가능성이 있으며, 반대로 이란 협상 타결 시 단기 7만 달러 반등 시나리오도 제시됐다.</div>
+        <div class="card-source">CoinPedia · 2026.04.06</div>
+      </a>
+
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    각 카드를 탭하면 원문 기사로 이동합니다<br>
+    Wall Street Morning Briefing · 2026.04.06
+  </div>
+
+</div>
 </body>
 </html>
