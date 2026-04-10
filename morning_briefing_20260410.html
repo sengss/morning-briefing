@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>월스트리트 모닝 브리핑 – 2026년 4월 10일</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Noto Sans KR', sans-serif; background: #0a0a0f; color: #e8e8f0; padding: 0 0 40px; }
+  .wrap { max-width: 480px; margin: 0 auto; }
+  .header { background: linear-gradient(135deg, #0d1117 0%, #161b27 100%); padding: 24px 20px 20px; border-bottom: 1px solid #1e2535; }
+  .header-top { display: flex; align-items: center; gap: 10px; margin-bottom: 4px; }
+  .logo-icon { font-size: 22px; }
+  .brand { font-size: 18px; font-weight: 900; letter-spacing: -0.5px; color: #fff; }
+  .brand span { color: #60a5fa; }
+  .date-line { font-size: 12px; color: #64748b; margin-bottom: 16px; }
+  .ticker { display: grid; grid-template-columns: repeat(5, 1fr); gap: 6px; }
+  .tick { background: #0f1623; border: 1px solid #1e2535; border-radius: 8px; padding: 7px 4px; text-align: center; }
+  .tick-name { font-size: 8px; color: #64748b; font-weight: 700; letter-spacing: 0.3px; margin-bottom: 3px; }
+  .tick-val { font-size: 12px; font-weight: 700; color: #e8e8f0; margin-bottom: 2px; }
+  .tick-chg { font-size: 9px; font-weight: 500; }
+  .up { color: #4ade80; } .down { color: #f87171; }
+  .tick.coin-tick { border-color: rgba(245,158,11,0.3); }
+  .tick.coin-tick .tick-val { color: #fbbf24; }
+  .section { margin-top: 20px; padding: 0 12px; }
+  .cat-header { display: flex; align-items: center; gap: 10px; padding: 10px 14px; border-radius: 10px; margin-bottom: 10px; }
+  .cat-icon { font-size: 20px; }
+  .cat-name { font-size: 15px; font-weight: 900; letter-spacing: -0.3px; flex: 1; }
+  .cat-badge { font-size: 11px; font-weight: 700; padding: 3px 8px; border-radius: 20px; }
+  .cat-politics .cat-header { background: rgba(239,83,80,0.12); border: 1px solid rgba(239,83,80,0.25); }
+  .cat-politics .cat-name { color: #ef5350; }
+  .cat-politics .cat-badge { background: rgba(239,83,80,0.2); color: #ef9a9a; }
+  .cat-politics .card { border-left: 3px solid #ef5350; }
+  .cat-economy .cat-header { background: rgba(66,165,245,0.12); border: 1px solid rgba(66,165,245,0.25); }
+  .cat-economy .cat-name { color: #42a5f5; }
+  .cat-economy .cat-badge { background: rgba(66,165,245,0.2); color: #90caf9; }
+  .cat-economy .card { border-left: 3px solid #42a5f5; }
+  .cat-market .cat-header { background: rgba(76,175,80,0.12); border: 1px solid rgba(76,175,80,0.25); }
+  .cat-market .cat-name { color: #4caf50; }
+  .cat-market .cat-badge { background: rgba(76,175,80,0.2); color: #a5d6a7; }
+  .cat-market .card { border-left: 3px solid #4caf50; }
+  .cat-trend .cat-header { background: rgba(171,71,188,0.12); border: 1px solid rgba(171,71,188,0.25); }
+  .cat-trend .cat-name { color: #ab47bc; }
+  .cat-trend .cat-badge { background: rgba(171,71,188,0.2); color: #ce93d8; }
+  .cat-trend .card { border-left: 3px solid #ab47bc; }
+  .cat-coin .cat-header { background: rgba(245,158,11,0.12); border: 1px solid rgba(245,158,11,0.3); }
+  .cat-coin .cat-name { color: #f59e0b; }
+  .cat-coin .cat-badge { background: rgba(245,158,11,0.2); color: #fcd34d; }
+  .cat-coin .card { border-left: 3px solid #f59e0b; }
+  .cards { display: flex; flex-direction: column; gap: 8px; }
+  .card { display: block; background: #111827; border-radius: 12px; padding: 14px 14px 12px; text-decoration: none; color: inherit; transition: transform 0.15s, background 0.15s; }
+  .card:active { transform: scale(0.98); background: #1a2234; }
+  .card-top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 7px; }
+  .tag { font-size: 10px; font-weight: 700; letter-spacing: 0.8px; padding: 2px 7px; border-radius: 4px; background: rgba(255,255,255,0.07); color: #94a3b8; text-transform: uppercase; }
+  .arrow { font-size: 14px; color: #475569; }
+  .card-title { font-size: 14px; font-weight: 700; line-height: 1.4; color: #f1f5f9; margin-bottom: 7px; letter-spacing: -0.2px; }
+  .card-body { font-size: 12px; line-height: 1.65; color: #94a3b8; margin-bottom: 8px; }
+  .card-body strong { color: #cbd5e1; }
+  .card-source { font-size: 10px; color: #475569; font-weight: 500; }
+  .divider { height: 1px; background: linear-gradient(90deg, transparent, #1e2535, transparent); margin: 16px 12px 0; }
+  .footer { text-align: center; padding: 24px 20px 0; font-size: 11px; color: #334155; line-height: 1.6; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="header">
+    <div class="header-top">
+      <span class="logo-icon">📰</span>
+      <div class="brand">월스트리트 <span>모닝 브리핑</span></div>
+    </div>
+    <div class="date-line">2026년 4월 10일 금요일 · Wall Street Veteran Analysis</div>
+    <div class="ticker">
+      <div class="tick">
+        <div class="tick-name">S&P 500</div>
+        <div class="tick-val">6,825</div>
+        <div class="tick-chg up">▲ 0.62%</div>
+      </div>
+      <div class="tick">
+        <div class="tick-name">나스닥</div>
+        <div class="tick-val">22,822</div>
+        <div class="tick-chg up">▲ 0.83%</div>
+      </div>
+      <div class="tick">
+        <div class="tick-name">코스피</div>
+        <div class="tick-val">5,778</div>
+        <div class="tick-chg down">▼ 1.61%</div>
+      </div>
+      <div class="tick coin-tick">
+        <div class="tick-name">BTC</div>
+        <div class="tick-val">$71K</div>
+        <div class="tick-chg down">▼ 1.2%</div>
+      </div>
+      <div class="tick">
+        <div class="tick-name">브렌트유</div>
+        <div class="tick-val">$101</div>
+        <div class="tick-chg up">▲ 7.3%</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 정치 -->
+  <div class="section cat-politics">
+    <div class="cat-header">
+      <span class="cat-icon">🏛</span>
+      <span class="cat-name">정치</span>
+      <span class="cat-badge">6 STORIES</span>
+    </div>
+    <div class="cards">
+
+      <a class="card" href="https://www.democracynow.org/2026/4/9/headlines" target="_blank">
+        <div class="card-top"><span class="tag">외교</span><span class="arrow">↗</span></div>
+        <div class="card-title">미-이란 직접 협상 오늘 이슬라마바드 개최</div>
+        <div class="card-body">트럼프-이란 2주 휴전 합의 후 <strong>4월 10일 파키스탄 이슬라마바드에서 미-이란 첫 직접 협상</strong>이 시작됐다. 미국 측은 밴스 부통령이, 이란 측은 아라그치 외무장관이 이끄는 고위급 회담으로, 호르무즈 개방과 핵합의 재개가 핵심 의제다.</div>
+        <div class="card-source">Democracy Now / NPR · 2026.04.10</div>
+      </a>
+
+      <a class="card" href="https://www.nbcnews.com/world" target="_blank">
+        <div class="card-top"><span class="tag">속보</span><span class="arrow">↗</span></div>
+        <div class="card-title">이스라엘, 레바논 250명 사망 대규모 공습 강행</div>
+        <div class="card-body">이스라엘이 레바논 남부와 베이루트 외곽에 <strong>대규모 공습을 감행해 250명 이상이 사망</strong>했다. 휴전 협상이 진행 중인 가운데 감행된 공습으로 국제사회의 거센 비난을 받고 있으며, 레바논 정부는 유엔 안보리 긴급 소집을 요청했다.</div>
+        <div class="card-source">NBC News / Al Jazeera · 2026.04.09</div>
+      </a>
+
+      <a class="card" href="https://www.aljazeera.com/" target="_blank">
+        <div class="card-top"><span class="tag">언론자유</span><span class="arrow">↗</span></div>
+        <div class="card-title">알자지라 특파원 이스라엘 드론에 피격 사망</div>
+        <div class="card-body">알자지라 특파원 모하메드 위샤가 <strong>이스라엘 드론의 차량 공격으로 사망</strong>했다. 중동 분쟁 취재 중 숨진 언론인이 올해만 47명에 달하며, 국경없는기자회는 이스라엘을 '언론인 최대 위협국'으로 다시 지정했다.</div>
+        <div class="card-source">Al Jazeera · 2026.04.09</div>
+      </a>
+
+      <a class="card" href="https://www.pbs.org/newshour/" target="_blank">
+        <div class="card-top"><span class="tag">북한</span><span class="arrow">↗</span></div>
+        <div class="card-title">북한, 집속탄 탄두 탑재 신형 탄도미사일 시험</div>
+        <div class="card-body">북한이 이번 주 <strong>집속탄 탄두를 장착한 신형 탄도미사일 연속 시험발사</strong>를 실시했다고 밝혔다. 핵 전력 확장의 일환으로, 한·미·일 합동 안보 협의가 긴급 소집됐다.</div>
+        <div class="card-source">PBS NewsHour · 2026.04.10</div>
+      </a>
+
+      <a class="card" href="https://korea.news-pravda.com/russia/2026/04/08/62381.html" target="_blank">
+        <div class="card-top"><span class="tag">우크라이나</span><span class="arrow">↗</span></div>
+        <div class="card-title">드론이 바꾼 전장…우크라 민간인 피해 급증</div>
+        <div class="card-body">헤르손 등 우크라이나 남부 전선 도시들에서 <strong>러시아 드론 공격에 의한 민간인 사상자가 올해 들어 40% 급증</strong>했다. 양측 모두 드론 전술을 고도화하면서 민간 인프라 피해가 속출하고 있다.</div>
+        <div class="card-source">NPR / Pravda Korea · 2026.04.09</div>
+      </a>
+
+      <a class="card" href="https://time.com/" target="_blank">
+        <div class="card-top"><span class="tag">아르테미스</span><span class="arrow">↗</span></div>
+        <div class="card-title">아르테미스 II, 오늘 지구 귀환…태평양 착수 예정</div>
+        <div class="card-body">NASA 아르테미스 II 유인 탐사선이 <strong>4월 10일 지구 대기권 재진입 후 태평양에 착수할 예정</strong>이다. 아폴로 17호(1972) 이후 53년 만의 유인 달 비행 임무를 성공적으로 마무리하는 역사적인 날이다.</div>
+        <div class="card-source">NASA / TIME · 2026.04.10</div>
+      </a>
+
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- 경제 -->
+  <div class="section cat-economy">
+    <div class="cat-header">
+      <span class="cat-icon">💰</span>
+      <span class="cat-name">경제</span>
+      <span class="cat-badge">6 STORIES</span>
+    </div>
+    <div class="cards">
+
+      <a class="card" href="https://fortune.com/article/price-of-oil-04-09-2026/" target="_blank">
+        <div class="card-top"><span class="tag">유가</span><span class="arrow">↗</span></div>
+        <div class="card-title">유가 급반등 $101…이란 협상 불확실성 재부각</div>
+        <div class="card-body">휴전 발표로 급락(-15%)했던 브렌트유가 <strong>이란의 호르무즈 재개 조건 논쟁으로 $101까지 반등</strong>했다. EIA는 올해 4월 중동 원유 생산 차질이 일 910만 배럴에 달할 것이라 경고하며 에너지 시장의 고변동성이 지속되고 있다.</div>
+        <div class="card-source">Fortune / EIA · 2026.04.09</div>
+      </a>
+
+      <a class="card" href="https://www.eia.gov/outlooks/steo/pdf/steo_full.pdf" target="_blank">
+        <div class="card-top"><span class="tag">EIA전망</span><span class="arrow">↗</span></div>
+        <div class="card-title">EIA "4월 공급 차질 일 910만 배럴 정점"</div>
+        <div class="card-body">미국 에너지정보청(EIA)이 <strong>4월 중동 원유 생산 차질이 일 910만 배럴로 정점</strong>을 찍은 뒤 서서히 완화될 것으로 전망했다. 협상 타결 시 연내 $70대 복귀 시나리오와, 결렬 시 $130 돌파 시나리오를 동시에 제시했다.</div>
+        <div class="card-source">EIA STEO · 2026.04.2026</div>
+      </a>
+
+      <a class="card" href="https://www.jpmorgan.com/insights/global-research/commodities/oil-prices" target="_blank">
+        <div class="card-top"><span class="tag">관세</span><span class="arrow">↗</span></div>
+        <div class="card-title">트럼프, 이란 탱커 통행료 부과 경고</div>
+        <div class="card-body">트럼프 대통령이 이란이 <strong>호르무즈 통과 유조선에 통행료를 부과하면 즉각 제재</strong>를 가하겠다고 경고했다. 이란의 협상 조건과 미국의 레드라인이 충돌하면서 협상 결렬 리스크가 다시 고조되고 있다.</div>
+        <div class="card-source">Reuters · 2026.04.10</div>
+      </a>
+
+      <a class="card" href="https://www.iea.org/reports/oil-market-report-march-2026" target="_blank">
+        <div class="card-top"><span class="tag">항공</span><span class="arrow">↗</span></div>
+        <div class="card-title">중동 항공편 대규모 취소…글로벌 물류 타격</div>
+        <div class="card-body">중동 공역 폐쇄로 <strong>두바이·도하 경유 글로벌 항공 노선이 대거 취소</strong>되면서 국제 물류 비용이 급등하고 있다. IEA는 항공 수요 급감으로 글로벌 석유 소비가 월 100만 배럴 추가 감소할 것이라 예상했다.</div>
+        <div class="card-source">IEA / IATA · 2026.04.09</div>
+      </a>
+
+      <a class="card" href="https://www.dlnews.com/articles/markets/key-april-crypto-dates-include-clarity-act-and-blackrock-updates/" target="_blank">
+        <div class="card-top"><span class="tag">연준</span><span class="arrow">↗</span></div>
+        <div class="card-title">FOMC 4월 28~29일 개최…금리 동결 가능성 95%</div>
+        <div class="card-body">연준이 <strong>4월 28~29일 FOMC 회의에서 금리를 동결할 가능성이 95%</strong>에 달한다고 CME 선물 시장이 반영했다. 고유가에 따른 인플레 재점화로 연내 인하 기대가 완전히 소멸됐다.</div>
+        <div class="card-source">CME FedWatch · 2026.04.10</div>
+      </a>
+
+      <a class="card" href="https://www.wto.org/english/news_e/news26_e/stat_19mar26_329_e.htm" target="_blank">
+        <div class="card-top"><span class="tag">쿠바</span><span class="arrow">↗</span></div>
+        <div class="card-title">쿠바 디아스카넬 "퇴진 없다"…미국 제재 지속</div>
+        <div class="card-body">쿠바 디아스카넬 대통령이 미국 NBC와의 인터뷰에서 <strong>"절대 퇴진하지 않겠다"</strong>고 선언했다. 미국의 체제 교체 압박에도 불구, 쿠바 정치범 2천여 명 석방은 협상의 여지를 남기고 있다.</div>
+        <div class="card-source">NBC News · 2026.04.09</div>
+      </a>
+
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- 주식 -->
+  <div class="section cat-market">
+    <div class="cat-header">
+      <span class="cat-icon">📈</span>
+      <span class="cat-name">주식</span>
+      <span class="cat-badge">5 STORIES</span>
+    </div>
+    <div class="cards">
+
+      <a class="card" href="https://247wallst.com/investing/2026/04/08/stock-market-live-april-8-2026-sp-500-spy-soars-on-ceasefire/" target="_blank">
+        <div class="card-top"><span class="tag">미증시</span><span class="arrow">↗</span></div>
+        <div class="card-title">S&P500 6,825 상승…휴전 기대·다우 2026년 플러스</div>
+        <div class="card-body">S&P500이 0.62% 상승한 6,825에 마감하며 <strong>다우존스가 2026년 기준 드디어 플러스로 전환</strong>됐다. 이란 협상 지속 기대와 유가 안정 기대가 맞물리며 4일 연속 상승 랠리가 이어졌다.</div>
+        <div class="card-source">247 Wall St / CNBC · 2026.04.08</div>
+      </a>
+
+      <a class="card" href="https://www.investing.com/indices/kospi" target="_blank">
+        <div class="card-top"><span class="tag">코스피</span><span class="arrow">↗</span></div>
+        <div class="card-title">코스피 -1.61% 반락…외국인 이틀째 순매도</div>
+        <div class="card-body">코스피가 1.61% 하락한 5,778에 마감했다. <strong>이란 협상 지연 우려와 북한 미사일 도발</strong>이 악재로 작용했으며, 외국인이 이틀 연속 순매도를 기록했다. 삼성전자·SK하이닉스 등 반도체주가 하락을 주도했다.</div>
+        <div class="card-source">한국거래소 / Investing.com · 2026.04.09</div>
+      </a>
+
+      <a class="card" href="https://www.cnbc.com/2026/04/08/stock-market-today-live-updates.html" target="_blank">
+        <div class="card-top"><span class="tag">에너지</span><span class="arrow">↗</span></div>
+        <div class="card-title">에너지株 반등…엑슨·쉐브론 3~5% 급등</div>
+        <div class="card-body">유가 재반등에 따라 <strong>엑슨모빌 +5.2%, 쉐브론 +3.8%</strong> 등 에너지 대형주들이 강세를 보였다. 방산주도 록히드마틴 +2.1%, 노스럽그루먼 +3.4%로 동반 상승하며 '전쟁 수혜주' 강세가 지속됐다.</div>
+        <div class="card-source">CNBC · 2026.04.08</div>
+      </a>
+
+      <a class="card" href="https://finance.yahoo.com/quote/%5EGSPC/" target="_blank">
+        <div class="card-top"><span class="tag">빅테크</span><span class="arrow">↗</span></div>
+        <div class="card-title">아마존 AWS AI 매출 연 $150억 돌파…빅테크 반등</div>
+        <div class="card-body">아마존이 AWS의 <strong>AI 관련 매출이 연환산 150억 달러를 돌파</strong>했다고 발표하며 주가가 4% 급등했다. 이에 힘입어 마이크로소프트·알파벳 등 빅테크 전반의 반등이 나타나고 있다.</div>
+        <div class="card-source">Yahoo Finance · 2026.04.10</div>
+      </a>
+
+      <a class="card" href="https://techstartups.com/2026/04/09/top-tech-news-today-april-9-2026/" target="_blank">
+        <div class="card-top"><span class="tag">IPO</span><span class="arrow">↗</span></div>
+        <div class="card-title">OpenAI $1조 IPO 준비…개인투자자 참여 예정</div>
+        <div class="card-body">OpenAI가 <strong>기업가치 1조 달러를 목표로 연내 상장 절차</strong>에 돌입했으며, IPO 물량 일부를 개인투자자에게 배정할 계획이다. 연환산 매출 250억 달러를 돌파한 직후의 발표로 시장의 뜨거운 관심을 받고 있다.</div>
+        <div class="card-source">TechStartups / Reuters · 2026.04.09</div>
+      </a>
+
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- 트렌드 -->
+  <div class="section cat-trend">
+    <div class="cat-header">
+      <span class="cat-icon">🔮</span>
+      <span class="cat-name">트렌드</span>
+      <span class="cat-badge">6 STORIES</span>
+    </div>
+    <div class="cards">
+
+      <a class="card" href="https://opentools.ai/news" target="_blank">
+        <div class="card-top"><span class="tag">AI인프라</span><span class="arrow">↗</span></div>
+        <div class="card-title">MCP 9700만 설치 돌파…AI 에이전트 표준 굳혀</div>
+        <div class="card-body">Anthropic의 모델 컨텍스트 프로토콜(MCP)이 <strong>누적 9,700만 설치를 돌파</strong>해 AI 에이전트 구축의 사실상 표준으로 자리매김했다. 리눅스재단이 오픈소스 채택을 선언하며 생태계가 빠르게 확장되고 있다.</div>
+        <div class="card-source">OpenTools AI · 2026.04.10</div>
+      </a>
+
+      <a class="card" href="https://techcrunch.com/2026/04/07/google-quietly-releases-an-offline-first-ai-dictation-app-on-ios/" target="_blank">
+        <div class="card-top"><span class="tag">구글</span><span class="arrow">↗</span></div>
+        <div class="card-title">구글, 오프라인 AI 받아쓰기 앱 iOS 조용히 출시</div>
+        <div class="card-body">구글이 인터넷 없이 동작하는 AI 받아쓰기 앱 <strong>'Google AI Edge Eloquent'를 iOS에 조용히 출시</strong>했다. Gemma 기반 온디바이스 음성인식 엔진을 탑재해 개인정보 보호와 속도 모두 잡았다는 평가를 받고 있다.</div>
+        <div class="card-source">TechCrunch · 2026.04.07</div>
+      </a>
+
+      <a class="card" href="https://www.crescendo.ai/news/latest-ai-news-and-updates" target="_blank">
+        <div class="card-top"><span class="tag">Anthropic</span><span class="arrow">↗</span></div>
+        <div class="card-title">Anthropic 연매출 $190억…OpenAI IPO 맞불 준비</div>
+        <div class="card-body">Anthropic의 연환산 매출이 <strong>190억 달러에 근접</strong>했으며, OpenAI의 IPO 추진에 맞서 자체 상장 검토를 가속화하고 있다. Claude 4 시리즈 수요 급증이 매출 성장의 핵심 동력이다.</div>
+        <div class="card-source">Crescendo AI · 2026.04.09</div>
+      </a>
+
+      <a class="card" href="https://www.humai.blog/ai-news-trends-april-2026-complete-monthly-digest/" target="_blank">
+        <div class="card-top"><span class="tag">xAI</span><span class="arrow">↗</span></div>
+        <div class="card-title">머스크 xAI, 멤피스 슈퍼컴퓨터 클러스터 확장</div>
+        <div class="card-body">일론 머스크의 xAI가 <strong>멤피스 AI 데이터센터를 Grok 차세대 모델 학습용 세계 최대 GPU 클러스터</strong>로 확장한다고 발표했다. 엔비디아 H200 칩 10만 개 규모로, OpenAI·구글과의 AI 인프라 경쟁이 본격화되고 있다.</div>
+        <div class="card-source">Humai / TechCrunch · 2026.04.09</div>
+      </a>
+
+      <a class="card" href="https://korea.news-pravda.com/dprk/2026/04/08/62407.html" target="_blank">
+        <div class="card-top"><span class="tag">우주</span><span class="arrow">↗</span></div>
+        <div class="card-title">아르테미스 II 승무원, ISS와 첫 교신 성공</div>
+        <div class="card-body">달 궤도를 돌고 있는 아르테미스 II 우주비행사들이 <strong>국제우주정거장(ISS)과 첫 직접 교신에 성공</strong>했다. 지구 귀환을 앞두고 태평양 착수 절차를 최종 점검 중이며, 귀환 성공 시 NASA의 아르테미스 III 유인 달 착륙 프로그램이 탄력을 받을 것으로 전망된다.</div>
+        <div class="card-source">NASA / Pravda Korea · 2026.04.08</div>
+      </a>
+
+      <a class="card" href="https://blog.mean.ceo/ai-news-april-2026/" target="_blank">
+        <div class="card-top"><span class="tag">VC</span><span class="arrow">↗</span></div>
+        <div class="card-title">VC 사상 최대 $3000억…스타트업 80% AI 집중</div>
+        <div class="card-body">2026년 1분기 글로벌 벤처캐피털 투자가 <strong>사상 최대인 3,000억 달러를 돌파</strong>하고, 그 중 80%가 AI 스타트업에 집중됐다. AI 인프라·헬스케어 AI·AI 에이전트가 투자 주도 3대 섹터로 부상했다.</div>
+        <div class="card-source">Pitchbook / Mean CEO · 2026.04.09</div>
+      </a>
+
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- 코인 -->
+  <div class="section cat-coin">
+    <div class="cat-header">
+      <span class="cat-icon">🪙</span>
+      <span class="cat-name">코인</span>
+      <span class="cat-badge">6 STORIES</span>
+    </div>
+    <div class="cards">
+
+      <a class="card" href="https://finance.yahoo.com/personal-finance/investing/article/bitcoin-and-ethereum-price-today-thursday-april-9-2026-crypto-rally-slows-as-ceasefire-wavers-112457545.html" target="_blank">
+        <div class="card-top"><span class="tag">BTC</span><span class="arrow">↗</span></div>
+        <div class="card-title">비트코인 $71K…휴전 흔들리자 랠리 주춤</div>
+        <div class="card-body">비트코인이 <strong>71,094달러</strong>로 전일 대비 1.2% 하락했다. 이란 휴전 합의 직후 74,000달러까지 치솟았다가 협상 불확실성이 재부각되면서 상승분을 반납했다. 이더리움도 $2,184로 2.3% 하락했다.</div>
+        <div class="card-source">Yahoo Finance · 2026.04.09</div>
+      </a>
+
+      <a class="card" href="https://coinpedia.org/news/crypto-market-today-what-comes-next-for-bitcoin-ethereum-and-xrp-a-breakout-with-a-macro-twist/" target="_blank">
+        <div class="card-top"><span class="tag">분석</span><span class="arrow">↗</span></div>
+        <div class="card-title">BTC $72K 돌파 vs $60K 붕괴…이번 주 분수령</div>
+        <div class="card-body">온체인 분석가들이 비트코인의 <strong>$72,277 돌파 혹은 $60,000 이탈 여부를 이번 주 최대 분수령</strong>으로 꼽고 있다. 이란 협상 결과, FOMC 4월 회의, ETF 자금 흐름이 3대 변수로 작동할 전망이다.</div>
+        <div class="card-source">CoinPedia · 2026.04.10</div>
+      </a>
+
+      <a class="card" href="https://www.dlnews.com/articles/markets/key-april-crypto-dates-include-clarity-act-and-blackrock-updates/" target="_blank">
+        <div class="card-top"><span class="tag">규제</span><span class="arrow">↗</span></div>
+        <div class="card-title">미 CLARITY Act 심의…코인 법적 지위 판가름</div>
+        <div class="card-body">4월 주요 크립토 일정 중 가장 주목받는 <strong>미국 CLARITY Act(디지털자산 명확성 법안) 상원 심의</strong>가 이달 진행된다. 비트코인·이더리움·XRP 등 주요 코인의 증권 해당 여부를 최종 규정하는 역사적인 입법이 될 수 있다.</div>
+        <div class="card-source">DL News · 2026.04.09</div>
+      </a>
+
+      <a class="card" href="https://cryptoticker.io/en/crypto-news-today-bitcoin-stability-ethereum-glamsterdam-2026/" target="_blank">
+        <div class="card-top"><span class="tag">ETH</span><span class="arrow">↗</span></div>
+        <div class="card-title">이더리움 글램스터담 상반기 출시 확정…ETH 주목</div>
+        <div class="card-body">이더리움 차세대 업그레이드 '글램스터담(Glamsterdam)'이 <strong>2026년 상반기 출시가 공식 확정</strong>됐다. 트랜잭션 처리 속도 최대 10배 향상과 가스비 대폭 절감이 핵심으로, 이더리움 생태계 반등의 촉매로 기대된다.</div>
+        <div class="card-source">CryptoTicker · 2026.04.09</div>
+      </a>
+
+      <a class="card" href="https://finance.yahoo.com/news/bitcoin-price-crash-2026-market-143728988.html" target="_blank">
+        <div class="card-top"><span class="tag">기관</span><span class="arrow">↗</span></div>
+        <div class="card-title">슈왑 코인 직접거래 서비스 준비…기관 진입 가속</div>
+        <div class="card-body"><strong>자산 12조 달러의 찰스 슈왑이 암호화폐 직접 매매 서비스 출시를 준비</strong>하며 얼리액세스 등록을 시작했다. ETF를 넘어 실물 코인 거래를 지원하는 대형 전통 금융사의 첫 사례가 될 전망이다.</div>
+        <div class="card-source">Yahoo Finance · 2026.04.08</div>
+      </a>
+
+      <a class="card" href="https://www.theblock.co/" target="_blank">
+        <div class="card-top"><span class="tag">스테이블코인</span><span class="arrow">↗</span></div>
+        <div class="card-title">스테이블코인 시총 $2500억 돌파…주류 진입</div>
+        <div class="card-body">USDT·USDC 등 주요 스테이블코인의 총 시가총액이 <strong>2,500억 달러를 돌파</strong>하며 주류 금융시스템 편입이 가시화됐다. CLARITY Act 입법 기대와 맞물려 스테이블코인 기반 결제 생태계가 급속히 확장되고 있다.</div>
+        <div class="card-source">The Block · 2026.04.09</div>
+      </a>
+
+    </div>
+  </div>
+
+  <div class="footer">
+    각 카드를 탭하면 원문 기사로 이동합니다<br>
+    Wall Street Morning Briefing · 2026.04.10
+  </div>
+
+</div>
+</body>
+</html>
