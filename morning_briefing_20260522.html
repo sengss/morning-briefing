@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>월스트리트 모닝 브리핑 – 2026년 5월 22일 금요일</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: #0a0a0f;
+    color: #e8e8f0;
+    font-family: 'Noto Sans KR', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 14px;
+    line-height: 1.6;
+    min-height: 100vh;
+  }
+  .container {
+    max-width: 480px;
+    margin: 0 auto;
+    padding: 0 0 32px 0;
+  }
+
+  /* ── HEADER ── */
+  .header {
+    background: linear-gradient(135deg, #0d0d1a 0%, #12122a 100%);
+    border-bottom: 1px solid #1e1e3a;
+    padding: 20px 16px 16px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  .header-badge {
+    display: inline-block;
+    background: #1a1a3a;
+    border: 1px solid #2a2a5a;
+    border-radius: 20px;
+    padding: 3px 12px;
+    font-size: 10px;
+    font-weight: 500;
+    color: #8888bb;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+  .header-title {
+    font-size: 22px;
+    font-weight: 900;
+    letter-spacing: -0.02em;
+    color: #ffffff;
+    line-height: 1.2;
+    margin-bottom: 4px;
+  }
+  .header-title span {
+    background: linear-gradient(90deg, #6c8fff, #b06cff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .header-date {
+    font-size: 12px;
+    color: #6666aa;
+    font-weight: 400;
+    margin-bottom: 14px;
+  }
+
+  /* ── TICKER ── */
+  .ticker {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 6px;
+    margin-top: 2px;
+  }
+  .tick-item {
+    background: #0f0f20;
+    border: 1px solid #1a1a35;
+    border-radius: 8px;
+    padding: 6px 4px;
+    text-align: center;
+  }
+  .tick-label {
+    font-size: 9px;
+    color: #555588;
+    font-weight: 500;
+    letter-spacing: 0.03em;
+    margin-bottom: 2px;
+    display: block;
+  }
+  .tick-value {
+    font-size: 11px;
+    font-weight: 700;
+    color: #ccccee;
+    display: block;
+    margin-bottom: 1px;
+  }
+  .tick-change {
+    font-size: 9px;
+    font-weight: 600;
+    display: block;
+  }
+  .up { color: #4caf50; }
+  .down { color: #ef5350; }
+  .neutral { color: #9999bb; }
+
+  /* ── SECTION ── */
+  .section { padding: 0 12px; margin-top: 20px; }
+  .cat-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 12px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    background: rgba(255,255,255,0.03);
+    border-left: 3px solid;
+  }
+  .cat-emoji { font-size: 18px; }
+  .cat-name {
+    font-size: 15px;
+    font-weight: 700;
+    color: #ffffff;
+    flex: 1;
+  }
+  .cat-badge {
+    font-size: 11px;
+    font-weight: 700;
+    padding: 2px 8px;
+    border-radius: 12px;
+    color: #fff;
+  }
+
+  /* Category colors */
+  .cat-politics  { border-color: #ef5350; }
+  .cat-politics .cat-badge  { background: #ef5350; }
+  .cat-economy   { border-color: #42a5f5; }
+  .cat-economy .cat-badge   { background: #42a5f5; }
+  .cat-markets   { border-color: #4caf50; }
+  .cat-markets .cat-badge   { background: #4caf50; }
+  .cat-trends    { border-color: #ab47bc; }
+  .cat-trends .cat-badge    { background: #ab47bc; }
+  .cat-crypto    { border-color: #f59e0b; }
+  .cat-crypto .cat-badge    { background: #f59e0b; }
+
+  /* ── CARD ── */
+  .card {
+    background: #111118;
+    border: 1px solid #1c1c2e;
+    border-radius: 12px;
+    padding: 14px;
+    margin-bottom: 10px;
+    text-decoration: none;
+    display: block;
+    transition: border-color 0.2s, background 0.2s;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .card:active { background: #16161f; }
+  .card-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 7px;
+  }
+  .card-tag {
+    font-size: 10px;
+    font-weight: 700;
+    padding: 2px 8px;
+    border-radius: 10px;
+    letter-spacing: 0.04em;
+  }
+  .tag-politics { background: rgba(239,83,80,0.15); color: #ef5350; }
+  .tag-economy  { background: rgba(66,165,245,0.15); color: #42a5f5; }
+  .tag-markets  { background: rgba(76,175,80,0.15);  color: #4caf50; }
+  .tag-trends   { background: rgba(171,71,188,0.15); color: #ab47bc; }
+  .tag-crypto   { background: rgba(245,158,11,0.15); color: #f59e0b; }
+
+  .card-arrow {
+    font-size: 14px;
+    color: #444466;
+  }
+  .card-title {
+    font-size: 14px;
+    font-weight: 700;
+    color: #e0e0f0;
+    line-height: 1.45;
+    margin-bottom: 7px;
+  }
+  .card-body {
+    font-size: 12.5px;
+    color: #8888aa;
+    line-height: 1.65;
+    margin-bottom: 8px;
+  }
+  .card-body strong { color: #aaaacc; }
+  .card-source {
+    font-size: 11px;
+    color: #44445a;
+    font-weight: 500;
+  }
+  .card-source::before { content: '📰 '; }
+
+  /* ── FOOTER ── */
+  .footer {
+    text-align: center;
+    padding: 24px 16px 8px;
+    font-size: 11px;
+    color: #333355;
+    line-height: 1.8;
+  }
+  .footer-hint {
+    background: #0e0e1c;
+    border: 1px solid #1a1a30;
+    border-radius: 8px;
+    padding: 10px;
+    margin: 0 12px 16px;
+    text-align: center;
+    font-size: 11.5px;
+    color: #55557a;
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <!-- HEADER -->
+  <div class="header">
+    <div class="header-badge">WALL ST. MORNING BRIEFING</div>
+    <div class="header-title">월스트리트 <span>모닝 브리핑</span></div>
+    <div class="header-date">2026년 5월 22일 금요일</div>
+    <div class="ticker">
+      <div class="tick-item">
+        <span class="tick-label">S&P500</span>
+        <span class="tick-value">5,892</span>
+        <span class="tick-change up">▲ +0.20%</span>
+      </div>
+      <div class="tick-item">
+        <span class="tick-label">나스닥</span>
+        <span class="tick-value">19,104</span>
+        <span class="tick-change up">▲ +0.10%</span>
+      </div>
+      <div class="tick-item">
+        <span class="tick-label">코스피</span>
+        <span class="tick-value">7,209</span>
+        <span class="tick-change down">▼ -0.86%</span>
+      </div>
+      <div class="tick-item">
+        <span class="tick-label">BTC</span>
+        <span class="tick-value">$77.5K</span>
+        <span class="tick-change down">▼ -1.20%</span>
+      </div>
+      <div class="tick-item">
+        <span class="tick-label">브렌트유</span>
+        <span class="tick-value">$108.8</span>
+        <span class="tick-change down">▼ -1.44%</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ① 정치 -->
+  <div class="section">
+    <div class="cat-header cat-politics">
+      <span class="cat-emoji">🏛</span>
+      <span class="cat-name">정치</span>
+      <span class="cat-badge">5</span>
+    </div>
+
+    <a class="card" href="https://www.cbsnews.com/live-updates/iran-war-trump-us-latest-peace-proposal/" target="_blank">
+      <div class="card-top">
+        <span class="card-tag tag-politics">외교</span>
+        <span class="card-arrow">↗</span>
+      </div>
+      <div class="card-title">트럼프 "이란과 전쟁 마무리 단계… 협상 긍정적"</div>
+      <div class="card-body">
+        트럼프 대통령은 이란과의 핵협상이 <strong>'최종 단계'</strong>에 접어들었다며 낙관적 신호를 보냈다. 루비오 국무장관도 "좋은 징조가 있다"며 파키스탄의 중재 역할을 평가했다. 합의 시 호르무즈 해협 봉쇄가 해제돼 글로벌 에너지 시장에 큰 파장이 예상된다.
+      </div>
+      <div class="card-source">CBS News · 2026.05.22</div>
+    </a>
+
+    <a class="card" href="https://www.democracynow.org/2026/5/20/headlines" target="_blank">
+      <div class="card-top">
+        <span class="card-tag tag-politics">중동</span>
+        <span class="card-arrow">↗</span>
+      </div>
+      <div class="card-title">레바논 휴전 연장에도 24시간 새 22명 사망</div>
+      <div class="card-body">
+        레바논 보건부는 45일 휴전 연장 중에도 이스라엘의 공습으로 24시간 새 22명이 숨졌다고 발표했다. <strong>지난 3월 2일 이후 누적 사망자 3,042명</strong>에 달하며 인구 5분의 1인 100만 명 이상이 난민 신세가 됐다. 국제사회의 인도주의적 개입 요구가 거세지고 있다.
+      </div>
+      <div class="card-source">Democracy Now · 2026.05.20</div>
+    </a>
+
+    <a class="card" href="https://www.npr.org/sections/world/" target="_blank">
+      <div class="card-top">
+        <span class="card-tag tag-politics">외교</span>
+        <span class="card-arrow">↗</span>
+      </div>
+      <div class="card-title">미국, 팔레스타인 유엔 고위직 출마 비자 압박으로 저지</div>
+      <div class="card-body">
+        팔레스타인 대표단은 미국이 비자 취소를 경고하자 <strong>유엔 사무총장 후보직을 전격 철회</strong>했다. 미국의 비공식 거부권 행사가 국제무대에서 팔레스타인 외교 공간을 다시 한번 좁혔다는 비판이 나오고 있다.
+      </div>
+      <div class="card-source">NPR · 2026.05.22</div>
+    </a>
+
+    <a class="card" href="https://www.npr.org/sections/world/" target="_blank">
+      <div class="card-top">
+        <span class="card-tag tag-politics">정상외교</span>
+        <span class="card-arrow">↗</span>
+      </div>
+      <div class="card-title">푸틴·시진핑, 경제협력·국제현안 논의 정상회담 예정</div>
+      <div class="card-body">
+        크렘린은 푸틴 대통령과 시진핑 국가주석이 경제 협력과 <strong>주요 국제·지역 현안을 포괄하는 정상회담</strong>을 개최할 예정이라고 밝혔다. 서방 제재 속 러시아-중국 밀착 기조가 강화되는 가운데 에너지·무역 협정 확대가 논의될 것으로 전망된다.
+      </div>
+      <div class="card-source">NPR · 2026.05.22</div>
+    </a>
+
+    <a class="card" href="https://www.democracynow.org/2026/5/20/headlines" target="_blank">
+      <div class="card-top">
+        <span class="card-tag tag-politics">보건위기</span>
+        <span class="card-arrow">↗</span>
+      </div>
+      <div class="card-title">WHO, 콩고 에볼라 급확산 경고… 134명 사망·500건 이상</div>
+      <div class="card-body">
+        세계보건기구(WHO) 사무총장이 콩고민주공화국에서 희귀형 에볼라가 빠르게 번지고 있다며 <strong>국제 공중보건 비상사태</strong> 가능성을 경고했다. 확인된 사망자 134명, 의심 사례 500건 이상이 보고됐으며 봉쇄를 위한 긴급 지원이 요청됐다.
+      </div>
+      <div class="card-source">Democracy Now · 2026.05.20</div>
+    </a>
+  </div>
+
+  <!-- ② 경제 -->
+  <div class="section">
+    <div class="cat-header cat-economy">
+      <span class="cat-emoji">💰</span>
+      <span class="cat-name">경제</span>
+      <span class="cat-badge">5</span>
+    </div>
+
+    <a class="card" href="https://fortune.com/article/price-of-oil-05-21-2026/" target="_blank">
+      <div class="card-top">
+        <span class="card-tag tag-economy">원자재</span>
+        <span class="card-arrow">↗</span>
+      </div>
+      <div class="card-title">이란 협상 진전에 국제유가 급락… 브렌트 $108</div>
+      <div class="card-body">
+        미-이란 평화 협상 진전 소식에 브렌트유가 <strong>배럴당 $108.76으로 하락</strong>했고, 서부텍사스산(WTI)은 $99.5로 이틀 새 6% 가까이 떨어졌다. 호르무즈 해협 재개통 가능성이 공급 우려를 완화시키며 유가를 끌어내렸다.
+      </div>
+      <div class="card-source">Fortune · 2026.05.21</div>
+    </a>
+
+    <a class="card" href="https://tradingeconomics.com/" target="_blank">
+      <div class="card-top">
+        <span class="card-tag tag-economy">무역</span>
+        <span class="card-arrow">↗</span>
+      </div>
+      <div class="card-title">일본 4월 수출 14.8% 급증… 3개월 최고 증가율</div>
+      <div class="card-body">
+        일본의 4월 수출이 전년 동기 대비 <strong>14.8% 증가</strong>해 시장 예상치(9.3%)를 크게 웃돌며 3개월 만에 최고 증가율을 기록했다. 엔화 약세와 글로벌 수요 회복이 수출을 뒷받침했으며, 자동차·반도체 부품이 주도했다.
+      </div>
+      <div class="card-source">Trading Economics · 2026.05.22</div>
+    </a>
+
+    <a class="card" href="https://www.cnbc.com/markets" target="_blank">
+      <div class="card-top">
+        <span class="card-tag tag-economy">재정</span>
+        <span class="card-arrow">↗</span>
+      </div>
+      <div class="card-title">美 '빅 뷰티풀 빌' 재정적자 우려… 무디스 강등 여파</div>
+      <div class="card-body">
+        무디스의 미국 신용등급 강등 이후 트럼프 행정부의 대형 감세·지출 법안 '빅 뷰티풀 빌'이 연방 재정 건전성 논란의 중심에 섰다. <strong>10년간 최대 3.8조 달러 재정 적자 확대</strong>가 우려되며 국채금리가 상승 압박을 받고 있다.
+      </div>
+      <div class="card-source">CNBC · 2026.05.22</div>
+    </a>
+
+    <a class="card" href="https://www.theblock.co/" target="_blank">
+      <div class="card-top">
+        <span class="card-tag tag-economy">정책</span>
+        <span class="card-arrow">↗</span>
+      </div>
+      <div class="card-title">美 의회, 250억 달러 규모 '전략 비트코인 준비금법' 발의</div>
+      <div class="card-body">
+        미국 의회에서 연방 정부가 <strong>최대 250억 달러 규모의 비트코인을 보유</strong>하는 '전략 비트코인 준비금법'이 발의됐다. 디지털 자산을 국가 전략자산으로 편입하려는 시도로, 통과 시 글로벌 중앙은행의 준비금 다각화 논의에 불을 붙일 전망이다.
+      </div>
+      <div class="card-source">The Block · 2026.05.22</div>
+    </a>
+
+    <a class="card" href="https://www.business-standard.com/world-news" target="_blank">
+      <div class="card-top">
+        <span class="card-tag tag-economy">공급망</span>
+        <span class="card-arrow">↗</span>
+      </div>
+      <div class="card-title">미-이란 합의 임박, 글로벌 에너지 공급망 재편 촉발 전망</div>
+      <div class="card-body">
+        이란 핵합의가 성사될 경우 이란산 원유 연간 200만 배럴이 시장에 복귀하며 <strong>글로벌 에너지 공급 지형이 대폭 변화</strong>할 것으로 분석된다. OPEC+ 내 산유국 간 갈등도 재점화될 수 있어 산업계가 긴박하게 상황을 주시하고 있다.
+      </div>
+      <div class="card-source">Business Standard · 2026.05.22</div>
+    </a>
+  </div>
+
+  <!-- ③ 주식 -->
+  <div class="section">
+    <div class="cat-header cat-markets">
+      <span class="cat-emoji">📈</span>
+      <span class="cat-name">주식</span>
+      <span class="cat-badge">5</span>
+    </div>
+
+    <a class="card" href="https://finance.yahoo.com/economy/live/stock-market-today-dow-sp-500-nasdaq-fall-after-iranian-supreme-leader-says-enriched-uranium-must-stay-in-country-232311776.html" target="_blank">
+      <div class="card-top">
+        <span class="card-tag tag-markets">지수</span>
+        <span class="card-arrow">↗</span>
+      </div>
+      <div class="card-title">다우존스 사상 최고치 경신, 이란 협상 기대감에 상승</div>
+      <div class="card-body">
+        다우존스 산업평균지수가 <strong>0.6% 상승하며 사상 최고치</strong>를 다시 썼고, S&P 500은 +0.20%, 나스닥은 +0.10%로 장을 마쳤다. 미국과 이란의 핵협상 진전 소식이 투자 심리를 개선해 전반적 랠리를 이끌었다.
+      </div>
+      <div class="card-source">Yahoo Finance · 2026.05.22</div>
+    </a>
+
+    <a class="card" href="https://finance.yahoo.com/economy/live/stock-market-today-dow-sp-500-nasdaq-fall-after-iranian-supreme-leader-says-enriched-uranium-must-stay-in-country-232311776.html" target="_blank">
+      <div class="card-top">
+        <span class="card-tag tag-markets">실적</span>
+        <span class="card-arrow">↗</span>
+      </div>
+      <div class="card-title">엔비디아 호실적 발표에도 주가 보합… '이미 반영' 해석</div>
+      <div class="card-body">
+        엔비디아가 강력한 분기 실적을 발표했지만 주가는 거의 움직이지 않았다. 시장은 <strong>'이미 가격에 반영(priced in)'</strong>됐다는 시각이 지배적이다. 데이터센터 수요와 블랙웰 칩 공급 확대는 여전히 견조한 것으로 확인됐다.
+      </div>
+      <div class="card-source">Yahoo Finance · 2026.05.22</div>
+    </a>
+
+    <a class="card" href="https://finance.yahoo.com/economy/live/stock-market-today-dow-sp-500-nasdaq-fall-after-iranian-supreme-leader-says-enriched-uranium-must-stay-in-country-232311776.html" target="_blank">
+      <div class="card-top">
+        <span class="card-tag tag-markets">실적</span>
+        <span class="card-arrow">↗</span>
+      </div>
+      <div class="card-title">월마트, 매출·EPS 모두 예상 상회… 소비 회복 신호</div>
+      <div class="card-body">
+        월마트가 분기 매출과 주당 순이익 모두에서 <strong>월가 예상치를 웃도는 실적</strong>을 발표했다. 저가 생필품과 온라인 식품 부문이 견인차 역할을 했으며, 트럼프 관세 우려에도 소비자 수요가 예상보다 탄탄함을 보여줬다.
+      </div>
+      <div class="card-source">Yahoo Finance · 2026.05.22</div>
+    </a>
+
+    <a class="card" href="https://finance.yahoo.com/quote/%5EKS11/" target="_blank">
+      <div class="card-top">
+        <span class="card-tag tag-markets">한국증시</span>
+        <span class="card-arrow">↗</span>
+      </div>
+      <div class="card-title">코스피 7,209 마감, 0.86% 하락… 외국인 순매도 지속</div>
+      <div class="card-body">
+        코스피가 <strong>7,209에 마감</strong>하며 전날 대비 0.86% 하락했다. 외국인이 삼성전자와 반도체 종목을 중심으로 순매도에 나섰으며, 이란 긴장 불확실성과 미국채 금리 상승이 신흥국 증시 전반에 압박을 가했다.
+      </div>
+      <div class="card-source">Yahoo Finance · 2026.05.21</div>
+    </a>
+
+    <a class="card" href="https://www.cnn.com/markets" target="_blank">
+      <div class="card-top">
+        <span class="card-tag tag-markets">글로벌</span>
+        <span class="card-arrow">↗</span>
+      </div>
+      <div class="card-title">이란 평화 기대감에 글로벌 증시 동반 반등</div>
+      <div class="card-body">
+        이란 협상 낙관론이 퍼지며 유럽 및 아시아 주요 지수가 동반 상승했다. <strong>에너지주는 유가 하락에 약세</strong>를 보인 반면, 항공·소비재·기술주가 상승을 이끌었다. 지정학적 리스크 완화가 시장 전반의 모멘텀을 끌어올리고 있다.
+      </div>
+      <div class="card-source">CNN Markets · 2026.05.22</div>
+    </a>
+  </div>
+
+  <!-- ④ 트렌드 -->
+  <div class="section">
+    <div class="cat-header cat-trends">
+      <span class="cat-emoji">🔮</span>
+      <span class="cat-name">트렌드</span>
+      <span class="cat-badge">5</span>
+    </div>
+
+    <a class="card" href="https://techstartups.com/2026/05/20/top-tech-news-today-may-20-2026/" target="_blank">
+      <div class="card-top">
+        <span class="card-tag tag-trends">AI</span>
+        <span class="card-arrow">↗</span>
+      </div>
+      <div class="card-title">구글 I/O 2026: 제미나이 전 플랫폼 탑재… AI 제국 선포</div>
+      <div class="card-body">
+        구글이 I/O 2026에서 <strong>제미나이 3.5 Flash, Gemini Omni, Gemini Spark</strong>를 공개하며 검색·안드로이드·유튜브·쇼핑·클라우드 전 서비스에 AI를 전면 통합했다. XR 안경 파트너십과 AI 코딩 도구도 발표돼 빅테크 AI 패권 경쟁에 불을 지폈다.
+      </div>
+      <div class="card-source">Tech Startups · 2026.05.20</div>
+    </a>
+
+    <a class="card" href="https://imfounder.com/science-tech/ai/ai-updates-may-2026/" target="_blank">
+      <div class="card-top">
+        <span class="card-tag tag-trends">빅테크</span>
+        <span class="card-arrow">↗</span>
+      </div>
+      <div class="card-title">메타, AI 효율화 명분으로 8,000명 감원… 10% 인력 축소</div>
+      <div class="card-body">
+        메타가 AI 투자 확대에 따른 비용 효율화를 위해 <strong>전체 인력의 10%에 해당하는 8,000명을 감원</strong>했다. 동시에 7,000명은 AI 집중 부서로 재배치됐다. 시스코, 블록 등 타 기업도 'AI 효율화'를 이유로 잇따라 구조조정을 단행하고 있다.
+      </div>
+      <div class="card-source">IM Founder · 2026.05.22</div>
+    </a>
+
+    <a class="card" href="https://news.microsoft.com/source/features/ai/whats-next-in-ai-7-trends-to-watch-in-2026/" target="_blank">
+      <div class="card-top">
+        <span class="card-tag tag-trends">AI에이전트</span>
+        <span class="card-arrow">↗</span>
+      </div>
+      <div class="card-title">자율 AI 에이전트, 2026년 기업 핵심 경쟁력으로 부상</div>
+      <div class="card-body">
+        사람의 개입 없이 다단계 업무를 자동 처리하는 <strong>AI 에이전트</strong>가 2026년 기업 경쟁력의 핵심으로 자리잡고 있다. 소형 도메인 특화 모델과 멀티모달 추론 모델의 조합이 주목받으며, GPU에 이어 ASIC·칩렛 기반 추론 가속기 시장도 급성장 중이다.
+      </div>
+      <div class="card-source">Microsoft News · 2026.05.22</div>
+    </a>
+
+    <a class="card" href="https://www.technologyreview.com/2026/04/21/1135643/10-ai-artificial-intelligence-trends-technologies-research-2026/" target="_blank">
+      <div class="card-top">
+        <span class="card-tag tag-trends">과학</span>
+        <span class="card-arrow">↗</span>
+      </div>
+      <div class="card-title">AI, 과학 연구 파트너로 진화… 실험 설계부터 가설 도출까지</div>
+      <div class="card-body">
+        2026년 AI는 논문 요약을 넘어 물리학·화학·생물학 분야에서 <strong>직접 가설을 생성하고 실험을 제어</strong>하는 '연구 파트너'로 진화하고 있다. MIT 테크놀로지 리뷰는 AI 주도 과학 발견이 신약 개발과 소재 연구를 수년 단축할 것이라고 전망했다.
+      </div>
+      <div class="card-source">MIT Technology Review · 2026.04.21</div>
+    </a>
+
+    <a class="card" href="https://www.artificialintelligence-news.com/" target="_blank">
+      <div class="card-top">
+        <span class="card-tag tag-trends">규제</span>
+        <span class="card-arrow">↗</span>
+      </div>
+      <div class="card-title">MS·xAI, 규제기관에 AI 모델 사전 공개… 선제 대응 전략</div>
+      <div class="card-body">
+        마이크로소프트와 일론 머스크의 xAI가 각국 규제기관에 <strong>AI 모델 출시 전 조기 접근권</strong>을 제공하기로 했다. 정부 당국의 AI 규제 입법이 빨라지는 상황에서 선제적 협력으로 규제 리스크를 관리하려는 전략으로 분석된다.
+      </div>
+      <div class="card-source">AI News · 2026.05.22</div>
+    </a>
+  </div>
+
+  <!-- ⑤ 코인 -->
+  <div class="section">
+    <div class="cat-header cat-crypto">
+      <span class="cat-emoji">🪙</span>
+      <span class="cat-name">코인</span>
+      <span class="cat-badge">5</span>
+    </div>
+
+    <a class="card" href="https://www.coindesk.com/price/bitcoin" target="_blank">
+      <div class="card-top">
+        <span class="card-tag tag-crypto">BTC</span>
+        <span class="card-arrow">↗</span>
+      </div>
+      <div class="card-title">비트코인 $77,500선 압박… ETF 자금 6주 유입 행진 끊겨</div>
+      <div class="card-body">
+        비트코인이 <strong>$77,500대에서 지지선 공방</strong>을 벌이는 가운데 6주 연속 이어온 현물 ETF 순유입 행진이 끊겼다. 이란발 지정학 리스크와 미국 국채금리 상승이 고위험 자산 전반에 투자심리를 위축시키고 있다.
+      </div>
+      <div class="card-source">CoinDesk · 2026.05.22</div>
+    </a>
+
+    <a class="card" href="https://www.theblock.co/" target="_blank">
+      <div class="card-top">
+        <span class="card-tag tag-crypto">ETH</span>
+        <span class="card-arrow">↗</span>
+      </div>
+      <div class="card-title">이더리움 $2,100 지지선 테스트… 저가 매수 기회 vs 추가 하락</div>
+      <div class="card-body">
+        이더리움이 <strong>$2,100 지지선</strong>을 테스트하며 단기 수요가 흔들리고 있다. 거래소 이더 유입량 증가와 선물 순매도가 하방 압력을 가중시키고, ETF 유출도 지속되지만 일부 분석가는 이 구간을 중기 매수 기회로 평가하고 있다.
+      </div>
+      <div class="card-source">The Block · 2026.05.22</div>
+    </a>
+
+    <a class="card" href="https://www.fxstreet.com/cryptocurrencies/news" target="_blank">
+      <div class="card-top">
+        <span class="card-tag tag-crypto">시장심리</span>
+        <span class="card-arrow">↗</span>
+      </div>
+      <div class="card-title">이란 긴장·금리 우려에 크립토 투자자 리스크 회피 강화</div>
+      <div class="card-body">
+        이란 관련 지정학 불확실성이 고조되면서 <strong>크립토 시장 전반에 리스크 오프(risk-off) 기조</strong>가 강화됐다. 비트코인 ETF 배분자들이 포지션을 줄이고 있으며, 유가 급등과 미 국채 수익률 상승의 이중 압박이 알트코인까지 전이되고 있다.
+      </div>
+      <div class="card-source">FX Street · 2026.05.22</div>
+    </a>
+
+    <a class="card" href="https://cryptoslate.com/" target="_blank">
+      <div class="card-top">
+        <span class="card-tag tag-crypto">온체인</span>
+        <span class="card-arrow">↗</span>
+      </div>
+      <div class="card-title">장기 보유자 BTC 1,630만 개 축적… 약세장서 200만 개 증가</div>
+      <div class="card-body">
+        온체인 데이터에 따르면 현재 약세장에서 <strong>장기 보유자(LTH) 공급량이 200만 BTC 이상 급증해 1,630만 개</strong>에 달했다. 단기 투자자가 손절하는 동안 고래와 기관 투자자가 저가 매집에 나서고 있다는 강력한 신호로 해석된다.
+      </div>
+      <div class="card-source">CryptoSlate · 2026.05.22</div>
+    </a>
+
+    <a class="card" href="https://www.theblock.co/" target="_blank">
+      <div class="card-top">
+        <span class="card-tag tag-crypto">정책</span>
+        <span class="card-arrow">↗</span>
+      </div>
+      <div class="card-title">美 '전략 비트코인 준비금법' 발의… 250억 달러 연방 매입 추진</div>
+      <div class="card-body">
+        미국 의회에서 연방 정부가 <strong>250억 달러 규모의 비트코인을 국가 준비금으로 매입</strong>하는 법안이 공식 발의됐다. 통과 시 달러 패권의 보완재로 BTC를 편입하는 첫 사례가 되며, 다른 국가들의 암호화폐 준비금 정책에도 영향을 미칠 전망이다.
+      </div>
+      <div class="card-source">The Block · 2026.05.22</div>
+    </a>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer-hint">
+    각 카드를 탭하면 원문 기사로 이동합니다
+  </div>
+  <div class="footer">
+    © 2026 월스트리트 모닝 브리핑<br>
+    본 브리핑은 정보 제공 목적으로 작성되었으며 투자 조언이 아닙니다
+  </div>
+
+</div>
+</body>
+</html>
