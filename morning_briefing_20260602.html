@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>월스트리트 모닝 브리핑 – 2026년 6월 2일 화요일</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: #0a0a0f;
+    color: #e8e8f0;
+    font-family: 'Noto Sans KR', sans-serif;
+    min-height: 100vh;
+    padding-bottom: 40px;
+  }
+  .container { max-width: 480px; margin: 0 auto; padding: 0 12px; }
+
+  /* HEADER */
+  .header {
+    background: linear-gradient(135deg, #0d0d1a 0%, #12122a 100%);
+    border-bottom: 1px solid #1e1e3a;
+    padding: 20px 16px 16px;
+    text-align: center;
+    position: sticky; top: 0; z-index: 100;
+  }
+  .header-logo {
+    font-size: 11px; letter-spacing: 3px; color: #6b6b99;
+    text-transform: uppercase; margin-bottom: 4px;
+  }
+  .header-title {
+    font-size: 20px; font-weight: 900; color: #ffffff;
+    letter-spacing: -0.5px; margin-bottom: 4px;
+  }
+  .header-date {
+    font-size: 12px; color: #8888bb; margin-bottom: 14px;
+  }
+
+  /* TICKER */
+  .ticker {
+    display: flex; gap: 6px; overflow-x: auto;
+    scrollbar-width: none; padding-bottom: 2px;
+  }
+  .ticker::-webkit-scrollbar { display: none; }
+  .tick {
+    flex: 0 0 auto;
+    background: #131320;
+    border: 1px solid #1e1e3a;
+    border-radius: 8px;
+    padding: 7px 10px;
+    text-align: center;
+    min-width: 80px;
+  }
+  .tick-name { font-size: 9px; color: #6b6b99; letter-spacing: 1px; margin-bottom: 2px; }
+  .tick-val { font-size: 13px; font-weight: 700; color: #e8e8f0; }
+  .tick-chg { font-size: 10px; margin-top: 1px; }
+  .up { color: #4caf50; }
+  .dn { color: #ef5350; }
+  .neu { color: #8888bb; }
+
+  /* SECTION */
+  .section { margin-top: 20px; }
+  .cat-header {
+    display: flex; align-items: center; gap: 8px;
+    padding: 10px 4px 8px;
+    border-bottom: 1px solid #1e1e3a;
+    margin-bottom: 10px;
+  }
+  .cat-emoji { font-size: 18px; }
+  .cat-name { font-size: 15px; font-weight: 700; color: #fff; }
+  .cat-badge {
+    margin-left: auto;
+    font-size: 10px; font-weight: 700;
+    padding: 2px 7px; border-radius: 10px;
+    color: #fff;
+  }
+
+  /* CARD */
+  .card {
+    display: block;
+    background: #111118;
+    border: 1px solid #1e1e3a;
+    border-radius: 12px;
+    padding: 14px;
+    margin-bottom: 10px;
+    text-decoration: none;
+    color: inherit;
+    transition: border-color 0.2s, background 0.2s;
+  }
+  .card:hover { background: #161625; }
+  .card-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px; }
+  .tag {
+    font-size: 10px; font-weight: 700; letter-spacing: 0.5px;
+    padding: 2px 8px; border-radius: 6px; color: #fff;
+  }
+  .card-arrow { font-size: 14px; color: #444466; }
+  .card-title { font-size: 14px; font-weight: 700; line-height: 1.4; margin-bottom: 7px; color: #e8e8f0; }
+  .card-body { font-size: 12px; line-height: 1.65; color: #9999bb; }
+  .card-body strong { color: #ccccee; }
+  .card-source { font-size: 10px; color: #555577; margin-top: 8px; }
+
+  /* FOOTER */
+  .footer {
+    text-align: center;
+    font-size: 11px;
+    color: #3a3a5a;
+    margin-top: 28px;
+    padding: 0 16px;
+  }
+
+  /* CATEGORY COLORS */
+  .pol { background: #ef5350; }
+  .eco { background: #42a5f5; }
+  .mkt { background: #4caf50; }
+  .trd { background: #ab47bc; }
+  .coi { background: #f59e0b; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="header-logo">WALL STREET MORNING BRIEFING</div>
+  <div class="header-title">월스트리트 모닝 브리핑</div>
+  <div class="header-date">2026년 6월 2일 화요일</div>
+  <div class="ticker">
+    <div class="tick">
+      <div class="tick-name">S&P500</div>
+      <div class="tick-val">7,599</div>
+      <div class="tick-chg up">▲ +0.26%</div>
+    </div>
+    <div class="tick">
+      <div class="tick-name">나스닥</div>
+      <div class="tick-val">27,086</div>
+      <div class="tick-chg up">▲ +0.42%</div>
+    </div>
+    <div class="tick">
+      <div class="tick-name">코스피</div>
+      <div class="tick-val">8,545</div>
+      <div class="tick-chg dn">▼ -2.76%</div>
+    </div>
+    <div class="tick">
+      <div class="tick-name">BTC</div>
+      <div class="tick-val">$72.5K</div>
+      <div class="tick-chg dn">▼ -1.4%</div>
+    </div>
+    <div class="tick">
+      <div class="tick-name">브렌트유</div>
+      <div class="tick-val">$106</div>
+      <div class="tick-chg up">▲ +6.0%</div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+
+  <!-- 정치 -->
+  <div class="section">
+    <div class="cat-header">
+      <span class="cat-emoji">🏛</span>
+      <span class="cat-name">정치</span>
+      <span class="cat-badge pol">5</span>
+    </div>
+
+    <a class="card" href="https://www.npr.org/sections/world/" target="_blank">
+      <div class="card-top">
+        <span class="tag pol">미국·이란</span>
+        <span class="card-arrow">↗</span>
+      </div>
+      <div class="card-title">미군, 이란 레이더·드론 기지 공습… 군사 긴장 최고조</div>
+      <div class="card-body">미군이 이란의 무인기(드론)에 의한 MQ-1 프레데터 격추에 대응해 이란 내 레이더 및 드론 통제 기지를 공습했다. <strong>중동 군사 긴장이 최고조에 달하며</strong> 국제사회가 본격 충돌 가능성을 우려하고 있다.</div>
+      <div class="card-source">NPR · 2026.06.02</div>
+    </a>
+
+    <a class="card" href="https://www.npr.org/sections/world/" target="_blank">
+      <div class="card-top">
+        <span class="tag pol">중동</span>
+        <span class="card-arrow">↗</span>
+      </div>
+      <div class="card-title">이란 대화 중단 선언… 이스라엘·헤즈볼라 휴전 불투명</div>
+      <div class="card-body">트럼프 대통령은 이란이 미국과의 협상을 중단하면 이스라엘과 헤즈볼라의 전투가 재개될 것이라고 경고했다. <strong>가자·레바논·시리아를 사실상 통제 중인 이스라엘</strong>과 이란 간 갈등이 핵심 변수로 떠오르고 있다.</div>
+      <div class="card-source">NPR · 2026.06.02</div>
+    </a>
+
+    <a class="card" href="https://abcnews.go.com/International" target="_blank">
+      <div class="card-top">
+        <span class="tag pol">중남미</span>
+        <span class="card-arrow">↗</span>
+      </div>
+      <div class="card-title">콜롬비아 대선, 강경 치안파 에스프리엘라 1위… 결선 확정</div>
+      <div class="card-body">일요일 치러진 콜롬비아 대선 1차 투표에서 강력 치안 공약을 내건 아베랄도 데 라 에스프리엘라 후보가 선두를 차지했다. <strong>페트로 현 대통령 동맹인 세페다 후보와의 결선투표</strong>가 확정돼 남미 정치 지형에 큰 변화가 예상된다.</div>
+      <div class="card-source">ABC News · 2026.06.02</div>
+    </a>
+
+    <a class="card" href="https://www.koreancenter.or.kr/news/articleView.html?idxno=1360765" target="_blank">
+      <div class="card-top">
+        <span class="tag pol">한국</span>
+        <span class="card-arrow">↗</span>
+      </div>
+      <div class="card-title">6·3 지방선거 D-1… 여야 막판 유세 전국 총력전</div>
+      <div class="card-body">6·3 전국 지방선거 및 국회의원 재보궐선거 선거운동 마지막 날, 정청래 민주당 대표는 수도권·강원을, 장동혁 국민의힘 대표는 충남을 집중 공략했다. <strong>내일 개표 결과에 따라 향후 정국 주도권</strong>이 결정될 전망이다.</div>
+      <div class="card-source">연합뉴스 · 2026.06.02</div>
+    </a>
+
+    <a class="card" href="https://www.npr.org/sections/world/" target="_blank">
+      <div class="card-top">
+        <span class="tag pol">아프리카</span>
+        <span class="card-arrow">↗</span>
+      </div>
+      <div class="card-title">콩고 에볼라 사태 확산… 우간다 긴급 대응 체계 가동</div>
+      <div class="card-body">콩고민주공화국에서 에볼라 위기가 진행되는 가운데 인접국 우간다의 구호단체들이 바짝 경계 태세에 들어갔다. <strong>미국 등 주요국의 해외원조 삭감으로</strong> 방역 대응 역량 부족 우려가 커지고 있다.</div>
+      <div class="card-source">NPR · 2026.06.02</div>
+    </a>
+  </div>
+
+  <!-- 경제 -->
+  <div class="section">
+    <div class="cat-header">
+      <span class="cat-emoji">💰</span>
+      <span class="cat-name">경제</span>
+      <span class="cat-badge eco">5</span>
+    </div>
+
+    <a class="card" href="https://fortune.com/article/price-of-oil-06-01-2026/" target="_blank">
+      <div class="card-top">
+        <span class="tag eco">에너지</span>
+        <span class="card-arrow">↗</span>
+      </div>
+      <div class="card-title">중동 긴장에 WTI 배럴당 $92 돌파… 6% 급등</div>
+      <div class="card-body">이란발 지정학적 리스크가 고조되며 서부텍사스산 원유(WTI)가 6% 급등해 $92를 넘어섰다. <strong>이란이 호르무즈 해협 봉쇄 가능성을 시사</strong>하면서 글로벌 에너지 공급망 위협에 대한 우려가 확산되고 있다.</div>
+      <div class="card-source">Fortune · 2026.06.01</div>
+    </a>
+
+    <a class="card" href="https://www.eia.gov/outlooks/steo/" target="_blank">
+      <div class="card-top">
+        <span class="tag eco">공급망</span>
+        <span class="card-arrow">↗</span>
+      </div>
+      <div class="card-title">호르무즈 해협 사실상 봉쇄… 전 세계 원유 20% 차질 우려</div>
+      <div class="card-body">중동 군사 작전으로 호르무즈 해협의 사실상 봉쇄 상황이 발생했으며, 이 해협을 통한 전 세계 원유 수송량은 전체의 약 20%에 달한다. <strong>EIA는 2분기 글로벌 원유 재고가 하루 850만 배럴 감소</strong>할 것으로 전망했다.</div>
+      <div class="card-source">EIA · 2026.06.02</div>
+    </a>
+
+    <a class="card" href="https://www.worldbank.org/en/research/commodity-markets" target="_blank">
+      <div class="card-top">
+        <span class="tag eco">원자재</span>
+        <span class="card-arrow">↗</span>
+      </div>
+      <div class="card-title">2026년 글로벌 상품가격 16% 급등 전망… 인플레 재점화</div>
+      <div class="card-body">세계은행은 중동 전쟁 충격으로 2026년 글로벌 원자재 가격이 전년 대비 16% 오를 것으로 전망했다. <strong>에너지 가격지수는 4월에만 12.1% 상승</strong>했으며, 비료·식품 가격 급등이 신흥국 경제를 압박하고 있다.</div>
+      <div class="card-source">World Bank · 2026.06.02</div>
+    </a>
+
+    <a class="card" href="https://www.iea.org/events/oil-market-report-june-2026" target="_blank">
+      <div class="card-top">
+        <span class="tag eco">IEA</span>
+        <span class="card-arrow">↗</span>
+      </div>
+      <div class="card-title">IEA 6월 석유시장 보고서… 브렌트유 4Q 이후 하락 예상</div>
+      <div class="card-body">국제에너지기구(IEA)는 6월 브렌트유 가격이 배럴당 $106 수준을 유지하다 4분기부터 $89로 하락하고 2027년에는 $79까지 내려갈 것으로 예측했다. <strong>중동 생산 회복 시점이 핵심 변수</strong>로 지목됐다.</div>
+      <div class="card-source">IEA · 2026.06.02</div>
+    </a>
+
+    <a class="card" href="https://www.khan.co.kr/" target="_blank">
+      <div class="card-top">
+        <span class="tag eco">한국통신</span>
+        <span class="card-arrow">↗</span>
+      </div>
+      <div class="card-title">SKT·LG유플, 5G·LTE 통합요금제 출시… 통신비 부담 완화</div>
+      <div class="card-body">SK텔레콤과 LG유플러스가 5G·LTE 구분을 없앤 통합요금제를 잇달아 출시했다. <strong>정부 방침에 따라 요금제를 간소화하고 안심데이터를 확대</strong>해 소비자 통신비 부담을 낮춘다는 취지다.</div>
+      <div class="card-source">경향신문 · 2026.06.02</div>
+    </a>
+  </div>
+
+  <!-- 주식 -->
+  <div class="section">
+    <div class="cat-header">
+      <span class="cat-emoji">📈</span>
+      <span class="cat-name">주식</span>
+      <span class="cat-badge mkt">5</span>
+    </div>
+
+    <a class="card" href="https://www.cnbc.com/2026/05/31/stock-market-today-live-updates.html" target="_blank">
+      <div class="card-top">
+        <span class="tag mkt">S&P500</span>
+        <span class="card-arrow">↗</span>
+      </div>
+      <div class="card-title">S&P 500, 사상 최고치 경신… 7,599 마감</div>
+      <div class="card-body">S&P 500이 0.26% 상승한 7,599.96으로 마감하며 신고가를 경신했다. <strong>기술주 랠리가 유가 급등 충격을 상쇄</strong>하며 6월 첫 거래일을 강세로 마무리했다.</div>
+      <div class="card-source">CNBC · 2026.05.31</div>
+    </a>
+
+    <a class="card" href="https://www.cnbc.com/2026/05/31/stock-market-today-live-updates.html" target="_blank">
+      <div class="card-top">
+        <span class="tag mkt">나스닥</span>
+        <span class="card-arrow">↗</span>
+      </div>
+      <div class="card-title">나스닥, 27,086 신고가… AI 기대감으로 빅테크 강세</div>
+      <div class="card-body">나스닥 종합지수가 0.42% 오른 27,086에 마감하며 사상 최고치를 새로 썼다. 다우존스도 소폭 상승해 <strong>3대 주요 지수가 동반 신고가를 달성</strong>했다.</div>
+      <div class="card-source">CNBC · 2026.05.31</div>
+    </a>
+
+    <a class="card" href="https://www.cnbc.com/2026/05/31/stock-market-today-live-updates.html" target="_blank">
+      <div class="card-top">
+        <span class="tag mkt">엔비디아</span>
+        <span class="card-arrow">↗</span>
+      </div>
+      <div class="card-title">엔비디아, PC용 신형 AI 프로세서 공개… 6% 급등</div>
+      <div class="card-body">엔비디아가 개인용 컴퓨터를 위한 차세대 프로세서를 공개하자 주가가 6% 이상 급등했다. <strong>AI 반도체 수요 확대 기대감</strong>이 지수 전반의 상승을 이끈 핵심 동력이 됐다.</div>
+      <div class="card-source">CNBC · 2026.05.31</div>
+    </a>
+
+    <a class="card" href="https://www.asiae.co.kr/en/article/2026060209200298038" target="_blank">
+      <div class="card-top">
+        <span class="tag mkt">코스피</span>
+        <span class="card-arrow">↗</span>
+      </div>
+      <div class="card-title">코스피, 8,900선 터치 후 급반락… -2.76% 마감</div>
+      <div class="card-body">코스피가 장 초반 8,900선을 넘어섰으나 이후 외국인의 대규모 순매도(1조1,888억원)에 밀려 8,545까지 추락했다. <strong>IT서비스(-5.41%)·건설(-5.10%) 섹터가 급락</strong>하며 지수를 끌어내렸다.</div>
+      <div class="card-source">아시아경제 · 2026.06.02</div>
+    </a>
+
+    <a class="card" href="https://www.asiae.co.kr/en/article/2026060209200298038" target="_blank">
+      <div class="card-top">
+        <span class="tag mkt">국내증시</span>
+        <span class="card-arrow">↗</span>
+      </div>
+      <div class="card-title">삼성전자 +3.87%·LG엔솔 +7.36% 상승… 희비 엇갈려</div>
+      <div class="card-body">코스피 약세 속에서도 삼성전자(+3.87%)와 LG에너지솔루션(+7.36%)은 강세를 보였다. 반면 <strong>삼성전기(-9.13%)·현대차(-3.07%)·SK하이닉스(-1.40%)</strong> 등 주요 종목은 급락했다.</div>
+      <div class="card-source">아시아경제 · 2026.06.02</div>
+    </a>
+  </div>
+
+  <!-- 트렌드 -->
+  <div class="section">
+    <div class="cat-header">
+      <span class="cat-emoji">🔮</span>
+      <span class="cat-name">트렌드</span>
+      <span class="cat-badge trd">5</span>
+    </div>
+
+    <a class="card" href="https://blog.mean.ceo/ai-startup-trends-june-2026/" target="_blank">
+      <div class="card-top">
+        <span class="tag trd">AI 에이전트</span>
+        <span class="card-arrow">↗</span>
+      </div>
+      <div class="card-title">AI 에이전트 팀 시대 도래… '에이전트 협업'이 다음 화두</div>
+      <div class="card-body">단독 AI 에이전트를 넘어 복수의 에이전트가 협업해 복잡한 목표를 달성하는 '에이전트 팀' 모델이 2026년 AI 산업의 핵심 트렌드로 급부상했다. <strong>코딩·의료·제조 등 수직 특화 AI 솔루션</strong>으로 투자자금이 집중되고 있다.</div>
+      <div class="card-source">Mean.CEO · 2026.06</div>
+    </a>
+
+    <a class="card" href="https://llm-stats.com/llm-updates" target="_blank">
+      <div class="card-top">
+        <span class="tag trd">AI 모델</span>
+        <span class="card-arrow">↗</span>
+      </div>
+      <div class="card-title">AI 모델 302개 이상 출시… 추론형·멀티모달 표준화 가속</div>
+      <div class="card-body">2026년 현재까지 302종 이상의 AI 모델이 출시됐으며, OpenAI o1·DeepSeek-R1 등 추론 특화 모델이 주목받고 있다. <strong>멀티모달 기능이 최전선 모델의 표준</strong>으로 자리잡고, GPT-4급 성능이 대폭 낮은 비용으로 구현되는 추세다.</div>
+      <div class="card-source">LLM Stats · 2026.06</div>
+    </a>
+
+    <a class="card" href="https://news.microsoft.com/source/features/ai/whats-next-in-ai-7-trends-to-watch-in-2026/" target="_blank">
+      <div class="card-top">
+        <span class="tag trd">로보틱스</span>
+        <span class="card-arrow">↗</span>
+      </div>
+      <div class="card-title">구글 딥마인드·보스턴다이나믹스, 산업용 로봇 현장 투입 근접</div>
+      <div class="card-body">구글 딥마인드와 보스턴 다이나믹스가 실제 산업 현장 적용에 가까워진 로봇 시제품을 공개했다. <strong>'피지컬 AI(Physical AI)'</strong>라 불리는 이 분야에 VC 투자금이 급격히 몰리고 있다.</div>
+      <div class="card-source">Microsoft · 2026</div>
+    </a>
+
+    <a class="card" href="https://www.ibm.com/think/news/ai-tech-trends-predictions-2026" target="_blank">
+      <div class="card-top">
+        <span class="tag trd">플랫폼</span>
+        <span class="card-arrow">↗</span>
+      </div>
+      <div class="card-title">아마존 알렉사, 자동차·TV·건강 플랫폼으로 영역 확장</div>
+      <div class="card-body">아마존이 알렉사를 자동차, TV, 가전, 헬스케어 영역까지 심층 통합하며 AI 생활 플랫폼 경쟁이 격화되고 있다. <strong>AI가 단순 비서를 넘어 생활 인프라로</strong> 진화하고 있다는 분석이 나온다.</div>
+      <div class="card-source">IBM · 2026</div>
+    </a>
+
+    <a class="card" href="https://www.technologyreview.com/2026/04/21/1135643/10-ai-artificial-intelligence-trends-technologies-research-2026/" target="_blank">
+      <div class="card-top">
+        <span class="tag trd">의료AI</span>
+        <span class="card-arrow">↗</span>
+      </div>
+      <div class="card-title">의료 AI 혁명… 예측 진단부터 로봇수술까지 전방위 확산</div>
+      <div class="card-body">AI 알고리즘이 진단·환자 관리·수술 보조 등 의료 전반에 걸쳐 적용되고 있으며, 예측 분석 기반의 선제적 케어가 확산 중이다. <strong>MIT 테크리뷰는 의료 AI를 2026년 10대 핵심 AI 기술</strong> 중 하나로 선정했다.</div>
+      <div class="card-source">MIT Technology Review · 2026.04</div>
+    </a>
+  </div>
+
+  <!-- 코인 -->
+  <div class="section">
+    <div class="cat-header">
+      <span class="cat-emoji">🪙</span>
+      <span class="cat-name">코인</span>
+      <span class="cat-badge coi">5</span>
+    </div>
+
+    <a class="card" href="https://www.cryptotimes.io/2026/06/01/bitcoin-starts-june-near-73k-after-massive-etf-selloff-whats-next/" target="_blank">
+      <div class="card-top">
+        <span class="tag coi">비트코인</span>
+        <span class="card-arrow">↗</span>
+      </div>
+      <div class="card-title">BTC, 6월 $72,500 출발… ETF 대규모 청산 후 박스권</div>
+      <div class="card-body">비트코인이 5월의 대규모 ETF 매도세 이후 $72,500~73,200 박스권에서 등락하며 6월을 시작했다. <strong>$73,869 돌파 시 강세 전환</strong>이 가능하나, $70,000 이탈 시 $68,000까지 추가 하락 우려가 있다.</div>
+      <div class="card-source">CryptoTimes · 2026.06.01</div>
+    </a>
+
+    <a class="card" href="https://www.cryptotimes.io/2026/06/01/bitcoin-and-the-broader-crypto-market-down-may-review-etf-exodus-and-june-outlook/" target="_blank">
+      <div class="card-top">
+        <span class="tag coi">BTC ETF</span>
+        <span class="card-arrow">↗</span>
+      </div>
+      <div class="card-title">미국 BTC 현물 ETF, 5월 $24.3억 순유출… 2026년 최대</div>
+      <div class="card-body">미국 내 비트코인 현물 ETF가 5월 한 달간 24억3천만 달러의 순유출을 기록해 올해 최대 월간 자금 이탈을 기록했다. <strong>기관 투자자들의 리스크 오프 기조</strong>가 코인 시장 전반에 영향을 미치고 있다.</div>
+      <div class="card-source">CryptoTimes · 2026.06.01</div>
+    </a>
+
+    <a class="card" href="https://www.cryptotimes.io/2026/06/01/crypto-market-today-bitcoin-opens-june-below-72k-after-sealing-its-third-red-monthly-candle-of-2026/" target="_blank">
+      <div class="card-top">
+        <span class="tag coi">이더리움</span>
+        <span class="card-arrow">↗</span>
+      </div>
+      <div class="card-title">ETH ETF, 14일 연속 순유출… $1,964 지지선 사수가 관건</div>
+      <div class="card-body">이더리움 현물 ETF가 14거래일 연속 순유출을 기록하며 ETH 가격이 $1,980~2,000 선에서 지지를 테스트 중이다. <strong>$1,964 지지선이 무너지면 추가 하락</strong>이 불가피하며, 반등 시 $2,100~2,134 목표가 제시된다.</div>
+      <div class="card-source">CryptoTimes · 2026.06.01</div>
+    </a>
+
+    <a class="card" href="https://blockchainreporter.net/crypto-market-prepares-for-major-events-in-june-including-upgrades-launches-and-tges/" target="_blank">
+      <div class="card-top">
+        <span class="tag coi">6월 이벤트</span>
+        <span class="card-arrow">↗</span>
+      </div>
+      <div class="card-title">6월 크립토 주요 이벤트 다수… 업그레이드·TGE 촉각</div>
+      <div class="card-body">6월 한 달간 주요 블록체인 프로토콜 업그레이드, 신규 토큰 제너레이션 이벤트(TGE), 프로젝트 론칭이 집중 예정돼 있다. <strong>미국 고용 지표 발표</strong>도 이번 주 주요 변수로 꼽히며 크립토 시장 방향성을 가를 전망이다.</div>
+      <div class="card-source">Blockchain Reporter · 2026.06.01</div>
+    </a>
+
+    <a class="card" href="https://www.coingabbar.com/en/crypto-currency-news/key-crypto-events-june-2026-market-movers-this-week" target="_blank">
+      <div class="card-top">
+        <span class="tag coi">도미넌스</span>
+        <span class="card-arrow">↗</span>
+      </div>
+      <div class="card-title">BTC 도미넌스 59%… 알트코인 대비 상대적 강세 지속</div>
+      <div class="card-body">비트코인의 시장 지배력(도미넌스)이 59%에 달하며 알트코인 대비 상대적 강세를 이어가고 있다. 전체 크립토 시가총액은 약 <strong>2조4,600억 달러로 24시간 기준 1.4% 하락</strong>해 시장 전반이 소극적 관망세를 유지하고 있다.</div>
+      <div class="card-source">CoinGabbar · 2026.06.01</div>
+    </a>
+  </div>
+
+  <div class="footer">각 카드를 탭하면 원문 기사로 이동합니다</div>
+</div>
+
+</body>
+</html>
