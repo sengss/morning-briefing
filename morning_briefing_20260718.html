@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>월스트리트 모닝 브리핑 - 2026년 7월 18일</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: #0a0a0f;
+    color: #e8e8ec;
+    font-family: 'Noto Sans KR', sans-serif;
+    display: flex;
+    justify-content: center;
+  }
+  .wrap {
+    width: 100%;
+    max-width: 480px;
+    min-height: 100vh;
+    background: #0a0a0f;
+    padding-bottom: 40px;
+  }
+  header {
+    padding: 28px 20px 20px;
+    border-bottom: 1px solid #1e1e28;
+    background: linear-gradient(180deg, #12121a 0%, #0a0a0f 100%);
+  }
+  .brand {
+    font-size: 12px;
+    letter-spacing: 2px;
+    color: #6b6b7a;
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+  h1 {
+    font-size: 22px;
+    font-weight: 900;
+    margin-top: 6px;
+    color: #ffffff;
+    letter-spacing: -0.3px;
+  }
+  .date-ko {
+    font-size: 13px;
+    color: #9a9aab;
+    margin-top: 4px;
+    font-weight: 500;
+  }
+  .ticker {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 6px;
+    margin-top: 18px;
+  }
+  .tick {
+    background: #14141d;
+    border: 1px solid #22222e;
+    border-radius: 10px;
+    padding: 8px 4px;
+    text-align: center;
+  }
+  .tick-label {
+    font-size: 9.5px;
+    color: #7a7a8c;
+    font-weight: 500;
+    white-space: nowrap;
+  }
+  .tick-val {
+    font-size: 11.5px;
+    font-weight: 700;
+    margin-top: 4px;
+    color: #e8e8ec;
+    white-space: nowrap;
+  }
+  .up { color: #4caf50; }
+  .down { color: #ef5350; }
+  .na { color: #6b6b7a; font-size: 10px; }
+
+  section { padding: 22px 20px 4px; }
+  .cat-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 12px;
+  }
+  .cat-emoji { font-size: 18px; }
+  .cat-name { font-size: 16px; font-weight: 700; color: #fff; }
+  .cat-count {
+    margin-left: auto;
+    font-size: 11px;
+    font-weight: 700;
+    color: #9a9aab;
+    background: #1a1a24;
+    border-radius: 20px;
+    padding: 2px 10px;
+  }
+
+  .card {
+    display: block;
+    background: #12121a;
+    border: 1px solid #1e1e28;
+    border-radius: 14px;
+    padding: 16px;
+    margin-bottom: 10px;
+    text-decoration: none;
+    transition: border-color 0.15s;
+  }
+  .card-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 8px;
+  }
+  .tag {
+    font-size: 11px;
+    font-weight: 700;
+    padding: 3px 9px;
+    border-radius: 20px;
+  }
+  .arrow { font-size: 13px; color: #55556a; }
+  .card-title {
+    font-size: 15px;
+    font-weight: 700;
+    color: #f2f2f5;
+    line-height: 1.4;
+    margin-bottom: 6px;
+  }
+  .card-body {
+    font-size: 13px;
+    color: #a8a8b8;
+    line-height: 1.6;
+  }
+  .card-body strong { color: #dcdce4; font-weight: 700; }
+  .card-source {
+    font-size: 11px;
+    color: #6b6b7a;
+    margin-top: 10px;
+    font-weight: 500;
+  }
+
+  /* category colors */
+  .politics .tag { background: rgba(239,83,80,0.15); color: #ef5350; }
+  .economy .tag { background: rgba(66,165,245,0.15); color: #42a5f5; }
+  .stocks .tag { background: rgba(76,175,80,0.15); color: #4caf50; }
+  .trend .tag { background: rgba(171,71,188,0.15); color: #ab47bc; }
+  .crypto .tag { background: rgba(245,158,11,0.15); color: #f59e0b; }
+
+  footer {
+    text-align: center;
+    padding: 28px 20px 10px;
+    font-size: 12px;
+    color: #55556a;
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <div class="brand">WALL STREET MORNING BRIEFING</div>
+    <h1>월스트리트 모닝 브리핑</h1>
+    <div class="date-ko">2026년 7월 18일 토요일</div>
+
+    <div class="ticker">
+      <div class="tick">
+        <div class="tick-label">S&P500</div>
+        <div class="tick-val down">-1.0%</div>
+      </div>
+      <div class="tick">
+        <div class="tick-label">나스닥</div>
+        <div class="tick-val down">-1.4%</div>
+      </div>
+      <div class="tick">
+        <div class="tick-label">코스피</div>
+        <div class="tick-val na">확인불가</div>
+      </div>
+      <div class="tick">
+        <div class="tick-label">BTC</div>
+        <div class="tick-val down">-1.0%</div>
+      </div>
+      <div class="tick">
+        <div class="tick-label">브렌트유</div>
+        <div class="tick-val down">-0.1%</div>
+      </div>
+    </div>
+  </header>
+
+  <!-- 정치 -->
+  <section class="politics">
+    <div class="cat-header">
+      <span class="cat-emoji">🏛</span>
+      <span class="cat-name">정치</span>
+      <span class="cat-count">2</span>
+    </div>
+
+    <a class="card" href="https://www.npr.org/2026/07/16/g-s1-133920/ukraine-defense-minister-fired" target="_blank">
+      <div class="card-top"><span class="tag">우크라이나</span><span class="arrow">↗</span></div>
+      <div class="card-title">젤렌스키, 국방장관 전격 경질</div>
+      <div class="card-body">젤렌스키 우크라이나 대통령이 <strong>페도로프 국방장관을 전격 경질</strong>하며 취임 후 4번째 개각을 단행했다. 군 수뇌부와의 갈등이 경질 배경으로 지목된다.</div>
+      <div class="card-source">NPR · 2026.07.16</div>
+    </a>
+
+    <a class="card" href="https://www.aljazeera.com/news/2026/7/16/hundreds-protest-in-kyiv-over-zelenskyys-dismissal-of-defence-minister" target="_blank">
+      <div class="card-top"><span class="tag">우크라이나</span><span class="arrow">↗</span></div>
+      <div class="card-title">키이우 시위 확산, 경질 반발</div>
+      <div class="card-body">드론 전력화를 이끌며 인기를 끌었던 페도로프 전 장관의 경질에 반발해 <strong>키이우·리비우·하르키우 등에서 수백 명이 시위</strong>를 벌였다. "페도로프를 돌려달라"는 구호가 이어졌다.</div>
+      <div class="card-source">Al Jazeera · 2026.07.16</div>
+    </a>
+  </section>
+
+  <!-- 경제 -->
+  <section class="economy">
+    <div class="cat-header">
+      <span class="cat-emoji">💰</span>
+      <span class="cat-name">경제</span>
+      <span class="cat-count">2</span>
+    </div>
+
+    <a class="card" href="https://www.cnbc.com/2026/07/15/oil-prices-today-brent-wti-hormuz-blockade.html" target="_blank">
+      <div class="card-top"><span class="tag">국제유가</span><span class="arrow">↗</span></div>
+      <div class="card-title">호르무즈 봉쇄 우려, 유가 요동</div>
+      <div class="card-body">호르무즈 해협 인근 유조선 공격이 이어지며 <strong>브렌트유가 배럴당 85달러 안팎, 한 달 최고치권</strong>에서 등락하고 있다. 이라크 바스라 터미널의 원유 선적도 일시 중단됐다.</div>
+      <div class="card-source">CNBC · 2026.07.15</div>
+    </a>
+
+    <a class="card" href="https://www.aljazeera.com/economy/2026/7/13/oil-prices-jump-as-us-and-iran-trade-attacks-over-strait-of-hormuz" target="_blank">
+      <div class="card-top"><span class="tag">국제유가</span><span class="arrow">↗</span></div>
+      <div class="card-title">美·이란 공방에 유가 급등</div>
+      <div class="card-body">카타르 선적 가스운반선과 사우디 유조선이 호르무즈 해협에서 미사일 공격을 받으며 <strong>브렌트유가 4% 넘게 급등</strong>했다. 전 세계 원유 물동량의 20%가 지나는 항로의 긴장이 고조됐다.</div>
+      <div class="card-source">Al Jazeera · 2026.07.13</div>
+    </a>
+  </section>
+
+  <!-- 주식 -->
+  <section class="stocks">
+    <div class="cat-header">
+      <span class="cat-emoji">📈</span>
+      <span class="cat-name">주식</span>
+      <span class="cat-count">2</span>
+    </div>
+
+    <a class="card" href="https://www.cnbc.com/2026/07/16/stock-market-today-live-updates.html" target="_blank">
+      <div class="card-top"><span class="tag">뉴욕증시</span><span class="arrow">↗</span></div>
+      <div class="card-title">반도체주 약세장, 뉴욕증시 하락</div>
+      <div class="card-body">필라델피아 반도체지수(SOX)가 약세장에 진입하며 <strong>S&P500과 나스닥이 동반 하락</strong>했다. 어플라이드머티리얼즈·인텔·엔비디아 등 주요 반도체주가 일제히 밀렸다.</div>
+      <div class="card-source">CNBC · 2026.07.16</div>
+    </a>
+
+    <a class="card" href="https://finance.yahoo.com/markets/live/stock-market-today-friday-july-17-dow-sp-500-nasdaq-092345307.html" target="_blank">
+      <div class="card-top"><span class="tag">뉴욕증시</span><span class="arrow">↗</span></div>
+      <div class="card-title">넷플릭스 실적 쇼크, 나스닥 하락</div>
+      <div class="card-body">넷플릭스가 3분기 매출 전망 실망으로 시간외 <strong>9% 넘게 급락</strong>했고, 반도체주 매도세까지 겹치며 나스닥을 압박했다. 뉴욕증시는 주간 기준으로도 손실을 기록했다.</div>
+      <div class="card-source">Yahoo Finance · 2026.07.17</div>
+    </a>
+  </section>
+
+  <!-- 트렌드 -->
+  <section class="trend">
+    <div class="cat-header">
+      <span class="cat-emoji">🔮</span>
+      <span class="cat-name">트렌드</span>
+      <span class="cat-count">3</span>
+    </div>
+
+    <a class="card" href="https://www.cnbc.com/2026/07/17/moonshot-ai-kimi-k3-model-openai-anthropic-china.html" target="_blank">
+      <div class="card-top"><span class="tag">AI</span><span class="arrow">↗</span></div>
+      <div class="card-title">中 문샷AI, 'Kimi K3' 공개</div>
+      <div class="card-body">중국 문샷AI가 <strong>2.8조 파라미터급 오픈웨이트 모델 'Kimi K3'</strong>를 공개하며 OpenAI·Anthropic을 정조준했다. 100만 토큰 컨텍스트와 시각 이해 기능을 지원한다.</div>
+      <div class="card-source">CNBC · 2026.07.17</div>
+    </a>
+
+    <a class="card" href="https://techcrunch.com/2026/07/16/moonshots-upcoming-kimi-3-is-expected-to-close-the-gap-with-anthropics-opus-4-8/" target="_blank">
+      <div class="card-top"><span class="tag">AI</span><span class="arrow">↗</span></div>
+      <div class="card-title">Kimi 3, 코딩 성능서 두각</div>
+      <div class="card-body">블라인드 테스트에서 개발자들이 프런트엔드 코딩에 있어 <strong>Kimi를 Anthropic·OpenAI 최상위 모델보다 선호</strong>한 것으로 나타났다. 미중 AI 경쟁이 한층 격화되고 있다.</div>
+      <div class="card-source">TechCrunch · 2026.07.16</div>
+    </a>
+
+    <a class="card" href="https://www.bloomberg.com/news/articles/2026-07-17/china-s-powerful-new-moonshot-ai-model-closes-gap-with-us-rivals" target="_blank">
+      <div class="card-top"><span class="tag">AI</span><span class="arrow">↗</span></div>
+      <div class="card-title">Kimi K3, 가격도 절반 수준</div>
+      <div class="card-body">알리바바·텐센트가 투자한 문샷AI는 <strong>API 가격을 경쟁 모델 대비 40~50% 낮게</strong> 책정했다. AI 인프라 경쟁이 가격 경쟁으로 번지는 모습이다.</div>
+      <div class="card-source">Bloomberg · 2026.07.17</div>
+    </a>
+  </section>
+
+  <!-- 코인 -->
+  <section class="crypto">
+    <div class="cat-header">
+      <span class="cat-emoji">🪙</span>
+      <span class="cat-name">코인</span>
+      <span class="cat-count">2</span>
+    </div>
+
+    <a class="card" href="https://www.coingabbar.com/en/crypto-currency-news/crypto-news-today-july-17-visa-bybit-bitpay-mica-bonk-update" target="_blank">
+      <div class="card-top"><span class="tag">비트코인</span><span class="arrow">↗</span></div>
+      <div class="card-title">비트코인 하락, 반도체발 약세</div>
+      <div class="card-body">반도체주 급락 여파로 위험자산 회피 심리가 커지며 <strong>비트코인이 6만3944달러로 1%대 하락</strong>했다. 공포탐욕지수는 '극단적 공포'에서 '공포'로 소폭 개선됐다.</div>
+      <div class="card-source">CoinGabbar · 2026.07.17</div>
+    </a>
+
+    <a class="card" href="https://finance.yahoo.com/personal-finance/investing/article/bitcoin-and-ethereum-prices-today-wednesday-july-15-2026-prices-surge-after-softer-inflation-report-122602214.html" target="_blank">
+      <div class="card-top"><span class="tag">이더리움</span><span class="arrow">↗</span></div>
+      <div class="card-title">물가 완화에 코인 일제히 상승</div>
+      <div class="card-body">예상보다 부드러운 인플레이션 지표가 발표되며 <strong>비트코인과 이더리움이 나란히 급등</strong>했다. 위험자산 선호 심리가 살아나며 코인 시장 전반에 매수세가 유입됐다.</div>
+      <div class="card-source">Yahoo Finance · 2026.07.15</div>
+    </a>
+  </section>
+
+  <footer>
+    각 카드를 탭하면 원문 기사로 이동합니다
+  </footer>
+
+</div>
+</body>
+</html>
