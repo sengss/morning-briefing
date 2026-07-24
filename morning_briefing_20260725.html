@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>월스트리트 모닝 브리핑 · 2026년 7월 25일 토요일</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body {
+    background: #0a0a0f;
+    color: #f2f2f5;
+    font-family: 'Noto Sans KR', -apple-system, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  body {
+    max-width: 480px;
+    margin: 0 auto;
+    padding-bottom: 40px;
+  }
+  header {
+    padding: 28px 20px 20px;
+    background: linear-gradient(180deg, #14141f 0%, #0a0a0f 100%);
+    border-bottom: 1px solid #232330;
+  }
+  .brand {
+    font-size: 12px;
+    letter-spacing: 2px;
+    color: #7c7c92;
+    font-weight: 700;
+    margin-bottom: 6px;
+  }
+  h1 {
+    font-size: 23px;
+    font-weight: 900;
+    color: #ffffff;
+    letter-spacing: -0.3px;
+  }
+  .date-line {
+    margin-top: 6px;
+    font-size: 13px;
+    color: #9a9ab0;
+    font-weight: 500;
+  }
+  .ticker {
+    margin-top: 18px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 6px;
+  }
+  .tick-cell {
+    background: #15151f;
+    border: 1px solid #232330;
+    border-radius: 10px;
+    padding: 8px 4px;
+    text-align: center;
+  }
+  .tick-label {
+    font-size: 9.5px;
+    color: #7c7c92;
+    font-weight: 700;
+    margin-bottom: 4px;
+    white-space: nowrap;
+  }
+  .tick-value {
+    font-size: 11.5px;
+    color: #f2f2f5;
+    font-weight: 700;
+    white-space: nowrap;
+  }
+  .tick-change {
+    font-size: 10.5px;
+    font-weight: 700;
+    margin-top: 2px;
+  }
+  .tick-change.up { color: #ef5350; }
+  .tick-change.down { color: #4aa8ff; }
+
+  .cat-section {
+    padding: 22px 16px 4px;
+  }
+  .cat-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 0 4px 12px;
+  }
+  .cat-emoji { font-size: 18px; }
+  .cat-name {
+    font-size: 16.5px;
+    font-weight: 900;
+    letter-spacing: -0.2px;
+  }
+  .cat-badge {
+    font-size: 11px;
+    font-weight: 700;
+    padding: 2px 8px;
+    border-radius: 20px;
+    margin-left: auto;
+  }
+  .cat-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .card {
+    display: block;
+    background: #14141c;
+    border: 1px solid #232330;
+    border-radius: 14px;
+    padding: 14px 15px;
+    text-decoration: none;
+    color: inherit;
+    transition: border-color 0.15s ease;
+  }
+  .card:active {
+    border-color: #3a3a4a;
+  }
+  .card-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 8px;
+  }
+  .card-tag {
+    font-size: 11px;
+    font-weight: 700;
+    padding: 3px 9px;
+    border-radius: 20px;
+    border: 1px solid;
+  }
+  .card-arrow {
+    font-size: 14px;
+    font-weight: 700;
+    opacity: 0.85;
+  }
+  .card-title {
+    font-size: 15.5px;
+    font-weight: 700;
+    color: #ffffff;
+    line-height: 1.4;
+    margin-bottom: 6px;
+    letter-spacing: -0.2px;
+  }
+  .card-body {
+    font-size: 13px;
+    line-height: 1.65;
+    color: #b8b8c8;
+    margin-bottom: 10px;
+  }
+  .card-body strong {
+    color: #e8e8f0;
+    font-weight: 700;
+  }
+  .card-source {
+    font-size: 11.5px;
+    color: #6b6b80;
+    font-weight: 500;
+  }
+
+  footer {
+    margin-top: 28px;
+    padding: 20px;
+    text-align: center;
+  }
+  footer .foot-text {
+    font-size: 12px;
+    color: #5c5c70;
+  }
+  footer .foot-brand {
+    margin-top: 6px;
+    font-size: 11px;
+    color: #3f3f50;
+    letter-spacing: 1px;
+  }
+</style>
+</head>
+<body>
+  <header>
+    <div class="brand">WALL STREET MORNING BRIEFING</div>
+    <h1>월스트리트 모닝 브리핑</h1>
+    <div class="date-line">2026년 7월 25일 토요일</div>
+    <div class="ticker">
+      <div class="tick-cell">
+      <div class="tick-label">S&P500</div>
+      <div class="tick-value">7,411.98</div>
+      <div class="tick-change up">+0.05%</div>
+    </div>
+<div class="tick-cell">
+      <div class="tick-label">나스닥</div>
+      <div class="tick-value">24,975.82</div>
+      <div class="tick-change down">-0.64%</div>
+    </div>
+<div class="tick-cell">
+      <div class="tick-label">코스피</div>
+      <div class="tick-value">6,690.62</div>
+      <div class="tick-change down">-5.72%</div>
+    </div>
+<div class="tick-cell">
+      <div class="tick-label">BTC</div>
+      <div class="tick-value">$65,440.76</div>
+      <div class="tick-change up">+0.06%</div>
+    </div>
+<div class="tick-cell">
+      <div class="tick-label">브렌트유</div>
+      <div class="tick-value"><$99</div>
+      <div class="tick-change down">-2.0%</div>
+    </div>
+    </div>
+  </header>
+
+  <section class="cat-section">
+      <div class="cat-header">
+        <span class="cat-emoji">🏛</span>
+        <span class="cat-name" style="color:#ef5350;">정치</span>
+        <span class="cat-badge" style="background:#ef535022;color:#ef5350;">3</span>
+      </div>
+      <div class="cat-cards">
+        <a class="card" href="https://www.nbcnews.com/world/iran/us-iran-strikes-trump-massive-attack-war-hormuz-red-sea-oil-rcna589016" target="_blank" rel="noopener">
+        <div class="card-top">
+          <span class="card-tag" style="color:#ef5350;border-color:#ef535055;background:#ef53501a;">이란-후티 확전</span>
+          <span class="card-arrow" style="color:#ef5350;">↗</span>
+        </div>
+        <div class="card-title">美, 이란에 12차 공습…확전 위기</div>
+        <div class="card-body">미군이 이란에 대한 12차 공습을 단행하며 확전 국면에 들어섰다. <strong>트럼프 대통령은 후티 반군이 추가 공격에 나설 경우 이란에 "대규모 공격"을 가하겠다고 경고</strong>했으며, 중동 우방국 사이에서도 외교적 진전 부재에 대한 우려가 커지고 있다.</div>
+        <div class="card-source">NBC News · 최근</div>
+      </a>
+<a class="card" href="https://www.hawaiitribune-herald.com/2026/07/24/nation-world-news/trump-vows-to-punish-iran-for-houthi-attacks-in-red-sea-oil-surges-over-100/" target="_blank" rel="noopener">
+        <div class="card-top">
+          <span class="card-tag" style="color:#ef5350;border-color:#ef535055;background:#ef53501a;">트럼프 경고</span>
+          <span class="card-arrow" style="color:#ef5350;">↗</span>
+        </div>
+        <div class="card-title">트럼프, 이란에 '군사적 응징' 경고</div>
+        <div class="card-body">트럼프 대통령이 후티 반군의 홍해 유조선 공격과 관련해 이란에 <strong>"중대한 군사적 응징"을 가하겠다고 경고</strong>했다. 후티가 사우디 유조선을 추가 공격할 경우를 겨냥한 것으로, 이 여파로 국제유가는 배럴당 100달러를 돌파했다.</div>
+        <div class="card-source">Hawaii Tribune-Herald (AP) · 2026.07.24</div>
+      </a>
+<a class="card" href="https://www.cnn.com/2026/07/23/world/live-news/iran-war-trump" target="_blank" rel="noopener">
+        <div class="card-top">
+          <span class="card-tag" style="color:#ef5350;border-color:#ef535055;background:#ef53501a;">홍해 유조선 피격</span>
+          <span class="card-arrow" style="color:#ef5350;">↗</span>
+        </div>
+        <div class="card-title">후티, 홍해서 유조선 공격…유가 급등</div>
+        <div class="card-body">예멘 후티 반군이 홍해에서 유조선을 공격한 사실이 확인되며 중동發 공급 위기 우려가 확산됐다. <strong>브렌트유는 지난 5월 26일 이후 처음으로 배럴당 100달러를 돌파</strong>했다.</div>
+        <div class="card-source">CNN · 2026.07.23</div>
+      </a>
+      </div>
+    </section>
+<section class="cat-section">
+      <div class="cat-header">
+        <span class="cat-emoji">💰</span>
+        <span class="cat-name" style="color:#42a5f5;">경제</span>
+        <span class="cat-badge" style="background:#42a5f522;color:#42a5f5;">4</span>
+      </div>
+      <div class="cat-cards">
+        <a class="card" href="https://finance.yahoo.com/markets/live/stock-market-today-friday-july-24-dow-sp-500-nasdaq-081854465.html" target="_blank" rel="noopener">
+        <div class="card-top">
+          <span class="card-tag" style="color:#42a5f5;border-color:#42a5f555;background:#42a5f51a;">관세</span>
+          <span class="card-arrow" style="color:#42a5f5;">↗</span>
+        </div>
+        <div class="card-title">트럼프發 신규 관세 발효</div>
+        <div class="card-body">트럼프 행정부의 새 관세가 발효되며 <strong>미국 수입품의 99.4%에 10~12.5%의 관세가 부과</strong>된다. 법적 검토를 통과하기 위해 통상법 301조를 근거로 설계됐으며, 유가 부담을 고려해 일부 에너지 제품은 예외로 지정됐다.</div>
+        <div class="card-source">Yahoo Finance · 2026.07.24</div>
+      </a>
+<a class="card" href="https://sundayguardianlive.com/business/brent-crude-oil-price-today-july-24-brent-briefly-climbs-above-100-wti-surges-amid-us-iran-conflict-houthi-attacks-check-latest-brent-crude-wti-oil-rates-today-245155/" target="_blank" rel="noopener">
+        <div class="card-top">
+          <span class="card-tag" style="color:#42a5f5;border-color:#42a5f555;background:#42a5f51a;">국제유가</span>
+          <span class="card-arrow" style="color:#42a5f5;">↗</span>
+        </div>
+        <div class="card-title">브렌트유, 배럴당 100달러 돌파</div>
+        <div class="card-body">미-이란 갈등과 후티의 홍해 공격이 겹치며 <strong>브렌트유가 배럴당 100달러를 잠시 돌파</strong>했다. WTI도 함께 급등하며 인플레이션 재점화 우려가 커지고 있다.</div>
+        <div class="card-source">Sunday Guardian · 2026.07.24</div>
+      </a>
+<a class="card" href="https://www.newsis.com/view/NISX20260724_0003722180" target="_blank" rel="noopener">
+        <div class="card-top">
+          <span class="card-tag" style="color:#42a5f5;border-color:#42a5f555;background:#42a5f51a;">재계</span>
+          <span class="card-arrow" style="color:#42a5f5;">↗</span>
+        </div>
+        <div class="card-title">최태원, 노소영에 9440억원 지급 판결</div>
+        <div class="card-body">서울고법 파기환송심이 <strong>최태원 SK그룹 회장에게 노소영 아트센터 나비 관장에게 재산분할금 9440억원을 지급하라</strong>고 선고했다. 법원은 최 회장 보유 주식을 분할 대상에 포함해 2대1 비율을 적용했다.</div>
+        <div class="card-source">뉴시스 · 2026.07.24</div>
+      </a>
+<a class="card" href="https://www.cnbc.com/2026/07/23/iran-war-us-trump-houthis-red-sea-oil.html" target="_blank" rel="noopener">
+        <div class="card-top">
+          <span class="card-tag" style="color:#42a5f5;border-color:#42a5f555;background:#42a5f51a;">국제유가</span>
+          <span class="card-arrow" style="color:#42a5f5;">↗</span>
+        </div>
+        <div class="card-title">사우디 유조선 피격에 유가 상승</div>
+        <div class="card-body">사우디 유조선이 공격받은 이후 <strong>WTI와 브렌트유가 나란히 상승</strong>세를 보였다. 트럼프 대통령은 이란을 배후로 지목하며 책임을 묻겠다고 밝혔다.</div>
+        <div class="card-source">CNBC · 2026.07.23</div>
+      </a>
+      </div>
+    </section>
+<section class="cat-section">
+      <div class="cat-header">
+        <span class="cat-emoji">📈</span>
+        <span class="cat-name" style="color:#4caf50;">주식</span>
+        <span class="cat-badge" style="background:#4caf5022;color:#4caf50;">3</span>
+      </div>
+      <div class="cat-cards">
+        <a class="card" href="https://www.fool.com/coverage/stock-market-today/2026/07/24/stock-market-today-july-24-dow-recovers-and-sandisk-tumbles-11-as-tech-stocks-fall-further/" target="_blank" rel="noopener">
+        <div class="card-top">
+          <span class="card-tag" style="color:#4caf50;border-color:#4caf5055;background:#4caf501a;">미국증시</span>
+          <span class="card-arrow" style="color:#4caf50;">↗</span>
+        </div>
+        <div class="card-title">다우 반등, 나스닥은 기술주 약세로 하락</div>
+        <div class="card-body">24일(현지시간) <strong>다우존스는 0.46% 반등한 반면 나스닥은 0.64% 하락</strong>했다. 인텔은 실적 호조에도 6.5% 급락했고, 샌디스크는 메모리주 동반 약세 속에 11% 가까이 떨어졌다.</div>
+        <div class="card-source">The Motley Fool · 2026.07.24</div>
+      </a>
+<a class="card" href="https://finance.yahoo.com/markets/article/magnificent-7-stocks-erase-797-billion-in-market-value-in-worst-day-since-april-2025-201930579.html" target="_blank" rel="noopener">
+        <div class="card-top">
+          <span class="card-tag" style="color:#4caf50;border-color:#4caf5055;background:#4caf501a;">미국증시</span>
+          <span class="card-arrow" style="color:#4caf50;">↗</span>
+        </div>
+        <div class="card-title">'매그니피센트7', 하루새 8000억달러 증발</div>
+        <div class="card-body">전날 뉴욕증시에서 <strong>'매그니피센트7' 종목들의 시가총액이 하루 만에 약 8000억 달러 증발</strong>하며 2025년 4월 이후 최악의 하루를 기록했다. 알파벳과 테슬라의 AI 지출 확대 우려가 매도세를 촉발했다.</div>
+        <div class="card-source">Yahoo Finance · 2026.07.24</div>
+      </a>
+<a class="card" href="https://en.sedaily.com/finance/2026/07/24/kospi-closes-down-40627-points-at-669062" target="_blank" rel="noopener">
+        <div class="card-top">
+          <span class="card-tag" style="color:#4caf50;border-color:#4caf5055;background:#4caf501a;">코스피</span>
+          <span class="card-arrow" style="color:#4caf50;">↗</span>
+        </div>
+        <div class="card-title">코스피 5.72% 급락…6690선 마감</div>
+        <div class="card-body">뉴욕발 기술주 매도 여파가 아시아 시장으로 번지며 <strong>코스피가 406.27포인트(5.72%) 급락한 6690.62에 마감</strong>했다. AI 지출 우려와 국제유가 급등이 투자심리를 악화시켰다.</div>
+        <div class="card-source">Seoul Economic Daily · 2026.07.24</div>
+      </a>
+      </div>
+    </section>
+<section class="cat-section">
+      <div class="cat-header">
+        <span class="cat-emoji">🔮</span>
+        <span class="cat-name" style="color:#ab47bc;">트렌드</span>
+        <span class="cat-badge" style="background:#ab47bc22;color:#ab47bc;">4</span>
+      </div>
+      <div class="cat-cards">
+        <a class="card" href="https://fortune.com/2026/07/23/moonshot-deepseek-great-chinese-ai-ipo-rush/" target="_blank" rel="noopener">
+        <div class="card-top">
+          <span class="card-tag" style="color:#ab47bc;border-color:#ab47bc55;background:#ab47bc1a;">AI·IPO</span>
+          <span class="card-arrow" style="color:#ab47bc;">↗</span>
+        </div>
+        <div class="card-title">中 AI 기업들, 잇단 IPO 러시</div>
+        <div class="card-body">문샷AI가 <strong>홍콩 IPO를 목표로 최대 500억 달러 밸류에이션 투자 유치</strong>를 추진 중이며, 딥시크도 상하이 증시 상장을 위해 최대 710억 달러 밸류에이션을 노리고 있다. 미니맥스와 즈AI는 이미 지난 1월 홍콩 증시 상장을 마쳤다.</div>
+        <div class="card-source">Fortune · 2026.07.23</div>
+      </a>
+<a class="card" href="https://www.aol.com/articles/chinas-moonshot-tapped-anthropics-fable-143659000.html" target="_blank" rel="noopener">
+        <div class="card-top">
+          <span class="card-tag" style="color:#ab47bc;border-color:#ab47bc55;background:#ab47bc1a;">AI 분쟁</span>
+          <span class="card-arrow" style="color:#ab47bc;">↗</span>
+        </div>
+        <div class="card-title">백악관, 中 문샷AI 기술 도용 의혹 제기</div>
+        <div class="card-body">백악관이 <strong>중국 문샷AI가 앤스로픽 모델을 증류(distillation)해 '키미 K3'를 만들었다는 의혹을 제기</strong>했다. 문샷AI는 태국을 경유해 수출 규제 대상인 엔비디아 GB300 칩에 접근했다는 의혹도 함께 받고 있다.</div>
+        <div class="card-source">AOL · 최근</div>
+      </a>
+<a class="card" href="https://www.buildfastwithai.com/blogs/ai-news-today-july-24-2026" target="_blank" rel="noopener">
+        <div class="card-top">
+          <span class="card-tag" style="color:#ab47bc;border-color:#ab47bc55;background:#ab47bc1a;">AI·인수합병</span>
+          <span class="card-arrow" style="color:#ab47bc;">↗</span>
+        </div>
+        <div class="card-title">커서, 문샷 AI 모델 기반 개발 확인</div>
+        <div class="card-body">스페이스X가 약 600억 달러에 인수 중인 AI 코딩 스타트업 '커서'가 <strong>자사 제품이 문샷AI의 '키미' 모델을 기반으로 개발됐다고 인정</strong>했다. 미중 기술 갈등 속에서도 AI 공급망이 이미 깊이 얽혀 있음을 보여주는 사례로 주목받고 있다.</div>
+        <div class="card-source">Build Fast with AI · 2026.07.24</div>
+      </a>
+<a class="card" href="https://www.buildfastwithai.com/blogs/ai-news-today-july-24-2026" target="_blank" rel="noopener">
+        <div class="card-top">
+          <span class="card-tag" style="color:#ab47bc;border-color:#ab47bc55;background:#ab47bc1a;">로봇</span>
+          <span class="card-arrow" style="color:#ab47bc;">↗</span>
+        </div>
+        <div class="card-title">中 로봇 스타트업 '사이봇' 1.48조 밸류</div>
+        <div class="card-body">중국 로봇업체 사이봇(링추 인텔리전스)이 체리자동차 주도로 <strong>약 1억 달러를 유치하며 14억8000만 달러 밸류에이션</strong>을 인정받았다. 애플·테슬라에 부품을 공급하는 렌즈테크놀로지도 이번 라운드에 참여했다.</div>
+        <div class="card-source">Build Fast with AI · 2026.07.24</div>
+      </a>
+      </div>
+    </section>
+<section class="cat-section">
+      <div class="cat-header">
+        <span class="cat-emoji">🪙</span>
+        <span class="cat-name" style="color:#f59e0b;">코인</span>
+        <span class="cat-badge" style="background:#f59e0b22;color:#f59e0b;">5</span>
+      </div>
+      <div class="cat-cards">
+        <a class="card" href="https://www.coindesk.com/tech/2026/07/24/live-updates-dogecoin-and-ether-lead-pullback-as-investors-digest-tech-earnings" target="_blank" rel="noopener">
+        <div class="card-top">
+          <span class="card-tag" style="color:#f59e0b;border-color:#f59e0b55;background:#f59e0b1a;">시황</span>
+          <span class="card-arrow" style="color:#f59e0b;">↗</span>
+        </div>
+        <div class="card-title">도지코인·이더리움, 실적 소화하며 조정</div>
+        <div class="card-body">빅테크 실적 발표를 소화하는 과정에서 <strong>도지코인이 4.5%, 이더리움이 2.5% 하락</strong>하며 주요 코인들이 얕은 조정을 받았다. 다만 대부분 종목은 주간 기준으로는 여전히 상승세를 유지하고 있다.</div>
+        <div class="card-source">CoinDesk · 2026.07.24</div>
+      </a>
+<a class="card" href="https://www.coindesk.com/markets/2026/07/24/bitcoin-holds-near-usd65-000-as-usd800-billion-ai-selloff-leaves-crypto-largely-untouched" target="_blank" rel="noopener">
+        <div class="card-top">
+          <span class="card-tag" style="color:#f59e0b;border-color:#f59e0b55;background:#f59e0b1a;">비트코인</span>
+          <span class="card-arrow" style="color:#f59e0b;">↗</span>
+        </div>
+        <div class="card-title">AI發 8000억달러 셀오프에도 BTC 견조</div>
+        <div class="card-body">뉴욕증시에서 '매그니피센트7'이 8000억 달러 증발하는 최악의 하루를 보낸 와중에도 <strong>비트코인은 1% 미만 하락하며 6만5000달러 선을 지켰다</strong>. 반면 도지코인은 상대적으로 큰 낙폭을 보였다.</div>
+        <div class="card-source">CoinDesk · 2026.07.24</div>
+      </a>
+<a class="card" href="https://www.coindesk.com/markets/2026/07/24/mirae-asset-has-a-name-for-what-it-s-building-with-korbit-an-intelligent-platform" target="_blank" rel="noopener">
+        <div class="card-top">
+          <span class="card-tag" style="color:#f59e0b;border-color:#f59e0b55;background:#f59e0b1a;">국내 거래소</span>
+          <span class="card-arrow" style="color:#f59e0b;">↗</span>
+        </div>
+        <div class="card-title">미래에셋, 코빗 '디지털X'로 확장 개편</div>
+        <div class="card-body">미래에셋이 인수한 가상자산 거래소 코빗이 <strong>'디지털X'로 리브랜딩되며 실물자산(RWA)·스테이블코인을 아우르는 플랫폼으로 확장</strong>을 예고했다. 국내 대형 금융그룹의 가상자산 사업 확대 행보로 주목된다.</div>
+        <div class="card-source">CoinDesk · 2026.07.24</div>
+      </a>
+<a class="card" href="https://www.coindesk.com/business/2026/07/23/robinhood-ceo-vlad-tenev-s-x-account-hacked-to-promote-token-amid-memecoin-frenzy" target="_blank" rel="noopener">
+        <div class="card-top">
+          <span class="card-tag" style="color:#f59e0b;border-color:#f59e0b55;background:#f59e0b1a;">보안 사고</span>
+          <span class="card-arrow" style="color:#f59e0b;">↗</span>
+        </div>
+        <div class="card-title">로빈후드 CEO X 계정 해킹…토큰 홍보 악용</div>
+        <div class="card-body">블라드 테네브 로빈후드 CEO의 X(트위터) 계정이 <strong>해킹당해 '$VLAD' 토큰을 홍보하는 게시물이 올라왔다</strong>. 해당 게시물은 로빈후드 상장 예정이라는 허위 내용을 담았으며 이후 삭제됐다.</div>
+        <div class="card-source">CoinDesk · 2026.07.23</div>
+      </a>
+<a class="card" href="https://www.coindesk.com/policy/2026/07/23/clarity-act-expected-to-miss-its-window-before-congress-summer-break-leadership-says" target="_blank" rel="noopener">
+        <div class="card-top">
+          <span class="card-tag" style="color:#f59e0b;border-color:#f59e0b55;background:#f59e0b1a;">규제</span>
+          <span class="card-arrow" style="color:#f59e0b;">↗</span>
+        </div>
+        <div class="card-title">크립토 규제법안, 여름 휴회 전 처리 무산 전망</div>
+        <div class="card-body">미 의회 지도부는 <strong>가상자산 시장구조법(클래리티법)이 여름 휴회 전까지 처리되지 못할 것</strong>이라고 밝혔다. 존 튠 상원 다수당 대표는 휴회 전 논의 착수 가능성만 시사했다.</div>
+        <div class="card-source">CoinDesk · 2026.07.23</div>
+      </a>
+      </div>
+    </section>
+
+  <footer>
+    <div class="foot-text">각 카드를 탭하면 원문 기사로 이동합니다</div>
+    <div class="foot-brand">WALL ST. MORNING BRIEFING</div>
+  </footer>
+</body>
+</html>
