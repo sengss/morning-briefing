@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>월스트리트 모닝 브리핑 - 2026년 7월 26일</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: #0a0a0f;
+    color: #e8e8ec;
+    font-family: 'Noto Sans KR', sans-serif;
+    max-width: 480px;
+    margin: 0 auto;
+    padding-bottom: 40px;
+  }
+  header {
+    padding: 24px 18px 18px;
+    border-bottom: 1px solid #1c1c26;
+    background: linear-gradient(180deg, #12121a 0%, #0a0a0f 100%);
+  }
+  .brand {
+    font-size: 20px;
+    font-weight: 900;
+    letter-spacing: -0.3px;
+    color: #fff;
+  }
+  .date {
+    font-size: 13px;
+    color: #8a8a99;
+    margin-top: 4px;
+    font-weight: 500;
+  }
+  .ticker {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 6px;
+    margin-top: 16px;
+  }
+  .tick {
+    background: #14141d;
+    border: 1px solid #22222e;
+    border-radius: 10px;
+    padding: 8px 4px;
+    text-align: center;
+  }
+  .tick-label {
+    font-size: 9.5px;
+    color: #77778a;
+    font-weight: 700;
+    margin-bottom: 4px;
+  }
+  .tick-value {
+    font-size: 11.5px;
+    font-weight: 700;
+    color: #fff;
+    white-space: nowrap;
+  }
+  .tick-change {
+    font-size: 10px;
+    font-weight: 700;
+    margin-top: 2px;
+  }
+  .up { color: #4caf50; }
+  .down { color: #ef5350; }
+  .flat { color: #8a8a99; }
+  .section {
+    padding: 18px 18px 4px;
+  }
+  .cat-header {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 12px;
+  }
+  .cat-emoji { font-size: 16px; }
+  .cat-name {
+    font-size: 15.5px;
+    font-weight: 700;
+  }
+  .count-badge {
+    color: #0a0a0f;
+    font-size: 10.5px;
+    font-weight: 900;
+    border-radius: 20px;
+    padding: 1px 8px;
+    margin-left: auto;
+  }
+  .cards {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .card {
+    display: block;
+    background: #13131b;
+    border: 1px solid #1f1f2b;
+    border-radius: 14px;
+    padding: 14px 14px 12px;
+    text-decoration: none;
+    color: inherit;
+  }
+  .card-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 8px;
+  }
+  .tag {
+    font-size: 11px;
+    font-weight: 700;
+    border: 1px solid;
+    border-radius: 6px;
+    padding: 2px 7px;
+  }
+  .arrow {
+    color: #55556a;
+    font-size: 13px;
+  }
+  .card-title {
+    font-size: 15px;
+    font-weight: 700;
+    color: #f4f4f7;
+    line-height: 1.4;
+    margin-bottom: 6px;
+  }
+  .card-body {
+    font-size: 13px;
+    color: #b3b3c0;
+    line-height: 1.6;
+    margin-bottom: 10px;
+  }
+  .card-body strong {
+    color: #e8e8ec;
+    font-weight: 700;
+  }
+  .card-source {
+    font-size: 11px;
+    color: #6c6c7d;
+    font-weight: 500;
+  }
+  footer {
+    text-align: center;
+    padding: 26px 18px 10px;
+    font-size: 11.5px;
+    color: #55556a;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="brand">월스트리트 모닝 브리핑</div>
+  <div class="date">2026년 7월 26일 일요일</div>
+  <div class="ticker">
+    <div class="tick">
+      <div class="tick-label">S&P500</div>
+      <div class="tick-value">7,412</div>
+      <div class="tick-change up">+0.05%</div>
+    </div>
+    <div class="tick">
+      <div class="tick-label">나스닥</div>
+      <div class="tick-value">-</div>
+      <div class="tick-change down">-0.6%</div>
+    </div>
+    <div class="tick">
+      <div class="tick-label">코스피</div>
+      <div class="tick-value">6,690.6</div>
+      <div class="tick-change down">-5.72%</div>
+    </div>
+    <div class="tick">
+      <div class="tick-label">BTC</div>
+      <div class="tick-value">$65,048</div>
+      <div class="tick-change down">-1.6%</div>
+    </div>
+    <div class="tick">
+      <div class="tick-label">브렌트유</div>
+      <div class="tick-value">$100.39</div>
+      <div class="tick-change down">-0.3%</div>
+    </div>
+  </div>
+</header>
+
+<div class="section">
+  <div class="cat-header">
+    <span class="cat-emoji">🏛</span>
+    <span class="cat-name" style="color:#ef5350">정치</span>
+    <span class="count-badge" style="background:#ef5350">2</span>
+  </div>
+  <div class="cards">
+
+    <a class="card" href="https://www.timesofisrael.com/liveblog-july-25-2026/" target="_blank" rel="noopener">
+      <div class="card-top">
+        <span class="tag" style="color:#ef5350;border-color:#ef5350">이란전쟁</span>
+        <span class="arrow">↗</span>
+      </div>
+      <div class="card-title">네타냐후, 워싱턴 방문 앞두고 안보내각 소집</div>
+      <div class="card-body">이스라엘 네타냐후 총리가 워싱턴 방문을 앞두고 이란전쟁 관련 안보내각 회의를 소집했다. <strong>타임스오브이스라엘</strong>에 따르면 미군은 이란 항구 봉쇄를 피하려던 유조선을 무력화했고, 후티 반군은 미사일 공격을 감행했다.</div>
+      <div class="card-source">타임스오브이스라엘 · 2026-07-25</div>
+    </a>
+
+    <a class="card" href="https://www.timesofisrael.com/liveblog-july-22-2026/" target="_blank" rel="noopener">
+      <div class="card-top">
+        <span class="tag" style="color:#ef5350;border-color:#ef5350">이란전쟁</span>
+        <span class="arrow">↗</span>
+      </div>
+      <div class="card-title">트럼프 "이란, 곧 협상 준비될 것"</div>
+      <div class="card-body">트럼프 대통령이 이란이 아직 협상할 준비는 안 됐지만 곧 준비될 것이라고 밝혔다고 <strong>타임스오브이스라엘</strong>이 보도했다. 이란전쟁을 둘러싼 외교적 셈법이 여전히 유동적인 상황이다.</div>
+      <div class="card-source">타임스오브이스라엘 · 2026-07-22</div>
+    </a>
+
+  </div>
+</div>
+
+<div class="section">
+  <div class="cat-header">
+    <span class="cat-emoji">💰</span>
+    <span class="cat-name" style="color:#42a5f5">경제</span>
+    <span class="count-badge" style="background:#42a5f5">4</span>
+  </div>
+  <div class="cards">
+
+    <a class="card" href="https://www.bloomberg.com/news/articles/2026-07-25/trump-renews-tariff-onslaught-with-a-whirlwind-week-of-threats" target="_blank" rel="noopener">
+      <div class="card-top">
+        <span class="tag" style="color:#42a5f5;border-color:#42a5f5">관세전쟁</span>
+        <span class="arrow">↗</span>
+      </div>
+      <div class="card-title">트럼프, 관세 압박 다시 강화</div>
+      <div class="card-body">트럼프 대통령이 한 주간 전방위 관세 위협을 쏟아내며 관세 압박을 재개했다고 <strong>블룸버그</strong>가 보도했다. 대법원의 위법 판정 이후 잠잠했던 관세 전쟁이 다시 격화되는 모습이다.</div>
+      <div class="card-source">블룸버그 · 2026-07-25</div>
+    </a>
+
+    <a class="card" href="https://sundayguardianlive.com/business/brent-crude-oil-price-today-july-24-brent-briefly-climbs-above-100-wti-surges-amid-us-iran-conflict-houthi-attacks-check-latest-brent-crude-wti-oil-rates-today-245155/" target="_blank" rel="noopener">
+      <div class="card-top">
+        <span class="tag" style="color:#42a5f5;border-color:#42a5f5">유가</span>
+        <span class="arrow">↗</span>
+      </div>
+      <div class="card-title">브렌트유, 배럴당 100달러 돌파</div>
+      <div class="card-body">미-이란 갈등과 후티 반군의 공격 여파로 브렌트유 선물이 배럴당 <strong>100달러</strong>를 돌파했다고 <strong>선데이가디언라이브</strong>가 전했다. 지난 5월 26일 이후 처음으로 100달러 선을 넘어선 것이다.</div>
+      <div class="card-source">선데이가디언라이브 · 2026-07-24</div>
+    </a>
+
+    <a class="card" href="https://www.cnn.com/2026/07/23/economy/trump-new-tariffs" target="_blank" rel="noopener">
+      <div class="card-top">
+        <span class="tag" style="color:#42a5f5;border-color:#42a5f5">관세전쟁</span>
+        <span class="arrow">↗</span>
+      </div>
+      <div class="card-title">美, 수십개국에 새 관세 부과</div>
+      <div class="card-body">트럼프 행정부가 유럽부터 중국, 인도까지 수십개 무역 상대국에 새로운 관세를 부과했다고 <strong>CNN</strong>이 보도했다. 대상국들의 수입 규모는 미국 전체 수입의 상당 부분을 차지한다.</div>
+      <div class="card-source">CNN · 2026-07-23</div>
+    </a>
+
+    <a class="card" href="https://www.cnbc.com/2026/07/23/oil-prices-today-wti-brent-trump-iran-hormuz.html" target="_blank" rel="noopener">
+      <div class="card-top">
+        <span class="tag" style="color:#42a5f5;border-color:#42a5f5">유가</span>
+        <span class="arrow">↗</span>
+      </div>
+      <div class="card-title">사우디 유조선 공격에 유가 급등</div>
+      <div class="card-body">사우디 유조선에 대한 공격 소식에 WTI와 브렌트유가 동반 상승했다고 <strong>CNBC</strong>가 보도했다. 호르무즈 해협을 둘러싼 긴장이 유가 상승을 견인하고 있다.</div>
+      <div class="card-source">CNBC · 2026-07-23</div>
+    </a>
+
+  </div>
+</div>
+
+<div class="section">
+  <div class="cat-header">
+    <span class="cat-emoji">📈</span>
+    <span class="cat-name" style="color:#4caf50">주식</span>
+    <span class="count-badge" style="background:#4caf50">4</span>
+  </div>
+  <div class="cards">
+
+    <a class="card" href="https://finance.yahoo.com/markets/live/stock-market-today-friday-july-24-dow-sp-500-nasdaq-081854465.html" target="_blank" rel="noopener">
+      <div class="card-top">
+        <span class="tag" style="color:#4caf50;border-color:#4caf50">뉴욕증시</span>
+        <span class="arrow">↗</span>
+      </div>
+      <div class="card-title">나스닥 하락, 다우·S&P는 반등 마감</div>
+      <div class="card-body">변동성 컸던 한 주를 마감하며 다우와 S&P500은 반등했지만 나스닥은 약세로 마쳤다고 <strong>야후파이낸스</strong>가 전했다. S&P500은 <strong>7,412포인트</strong>로 0.05% 상승 마감했다.</div>
+      <div class="card-source">야후파이낸스 · 2026-07-24</div>
+    </a>
+
+    <a class="card" href="https://finance.yahoo.com/markets/live/stock-market-today-thursday-july-23-dow-sp-500-nasdaq-oil-bonds-earnings-084444369.html" target="_blank" rel="noopener">
+      <div class="card-top">
+        <span class="tag" style="color:#4caf50;border-color:#4caf50">뉴욕증시</span>
+        <span class="arrow">↗</span>
+      </div>
+      <div class="card-title">유가·금리 부담에 3대 지수 동반 하락</div>
+      <div class="card-body">유가 급등과 국채금리 상승, AI 설비투자 우려가 겹치며 다우·S&P500·나스닥이 일제히 하락했다고 <strong>야후파이낸스</strong>가 보도했다. 나스닥은 이번 주에만 2% 넘게 빠졌다.</div>
+      <div class="card-source">야후파이낸스 · 2026-07-23</div>
+    </a>
+
+    <a class="card" href="https://www.cnbc.com/2026/07/22/stock-market-today-live-updates.html" target="_blank" rel="noopener">
+      <div class="card-top">
+        <span class="tag" style="color:#4caf50;border-color:#4caf50">뉴욕증시</span>
+        <span class="arrow">↗</span>
+      </div>
+      <div class="card-title">뉴욕증시 실시간 시황 업데이트</div>
+      <div class="card-body"><strong>CNBC</strong>가 뉴욕증시 주요 지수의 실시간 시황을 전했다. 유가 상승과 지정학적 리스크가 시장 변동성을 키우고 있다.</div>
+      <div class="card-source">CNBC · 2026-07-22</div>
+    </a>
+
+    <a class="card" href="https://finance.yahoo.com/markets/live/stock-market-today-tuesday-july-21-dow-sp-500-nasdaq-084631499.html" target="_blank" rel="noopener">
+      <div class="card-top">
+        <span class="tag" style="color:#4caf50;border-color:#4caf50">뉴욕증시</span>
+        <span class="arrow">↗</span>
+      </div>
+      <div class="card-title">반도체 강세에 3대 지수 동반 상승</div>
+      <div class="card-body">반도체주 급등에 힘입어 다우·S&P500·나스닥이 일제히 상승 마감했다고 <strong>야후파이낸스</strong>가 전했다. 반도체 랠리가 이번 주 증시 반등을 이끌었다.</div>
+      <div class="card-source">야후파이낸스 · 2026-07-21</div>
+    </a>
+
+  </div>
+</div>
+
+<div class="section">
+  <div class="cat-header">
+    <span class="cat-emoji">🔮</span>
+    <span class="cat-name" style="color:#ab47bc">트렌드</span>
+    <span class="count-badge" style="background:#ab47bc">1</span>
+  </div>
+  <div class="cards">
+
+    <a class="card" href="https://gizmodo.com/chatgpt-health-rolls-out-to-everyone-2000789999" target="_blank" rel="noopener">
+      <div class="card-top">
+        <span class="tag" style="color:#ab47bc;border-color:#ab47bc">AI</span>
+        <span class="arrow">↗</span>
+      </div>
+      <div class="card-title">챗GPT 헬스, 美 전체 사용자로 확대</div>
+      <div class="card-body">오픈AI가 <strong>챗GPT 헬스</strong> 기능을 미국 내 18세 이상 전체 사용자에게 확대 출시했다고 <strong>기즈모도</strong>가 전했다. 의료기록과 애플헬스 데이터를 연동해 건강 조언을 받을 수 있으며, 주간 건강 관련 질문이 3억 건을 넘어섰다.</div>
+      <div class="card-source">기즈모도 · 2026-07-23</div>
+    </a>
+
+  </div>
+</div>
+
+<div class="section">
+  <div class="cat-header">
+    <span class="cat-emoji">🪙</span>
+    <span class="cat-name" style="color:#f59e0b">코인</span>
+    <span class="count-badge" style="background:#f59e0b">3</span>
+  </div>
+  <div class="cards">
+
+    <a class="card" href="https://finance.yahoo.com/personal-finance/investing/article/bitcoin-and-ethereum-prices-today-friday-july-24-2026-crypto-prices-retreat-on-higher-us-treasury-yields-152200068.html" target="_blank" rel="noopener">
+      <div class="card-top">
+        <span class="tag" style="color:#f59e0b;border-color:#f59e0b">비트코인</span>
+        <span class="arrow">↗</span>
+      </div>
+      <div class="card-title">국채금리 상승에 코인 시장 조정</div>
+      <div class="card-body">미 국채금리 상승 여파로 비트코인과 이더리움이 하락했다고 <strong>야후파이낸스</strong>가 전했다. 비트코인은 전일 대비 1.6% 낮은 <strong>6만5,048달러</strong>에 거래를 시작했다.</div>
+      <div class="card-source">야후파이낸스 · 2026-07-24</div>
+    </a>
+
+    <a class="card" href="https://finance.yahoo.com/personal-finance/investing/article/bitcoin-and-ethereum-prices-today-tuesday-july-21-2026-crypto-prices-rise-as-investors-risk-appetite-returns-152323748.html" target="_blank" rel="noopener">
+      <div class="card-top">
+        <span class="tag" style="color:#f59e0b;border-color:#f59e0b">비트코인</span>
+        <span class="arrow">↗</span>
+      </div>
+      <div class="card-title">위험자산 선호 회복에 코인 반등</div>
+      <div class="card-body">투자자들의 위험자산 선호 심리가 되살아나며 비트코인과 이더리움 가격이 상승했다고 <strong>야후파이낸스</strong>가 보도했다.</div>
+      <div class="card-source">야후파이낸스 · 2026-07-21</div>
+    </a>
+
+    <a class="card" href="https://finance.yahoo.com/personal-finance/investing/article/bitcoin-and-ethereum-prices-today-monday-july-20-2026-crypto-prices-mixed-as-second-half-2026-outlooks-conflict-151956982.html" target="_blank" rel="noopener">
+      <div class="card-top">
+        <span class="tag" style="color:#f59e0b;border-color:#f59e0b">비트코인</span>
+        <span class="arrow">↗</span>
+      </div>
+      <div class="card-title">하반기 전망 엇갈리며 코인 혼조</div>
+      <div class="card-body">2026년 하반기 시장 전망이 엇갈리는 가운데 비트코인과 이더리움이 혼조세를 보였다고 <strong>야후파이낸스</strong>가 전했다.</div>
+      <div class="card-source">야후파이낸스 · 2026-07-20</div>
+    </a>
+
+  </div>
+</div>
+
+<footer>각 카드를 탭하면 원문 기사로 이동합니다</footer>
+
+</body>
+</html>
