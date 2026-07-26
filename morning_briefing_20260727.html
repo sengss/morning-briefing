@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>월스트리트 모닝 브리핑 - 2026.07.27</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap');
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: 'Noto Sans KR', sans-serif;
+    background:#0a0a0f;
+    color:#e8e8ec;
+  }
+  .wrap { max-width:480px; margin:0 auto; padding-bottom:36px; }
+  header { padding:26px 20px 14px; text-align:center; border-bottom:1px solid #1e1e28; }
+  header h1 { font-size:19px; font-weight:900; color:#fff; letter-spacing:-0.3px; }
+  header .date { font-size:13px; color:#8a8a9a; margin-top:6px; }
+  .ticker { display:grid; grid-template-columns:repeat(5,1fr); gap:6px; padding:16px 12px; border-bottom:1px solid #1e1e28; }
+  .ticker-cell { background:#14141c; border-radius:10px; padding:9px 3px; text-align:center; }
+  .ticker-cell .label { font-size:9.5px; color:#8a8a9a; font-weight:500; }
+  .ticker-cell .value { font-size:11.5px; font-weight:700; color:#fff; margin-top:3px; }
+  .ticker-cell .chg { font-size:10.5px; font-weight:700; margin-top:2px; }
+  .chg.up { color:#ff5252; }
+  .chg.down { color:#4a90ff; }
+  .cat-section { padding:4px 16px 4px; }
+  .cat-header { display:flex; align-items:center; gap:8px; margin:22px 0 12px; }
+  .cat-header .name { font-size:15px; font-weight:700; color:#fff; }
+  .cat-header .badge { font-size:11px; background:#1e1e28; padding:2px 9px; border-radius:10px; color:#9a9aaa; font-weight:500; }
+  .card { display:block; background:#14141c; border-radius:14px; padding:16px; margin-bottom:10px; text-decoration:none; border-left:3px solid #444; }
+  .card-top { display:flex; justify-content:space-between; align-items:center; margin-bottom:9px; }
+  .card-tag { font-size:11px; font-weight:700; padding:3px 9px; border-radius:6px; }
+  .card-arrow { color:#5a5a6a; font-size:14px; }
+  .card-title { font-size:15px; font-weight:700; color:#fff; margin-bottom:7px; line-height:1.4; }
+  .card-body { font-size:13px; color:#b0b0bc; line-height:1.65; }
+  .card-body strong { color:#fff; font-weight:600; }
+  .card-source { font-size:11px; color:#68687a; margin-top:10px; }
+  footer { text-align:center; padding:26px 20px 10px; font-size:11px; color:#5a5a6a; }
+
+  .cat-politics .cat-header .name { color:#ef5350; }
+  .cat-politics .card { border-left-color:#ef5350; }
+  .cat-politics .card-tag { background:rgba(239,83,80,0.15); color:#ef5350; }
+
+  .cat-economy .cat-header .name { color:#42a5f5; }
+  .cat-economy .card { border-left-color:#42a5f5; }
+  .cat-economy .card-tag { background:rgba(66,165,245,0.15); color:#42a5f5; }
+
+  .cat-stock .cat-header .name { color:#4caf50; }
+  .cat-stock .card { border-left-color:#4caf50; }
+  .cat-stock .card-tag { background:rgba(76,175,80,0.15); color:#4caf50; }
+
+  .cat-trend .cat-header .name { color:#ab47bc; }
+  .cat-trend .card { border-left-color:#ab47bc; }
+  .cat-trend .card-tag { background:rgba(171,71,188,0.15); color:#ab47bc; }
+
+  .cat-coin .cat-header .name { color:#f59e0b; }
+  .cat-coin .card { border-left-color:#f59e0b; }
+  .cat-coin .card-tag { background:rgba(245,158,11,0.15); color:#f59e0b; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <h1>월스트리트 모닝 브리핑</h1>
+    <div class="date">2026년 7월 27일 월요일</div>
+  </header>
+
+  <div class="ticker">
+    <div class="ticker-cell">
+      <div class="label">S&P500</div>
+      <div class="value">7,411.98</div>
+      <div class="chg up">▲0.05%</div>
+    </div>
+    <div class="ticker-cell">
+      <div class="label">나스닥</div>
+      <div class="value">24,975.82</div>
+      <div class="chg down">▼0.64%</div>
+    </div>
+    <div class="ticker-cell">
+      <div class="label">코스피</div>
+      <div class="value">6,691</div>
+      <div class="chg down">▼5.72%</div>
+    </div>
+    <div class="ticker-cell">
+      <div class="label">BTC</div>
+      <div class="value">$64,148</div>
+      <div class="chg down">▼0.6%</div>
+    </div>
+    <div class="ticker-cell">
+      <div class="label">브렌트유</div>
+      <div class="value">$90.95</div>
+      <div class="chg down">▼7.56%</div>
+    </div>
+  </div>
+
+  <!-- 정치 -->
+  <div class="cat-section cat-politics">
+    <div class="cat-header">
+      <span>🏛</span><span class="name">정치</span><span class="badge">3</span>
+    </div>
+
+    <a class="card" href="https://www.globalsecurity.org/military/ops/iran-war-oprep.htm" target="_blank">
+      <div class="card-top"><span class="card-tag">중동/이란</span><span class="card-arrow">↗</span></div>
+      <div class="card-title">이란전쟁 149일째, 후티 사우디 정유시설 공습</div>
+      <div class="card-body">미 중부사령부가 이란에 대한 공습을 이틀 연속 중단하며 <strong>작전 소강 상태</strong>에 들어갔다. 반면 후티 반군은 사우디 자즈란·얀부 정유·송유 시설을 공격해 <strong>걸프 지역 원유 인프라 위협</strong>이 계속되고 있다.</div>
+      <div class="card-source">globalsecurity.org · 2026.07.26</div>
+    </a>
+
+    <a class="card" href="https://www.cnn.com/2026/07/24/world/live-news/iran-war-trump" target="_blank">
+      <div class="card-top"><span class="card-tag">중동/이란</span><span class="card-arrow">↗</span></div>
+      <div class="card-title">이란전쟁 확전 2주째, 美 공습 중단 신호</div>
+      <div class="card-body">CNN은 이란을 둘러싼 무력충돌이 확대된 지 2주가 가까워졌다고 전했다. 국방부 소식통은 <strong>작전이 일시 보류 상태</strong>라고 밝혔지만, 카스피해송유관공사(CPC)는 흑해 터미널 선적을 중단하는 등 <strong>여파가 세계 원유 공급망</strong>으로 번지고 있다.</div>
+      <div class="card-source">CNN · 2026.07.24</div>
+    </a>
+
+    <a class="card" href="https://www.newspim.com/news/view/20260726000177" target="_blank">
+      <div class="card-top"><span class="card-tag">국회</span><span class="card-arrow">↗</span></div>
+      <div class="card-title">국회, 7월27일 상임위·정당 일정 가동</div>
+      <div class="card-body">국회의장과 상임위원회, 주요 정당이 27일 세미나·기자회견 등 <strong>다양한 정치 일정</strong>을 소화한다. 통일부 장관은 이날 오전 10시 제2차 접경지역 평화안전 연석회의에 참석한다.</div>
+      <div class="card-source">뉴스핌 · 2026.07.26</div>
+    </a>
+  </div>
+
+  <!-- 경제 -->
+  <div class="cat-section cat-economy">
+    <div class="cat-header">
+      <span>💰</span><span class="name">경제</span><span class="badge">3</span>
+    </div>
+
+    <a class="card" href="https://www.washingtonpost.com/business/2026/07/24/stocks-dow-nasdaq-iran-oil/72ff5b36-879f-11f1-9cec-0fb26676f07e_story.html" target="_blank">
+      <div class="card-top"><span class="card-tag">유가/증시</span><span class="card-arrow">↗</span></div>
+      <div class="card-title">이란전쟁발 유가 변동성, 美증시 흔들어</div>
+      <div class="card-body">중동 전운이 짙어지는 가운데 국제유가가 요동치며 다우·나스닥 등 <strong>주요 지수가 혼조세</strong>를 보였다. 워싱턴포스트는 이란을 둘러싼 무력충돌이 원유 공급망 우려를 계속 자극하고 있다고 전했다.</div>
+      <div class="card-source">Washington Post · 2026.07.24</div>
+    </a>
+
+    <a class="card" href="https://www.thestreet.com/stock-market-today/stock-market-today-july-24-2026-dow-futures-rebound-as-oil-retreats-after-market-sell-off" target="_blank">
+      <div class="card-top"><span class="card-tag">유가/선물</span><span class="card-arrow">↗</span></div>
+      <div class="card-title">국제유가 하락 전환, 다우선물은 반등</div>
+      <div class="card-body">한 주간 급등했던 국제유가가 매도세로 돌아서며 <strong>다우 선물이 반등</strong>했다. 다만 빅테크의 설비투자 급증 우려가 겹치며 시장 변동성은 여전히 높은 수준이다.</div>
+      <div class="card-source">TheStreet · 2026.07.24</div>
+    </a>
+
+    <a class="card" href="https://www.etoday.co.kr/news/view/2607438" target="_blank">
+      <div class="card-top"><span class="card-tag">정책일정</span><span class="card-arrow">↗</span></div>
+      <div class="card-title">경제·사회부처, 이번주 주요 일정 발표</div>
+      <div class="card-body">이투데이에 따르면 정부 경제·사회부처가 7월27일부터 31일까지 <strong>한 주간 주요 정책 일정</strong>을 예고했다. 광양항 자동화 테스트베드 착공식 등 물류 인프라 행사도 포함됐다.</div>
+      <div class="card-source">이투데이 · 최근</div>
+    </a>
+  </div>
+
+  <!-- 주식 -->
+  <div class="cat-section cat-stock">
+    <div class="cat-header">
+      <span>📈</span><span class="name">주식</span><span class="badge">3</span>
+    </div>
+
+    <a class="card" href="https://finance.yahoo.com/markets/live/stock-market-today-friday-july-24-dow-sp-500-nasdaq-081854465.html" target="_blank">
+      <div class="card-top"><span class="card-tag">美증시</span><span class="card-arrow">↗</span></div>
+      <div class="card-title">나스닥 약세, 다우·S&P는 낙폭 회복</div>
+      <div class="card-body">지난주 변동성 장세를 마감하며 다우와 S&P500은 낙폭을 회복했지만 <strong>나스닥은 약세</strong>로 마쳤다. S&P500은 7,411.98(+0.05%), 나스닥은 24,975.82(-0.64%)로 종가를 형성했다.</div>
+      <div class="card-source">Yahoo Finance · 2026.07.24</div>
+    </a>
+
+    <a class="card" href="https://www.thestreet.com/stock-market-today/stock-market-today-july-24-2026-dow-futures-rebound-as-oil-retreats-after-market-sell-off" target="_blank">
+      <div class="card-top"><span class="card-tag">테크주</span><span class="card-arrow">↗</span></div>
+      <div class="card-title">테크 자본지출 우려에 나스닥·러셀 하락</div>
+      <div class="card-body">빅테크 기업들의 <strong>설비투자 급증 우려</strong>가 회복세에 제동을 걸며 나스닥과 러셀2000이 추가 하락했다. 반도체·메모리 관련주의 낙폭이 특히 두드러졌다.</div>
+      <div class="card-source">TheStreet · 2026.07.24</div>
+    </a>
+
+    <a class="card" href="https://www.fool.com/coverage/stock-market-today/2026/07/24/stock-market-today-july-24-dow-recovers-and-sandisk-tumbles-11-as-tech-stocks-fall-further/" target="_blank">
+      <div class="card-top"><span class="card-tag">실적</span><span class="card-arrow">↗</span></div>
+      <div class="card-title">샌디스크 11% 급락, 기술주 약세 지속</div>
+      <div class="card-body">메모리 업체 <strong>샌디스크 주가가 11% 급락</strong>하며 기술주 약세를 이끌었다. 인텔은 실적 호조에도 투자자 반응은 냉담해 6%대 하락을 기록했다.</div>
+      <div class="card-source">The Motley Fool · 2026.07.24</div>
+    </a>
+  </div>
+
+  <!-- 트렌드 -->
+  <div class="cat-section cat-trend">
+    <div class="cat-header">
+      <span>🔮</span><span class="name">트렌드</span><span class="badge">3</span>
+    </div>
+
+    <a class="card" href="https://www.techtimes.com/articles/321499/20260724/kimi-k3-open-weights-drop-july-27-near-frontier-coding-undisclosed-hallucination-risk.htm" target="_blank">
+      <div class="card-top"><span class="card-tag">AI모델</span><span class="card-arrow">↗</span></div>
+      <div class="card-title">키미 K3 오픈웨이트, 오늘 27일 전격 공개</div>
+      <div class="card-body">중국 문샷AI의 2.8조 파라미터 모델 <strong>'키미 K3' 가중치가 27일 공개</strong>된다. 코딩 성능은 최상위권이지만 독립 테스트에서 51%에 달하는 할루시네이션 비율이 발견돼 우려도 나온다.</div>
+      <div class="card-source">Tech Times · 2026.07.24</div>
+    </a>
+
+    <a class="card" href="https://techstartups.com/2026/07/24/top-tech-news-today-july-24-2026-amd-apple-google-intel-oracle-samsung-spacex-more/" target="_blank">
+      <div class="card-top"><span class="card-tag">빅테크</span><span class="card-arrow">↗</span></div>
+      <div class="card-title">구글, 올해 설비투자 최대 205조원으로 확대</div>
+      <div class="card-body">구글이 AI 컴퓨팅 수요에 대응해 2026년 <strong>설비투자 전망을 1,950억~2,050억 달러</strong>로 상향했다. 알파벳은 데이터센터 투자 확대 여파로 분기 잉여현금흐름이 사상 처음 마이너스(-58억달러)를 기록했다.</div>
+      <div class="card-source">Tech Startups · 2026.07.24</div>
+    </a>
+
+    <a class="card" href="https://techstartups.com/2026/07/24/top-tech-news-today-july-24-2026-amd-apple-google-intel-oracle-samsung-spacex-more/" target="_blank">
+      <div class="card-top"><span class="card-tag">생성AI</span><span class="card-arrow">↗</span></div>
+      <div class="card-title">클로드 소네트5, 저가 정책으로 코딩 저변 확대</div>
+      <div class="card-body">앤스로픽의 <strong>클로드 소네트5</strong>가 8월31일까지 할인된 도입가를 유지하며, 자율 코딩·업무자동화 도입을 노리는 팀들 사이에서 주목받고 있다.</div>
+      <div class="card-source">Tech Startups · 2026.07.24</div>
+    </a>
+  </div>
+
+  <!-- 코인 -->
+  <div class="cat-section cat-coin">
+    <div class="cat-header">
+      <span>🪙</span><span class="name">코인</span><span class="badge">3</span>
+    </div>
+
+    <a class="card" href="https://finance.yahoo.com/personal-finance/investing/article/bitcoin-and-ethereum-prices-today-friday-july-24-2026-crypto-prices-retreat-on-higher-us-treasury-yields-152200068.html" target="_blank">
+      <div class="card-top"><span class="card-tag">BTC/ETH</span><span class="card-arrow">↗</span></div>
+      <div class="card-title">국채금리 상승에 비트코인·이더리움 후퇴</div>
+      <div class="card-body">미 국채 금리 상승 여파로 비트코인이 금요일 <strong>6만4,304달러</strong>까지 밀렸다. 이더리움도 1,860달러 선까지 내려오며 동반 약세를 보였다.</div>
+      <div class="card-source">Yahoo Finance · 2026.07.24</div>
+    </a>
+
+    <a class="card" href="https://finance.yahoo.com/personal-finance/investing/article/bitcoin-and-ethereum-prices-today-friday-july-24-2026-crypto-prices-retreat-on-higher-us-treasury-yields-152200068.html" target="_blank">
+      <div class="card-top"><span class="card-tag">ETF</span><span class="card-arrow">↗</span></div>
+      <div class="card-title">비트코인 현물 ETF, 목요일 2.25억달러 순유출</div>
+      <div class="card-body">비트코인 현물 ETF에서 목요일 하루에만 <strong>2억2,500만달러 순유출</strong>이 발생했다. ETF 자금 이탈이 가격 하락 압력을 키운 것으로 풀이된다.</div>
+      <div class="card-source">Yahoo Finance · 2026.07.24</div>
+    </a>
+
+    <a class="card" href="https://cryptoticker.io/en/crypto-prices-today-bitcoin-holds-64k-ethereum-outperforms/" target="_blank">
+      <div class="card-top"><span class="card-tag">FOMC</span><span class="card-arrow">↗</span></div>
+      <div class="card-title">비트코인 6.4만달러 지지, FOMC 앞두고 관망</div>
+      <div class="card-body">비트코인이 <strong>6만4천달러선을 지지</strong>하는 가운데 이더리움은 상대적 강세를 보였다. 7월28~29일 FOMC 회의를 앞두고 이란 관련 지정학적 리스크가 반등폭을 제한하는 모습이다.</div>
+      <div class="card-source">CryptoTicker · 최근</div>
+    </a>
+  </div>
+
+  <footer>각 카드를 탭하면 원문 기사로 이동합니다</footer>
+
+</div>
+</body>
+</html>
